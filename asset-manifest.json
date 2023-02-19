@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/OhDangBro/ArtisiticInnovations.git/static/css/main.964fdded.css",
-    "main.js": "/OhDangBro/ArtisiticInnovations.git/static/js/main.7fe6c0f0.js",
-    "static/js/787.05c66b2b.chunk.js": "/OhDangBro/ArtisiticInnovations.git/static/js/787.05c66b2b.chunk.js",
-    "index.html": "/OhDangBro/ArtisiticInnovations.git/index.html",
-    "main.964fdded.css.map": "/OhDangBro/ArtisiticInnovations.git/static/css/main.964fdded.css.map",
-    "main.7fe6c0f0.js.map": "/OhDangBro/ArtisiticInnovations.git/static/js/main.7fe6c0f0.js.map",
-    "787.05c66b2b.chunk.js.map": "/OhDangBro/ArtisiticInnovations.git/static/js/787.05c66b2b.chunk.js.map"
+    "main.css": "/OhDangBro.github.io/ArtisiticInnovations/static/css/main.964fdded.css",
+    "main.js": "/OhDangBro.github.io/ArtisiticInnovations/static/js/main.e1117a34.js",
+    "static/js/787.05c66b2b.chunk.js": "/OhDangBro.github.io/ArtisiticInnovations/static/js/787.05c66b2b.chunk.js",
+    "index.html": "/OhDangBro.github.io/ArtisiticInnovations/index.html",
+    "main.964fdded.css.map": "/OhDangBro.github.io/ArtisiticInnovations/static/css/main.964fdded.css.map",
+    "main.e1117a34.js.map": "/OhDangBro.github.io/ArtisiticInnovations/static/js/main.e1117a34.js.map",
+    "787.05c66b2b.chunk.js.map": "/OhDangBro.github.io/ArtisiticInnovations/static/js/787.05c66b2b.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.964fdded.css",
-    "static/js/main.7fe6c0f0.js"
+    "static/js/main.e1117a34.js"
   ]
 }
