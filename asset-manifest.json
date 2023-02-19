@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/ohdangbro.github.io/artisiticinnovations/static/css/main.964fdded.css",
-    "main.js": "/ohdangbro.github.io/artisiticinnovations/static/js/main.0493bb03.js",
-    "static/js/787.05c66b2b.chunk.js": "/ohdangbro.github.io/artisiticinnovations/static/js/787.05c66b2b.chunk.js",
-    "index.html": "/ohdangbro.github.io/artisiticinnovations/index.html",
-    "main.964fdded.css.map": "/ohdangbro.github.io/artisiticinnovations/static/css/main.964fdded.css.map",
-    "main.0493bb03.js.map": "/ohdangbro.github.io/artisiticinnovations/static/js/main.0493bb03.js.map",
-    "787.05c66b2b.chunk.js.map": "/ohdangbro.github.io/artisiticinnovations/static/js/787.05c66b2b.chunk.js.map"
+    "main.css": "/static/css/main.964fdded.css",
+    "main.js": "/static/js/main.b9fa4920.js",
+    "static/js/787.05c66b2b.chunk.js": "/static/js/787.05c66b2b.chunk.js",
+    "index.html": "/index.html",
+    "main.964fdded.css.map": "/static/css/main.964fdded.css.map",
+    "main.b9fa4920.js.map": "/static/js/main.b9fa4920.js.map",
+    "787.05c66b2b.chunk.js.map": "/static/js/787.05c66b2b.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.964fdded.css",
-    "static/js/main.0493bb03.js"
+    "static/js/main.b9fa4920.js"
   ]
 }
