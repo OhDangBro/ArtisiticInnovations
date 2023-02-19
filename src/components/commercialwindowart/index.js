@@ -6,7 +6,6 @@ import Paper from '@mui/material/Paper';
 import Masonry from '@mui/lab/Masonry';
 import { styled } from '@mui/material/styles';
 import itemData from "./itemdata.js"
-import NavBar2 from '../navbar2/index.js';
 
 const styles = {
   container: {
@@ -53,16 +52,14 @@ const Label = styled(Paper)(({ theme }) => ({
   borderBottomRightRadius: 0,
 }));
 
-const CommercialWindowArt = () => {
+const CommercialWindowArt = ({handleClick}) => {
   return (
         <React.Fragment>
-          <NavBar2/>
           <Container maxWidth="xl">
             <div style={styles.container}>
               <h2 style={styles.h2}>Commercial Window Art</h2>
               <h3 style={styles.h3}>
-              Commercial Window Art creates an attractive focal point while drawing customers into your place of business.  Since each window is a  'work of art' in and of itself, Commercial Window Art is uniquely created for your business to bring customers to your front door by the use of color and imagination!   My work can be seasonal so that my customer can keep a fresh and exciting window scene, or it can be permanent and long lasting.  (I maintain my seasonal work throughout the year)
-              </h3>
+              Commercial Window Art is a highly effective way to create an eye-catching focal point that draws customers into your business. Each window is a 'work of art' in its own right, and as such, Commercial Window Art is custom-designed for your business, utilizing color and imagination to entice customers to your front door. With the ability to create seasonal or permanent works, your business can maintain a fresh and exciting window scene that's sure to catch the eye of passersby. As an experienced professional, I take great pride in maintaining my seasonal work throughout the year, ensuring that your window art always looks its best.              </h3>
               <div style={styles.imageContainer}></div>
               <Box sx={{ width: 900, minHeight: 829 }}>
       <Masonry columns={3} spacing={2}>
@@ -84,7 +81,7 @@ const CommercialWindowArt = () => {
         ))}
       </Masonry>
     </Box>
-    <Button variant="contained" color="primary" style={styles.button}>Book</Button>
+    <Button variant="contained" color="primary" style={styles.button}  onClick={() => { handleClick('Contact'); }}>Contact us</Button>
 
 </div>
 </Container>

@@ -49,14 +49,14 @@ function srcset(image, size, rows = 1, cols = 1) {
 }
 
 
-const Murals = () => {
+const Murals = ({handleClick}) => {
   return (
     <React.Fragment> 
     <Container maxWidth="xl">
     <div style={styles.container}>
       <h2 style={styles.h2}>Murals</h2>
       <h3 style={styles.h3}>
-      Mural painting is applied to a wall surface, and therefore is a medium on a spectrum between fine art and house painting.  Each mural is unique and original and is custom designed to capture architecture & atmosphere, color and design. Murals express ideas, thoughts, imagination and emotions!
+      Mural painting is a distinctive art form that blends the line between fine art and house painting. As a medium that's applied directly to a wall surface, each mural is uniquely crafted and custom designed to capture the essence of a particular space. The result is a stunning visual representation of architecture, atmosphere, color, and design that expresses a range of ideas, thoughts, imagination, and emotions. With murals, you have the opportunity to bring your space to life in a way that's both creative and transformative.
       </h3>
       <div style={styles.imageContainer}>
       <ImageList
@@ -76,8 +76,7 @@ const Murals = () => {
       ))}
     </ImageList>
       </div>
-      <Button variant="contained" color="primary" style={styles.button}>Book</Button>
-    </div>
+      <Button variant="contained" color="primary" style={styles.button}  onClick={() => { handleClick('Contact'); }}>Contact us</Button>    </div>
     </Container>
     </React.Fragment>
   );

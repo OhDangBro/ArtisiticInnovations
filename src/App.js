@@ -7,6 +7,7 @@ import ArtisticInnovations from './components/artisticinnovations';
 import Murals from './components/murals';
 import CommercialWindowArt from './components/commercialwindowart';
 import CustomAndCommercial from './components/customandcommercial';
+import ContactInfo from './components/contact';
 
 const styles = {
   container: {
@@ -28,7 +29,11 @@ const styles = {
   },
   artisticInnovations: {
     marginLeft: '15vh',
+    marginTop: '10em', // add margin to move the content below the navbar
     paddingBottom: '4em', // add padding to make room for the footer
+  },
+  footer: {
+    paddingTop: '2em', // add the desired margin value here
   },
 };
 
@@ -52,13 +57,13 @@ function App() {
     if (currentPage === "CustomAndCommercial") {
       return <CustomAndCommercial handleClick={handlePageChange}  />;
     }
+    if (currentPage === "Contact") {
+      return <ContactInfo handleClick={handlePageChange}  />;
+    }
   };
 
   return (
-    <div style={styles.container}>
-      {/* <div style={styles.hero}>
-        <Hero></Hero>
-      </div> */}
+<div style={styles.container}>
       <div style={styles.navBarContainer}>
         <div style={styles.navBar}>
           <NavBar handleClick={handlePageChange}/>

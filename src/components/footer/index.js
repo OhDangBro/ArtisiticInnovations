@@ -41,8 +41,8 @@ const Footer = () => {
         <Grid container spacing={1} style={{ display: 'flex', flexWrap: 'wrap' }}>
           <Grid item xs={4} style={{ ...styles.section, flexBasis: '33%', justifyContent: 'flex-start' }}>
             <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'left' }}>
-              <Typography variant="body1" align="center" style={{ fontSize: '12px' }}>FULLY INSURED</Typography>
-              <Typography variant="body1" align="center" style={{ fontSize: '12px' }} >NJ STATE LICENSED/CERTIFIED</Typography>
+              {/* <Typography variant="body1" align="center" style={{ fontSize: '12px' }}>FULLY INSURED</Typography>
+              <Typography variant="body1" align="center" style={{ fontSize: '12px' }} >NJ STATE LICENSED/CERTIFIED</Typography> */}
             </div>
           </Grid>
           <div style={styles.divider}></div>
@@ -58,8 +58,8 @@ const Footer = () => {
           <div style={styles.divider}></div>
           <Grid item xs={4} style={{ ...styles.section, flexBasis: '33.33%', justifyContent: 'flex-end' }}>
             <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'right' }}>
-              <Typography variant="body1" align="center" style={{ fontSize: '12px' }}>Pricing is based on your specific requirements. </Typography>
-              <Typography variant="body1" align="center" style={{ fontSize: '12px' }}>Please contact me for more information.</Typography>
+              {/* <Typography variant="body1" align="center" style={{ fontSize: '12px' }}>Pricing is based on your specific requirements. </Typography>
+              <Typography variant="body1" align="center" style={{ fontSize: '12px' }}>Please contact me for more information.</Typography> */}
             </div>
           </Grid>
         </Grid>

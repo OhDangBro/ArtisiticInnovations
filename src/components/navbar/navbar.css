@@ -1,0 +1,60 @@
+/* NAVBAR ------------------------------------------------------------------- */
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+    font-size: 2em;
+    }
+    
+    @media (max-width: 768px) {
+    .hamburger {
+    display: block;
+    color: white;
+    background-color: transparent;
+    border: aliceblue;
+    }
+    
+    .navbar-collapse {
+    height: 0;
+    width: 0;
+    background: lightgrey;
+    position: absolute;
+    top: 10vh;
+    right: 0;
+    z-index: 1;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    }
+    
+    .navLink {
+    color: white;
+    font-size: 30px;
+    margin: 1em 0;
+    text-align: center;
+    padding-right: 0 !important;
+    }
+    
+    .show {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    position: absolute;
+    top: 0;
+    background: lightgrey;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    }
+  
+    .navIcon {
+      margin: 0 !important;
+      left: 0 !important;
+      margin-left: -22% !important;
+      padding-bottom: 3%;
+    }
+  
+    
+    }

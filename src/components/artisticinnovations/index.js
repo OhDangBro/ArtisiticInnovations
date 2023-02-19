@@ -34,7 +34,7 @@ const styles = {
   },
 };
 
-const ArtisticInnovations = () => {
+const ArtisticInnovations = ({handleClick}) => {
   return (
     <React.Fragment> 
     <Container maxWidth="xl">
@@ -59,8 +59,7 @@ const ArtisticInnovations = () => {
       ))}
     </ImageList>
       </div>
-      <Button variant="contained" color="primary" style={styles.button}>Book</Button>
-    </div>
+      <Button variant="contained" color="primary" style={styles.button} onClick={() => { handleClick('Contact'); }}>Contact us</Button>    </div>
     </Container>
     </React.Fragment>
   );
