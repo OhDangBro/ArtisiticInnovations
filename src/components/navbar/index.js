@@ -1,6 +1,6 @@
 const styles = {
   container: {
-    height: '100vh',
+    height: '100%',
     width: '15vh',
     backgroundColor: '#F5F5F5',
     display: 'flex',
@@ -32,7 +32,7 @@ const NavBar = ({ currentPage, handleClick }) => {
       <a href="#artistic-innovations" style={currentPage === 'Home' ? { ...styles.link, ...styles.linkActive } : styles.link} onClick={() => handleClick("Home")}>Artistic Innovations</a>
       <a href="#murals" style={currentPage === 'Murals' ? { ...styles.link, ...styles.linkActive } : styles.link} onClick={() => handleClick("Murals")}>Murals</a>
       <a href="#commercialwindowart" style={currentPage === 'CommercialWindowArt' ? { ...styles.link, ...styles.linkActive } : styles.link} onClick={() => handleClick("CommercialWindowArt")}>Commercial Window Art</a>
-      <a href="#custom-and-commercial" style={styles.link}>Custom & Commercial</a>
+      <a href="#custom-and-commercial" style={styles.link} onClick={() => handleClick("CustomAndCommercial")}>Custom & Commercial</a>
       <a href="#faux" style={styles.link}>Faux</a>
     </div>
   );

@@ -22,13 +22,6 @@ const styles = {
     marginBottom: '0.5em',
     textAlign: 'center',
   },
-  quote: {
-    fontStyle: 'italic',
-    fontSize: '1.5em',
-    color: 'black',
-    textShadow: '1px 1px #FFFFFF',
-    textAlign: 'center',
-  },
 };
 
 const Hero = () => {
@@ -37,8 +30,7 @@ const Hero = () => {
       <Typography variant="h1" style={styles.header}>
         Artistic Innovations
       </Typography>
-      <Typography variant="body1" style={styles.quote}>
-      "The purpose of art is to make the invisible visible."       </Typography>
+
     </div>
   );
 };

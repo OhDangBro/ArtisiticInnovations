@@ -6,6 +6,7 @@ import Footer from './components/footer';
 import ArtisticInnovations from './components/artisticinnovations';
 import Murals from './components/murals';
 import CommercialWindowArt from './components/commercialwindowart';
+import CustomAndCommercial from './components/customandcommercial';
 
 const styles = {
   container: {
@@ -23,6 +24,7 @@ const styles = {
     position: 'absolute',
     top: '100%',
     left: 0,
+    height: '100vh', // add this to make the navbar take up the full height of the screen
   },
   artisticInnovations: {
     marginLeft: '15vh',
@@ -47,13 +49,16 @@ function App() {
     if (currentPage === "CommercialWindowArt") {
       return <CommercialWindowArt handleClick={handlePageChange}  />;
     }
+    if (currentPage === "CustomAndCommercial") {
+      return <CustomAndCommercial handleClick={handlePageChange}  />;
+    }
   };
 
   return (
     <div style={styles.container}>
-      <div style={styles.hero}>
+      {/* <div style={styles.hero}>
         <Hero></Hero>
-      </div>
+      </div> */}
       <div style={styles.navBarContainer}>
         <div style={styles.navBar}>
           <NavBar handleClick={handlePageChange}/>

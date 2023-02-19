@@ -1,20 +1,12 @@
 import React from 'react';
-import Masonry, { ResponsiveMasonry } from 'react-responsive-masonry';
-import commercialOne from "../../assets/images/commercialImages/commercialOne.jpeg"
-import commercialTwo from "../../assets/images/commercialImages/commercialTwo.jpeg"
-import commercialThree from "../../assets/images/commercialImages/commercialThree.jpeg"
-import commercialFour from "../../assets/images/commercialImages/commercialFour.jpeg"
-import commercialFive from "../../assets/images/commercialImages/commercialFive.jpeg"
-import commercialSix from "../../assets/images/commercialImages/commercialSix.jpeg"
-import commercialSeven from "../../assets/images/commercialImages/commercialSeven.jpeg"
-import commercialEight from "../../assets/images/commercialImages/commercialEight.jpeg"
-import commercialNine from "../../assets/images/commercialImages/commercialNine.jpeg"
-import Container from '@mui/material/Container';
 import { Button } from '@material-ui/core';
-
-
-
-const images = [commercialOne, commercialTwo, commercialThree, commercialFour, commercialFive, commercialSix, commercialSeven, commercialEight, commercialNine];
+import Container from '@mui/material/Container';
+import Box from '@mui/material/Box';
+import Paper from '@mui/material/Paper';
+import Masonry from '@mui/lab/Masonry';
+import { styled } from '@mui/material/styles';
+import itemData from "./itemdata.js"
+import NavBar2 from '../navbar2/index.js';
 
 const styles = {
   container: {
@@ -43,41 +35,64 @@ const styles = {
   imageContainer: {
     display: 'flex',
     justifyContent: 'center',
-    flexWrap: 'wrap',
     margin: '2em 0',
-    width: "100%"
+    width: '40%',
+    flexDirection: 'row',
   },
-  image: {
-    width: '100%',
-    height: 'auto',
-    margin: '1em',
-    objectFit: 'cover',
-    cursor: 'pointer',
-    
-  },
+
+
 };
+
+const Label = styled(Paper)(({ theme }) => ({
+  backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
+  ...theme.typography.body2,
+  padding: theme.spacing(0.5),
+  textAlign: 'center',
+  color: theme.palette.text.secondary,
+  borderBottomLeftRadius: 0,
+  borderBottomRightRadius: 0,
+}));
 
 const CommercialWindowArt = () => {
   return (
-    <React.Fragment> 
-      <Container maxWidth="xl">
-    <div style={styles.container}>
-      <h2 style={styles.h2}>Commercial Window Art</h2>
-      <h3 style={styles.h3}>
-      Commercial Window Art creates an attractive focal point while drawing customers into your place of business.  Since each window is a  'work of art' in and of itself, Commercial Window Art is uniquely created for your business to bring customers to your front door by the use of color and imagination!   My work can be seasonal so that my customer can keep a fresh and exciting window scene, or it can be permanent and long lasting.  (I maintain my seasonal work throughout the year)      </h3>
-      <div style={styles.imageContainer}>
-      <ResponsiveMasonry columnsCountBreakPoints={{ 100: 1, 200: 2, 300: 3 }} style={{ width: "40%" }}>
-          <Masonry gutter="20px">
-            {images.map((image, i) => (
-              <img key={i} src={image} style={styles.image} alt="" />
-            ))}
-          </Masonry>
-        </ResponsiveMasonry>
-      </div>
-    </div>
-    </Container>
-    </React.Fragment>
-  );
+        <React.Fragment>
+          <NavBar2/>
+          <Container maxWidth="xl">
+            <div style={styles.container}>
+              <h2 style={styles.h2}>Commercial Window Art</h2>
+              <h3 style={styles.h3}>
+              Commercial Window Art creates an attractive focal point while drawing customers into your place of business.  Since each window is a  'work of art' in and of itself, Commercial Window Art is uniquely created for your business to bring customers to your front door by the use of color and imagination!   My work can be seasonal so that my customer can keep a fresh and exciting window scene, or it can be permanent and long lasting.  (I maintain my seasonal work throughout the year)
+              </h3>
+              <div style={styles.imageContainer}></div>
+              <Box sx={{ width: 900, minHeight: 829 }}>
+      <Masonry columns={3} spacing={2}>
+        {itemData.map((item, index) => (
+          <div key={index}>
+      <img
+  src={`${item.img}?w=200&auto=format`}
+  srcSet={`${item.img}?w=200&auto=format&dpr=2 2x`}
+  alt={item.title}
+  loading="lazy"
+  style={{
+    borderBottomLeftRadius: 4,
+    borderBottomRightRadius: 4,
+    display: 'block',
+    width: '100%',
+  }}
+/>
+          </div>
+        ))}
+      </Masonry>
+    </Box>
+    <Button variant="contained" color="primary" style={styles.button}>Book</Button>
+
+</div>
+</Container>
+</React.Fragment>
+
+);
 };
 
 export default CommercialWindowArt;
+
+

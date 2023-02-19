@@ -1,19 +1,10 @@
 import React from 'react';
-import Masonry, { ResponsiveMasonry } from 'react-responsive-masonry';
-import muralOne from "../../assets/images/muralImages/muralOne.jpeg"
-import muralTwo from "../../assets/images/muralImages/muralTwo.jpeg"
-import muralThree from "../../assets/images/muralImages/muralThree.jpeg"
-import muralFour from "../../assets/images/muralImages/muralFour.jpeg"
-import muralFive from "../../assets/images/muralImages/muralFive.jpeg"
-import muralSix from "../../assets/images/muralImages/muralSix.jpeg"
-import muralSeven from "../../assets/images/muralImages/muralSeven.jpeg"
-import muralEight from "../../assets/images/muralImages/muralEight.jpeg"
-import muralNine from "../../assets/images/muralImages/muralNine.jpeg"
 import Container from '@mui/material/Container';
 import { Button } from '@material-ui/core';
+import ImageList from '@mui/material/ImageList';
+import ImageListItem from '@mui/material/ImageListItem';
+import itemData from './itemdata';
 
-
-const images = [muralOne, muralTwo, muralThree, muralFour, muralFive, muralSix, muralSeven, muralEight, muralNine];
 
 const styles = {
   container: {
@@ -46,15 +37,17 @@ const styles = {
     margin: '2em 0',
     width: "100%"
   },
-  image: {
-    width: '100%',
-    height: 'auto',
-    margin: '1em',
-    objectFit: 'cover',
-    cursor: 'pointer',
-    
-  },
 };
+
+function srcset(image, size, rows = 1, cols = 1) {
+  return {
+    src: `${image}?w=${size * cols}&h=${size * rows}&fit=crop&auto=format`,
+    srcSet: `${image}?w=${size * cols}&h=${
+      size * rows
+    }&fit=crop&auto=format&dpr=2 2x`,
+  };
+}
+
 
 const Murals = () => {
   return (
@@ -66,13 +59,22 @@ const Murals = () => {
       Mural painting is applied to a wall surface, and therefore is a medium on a spectrum between fine art and house painting.  Each mural is unique and original and is custom designed to capture architecture & atmosphere, color and design. Murals express ideas, thoughts, imagination and emotions!
       </h3>
       <div style={styles.imageContainer}>
-      <ResponsiveMasonry columnsCountBreakPoints={{ 100: 1, 200: 2, 300: 3 }} style={{ width: "25%" }}>
-          <Masonry gutter="20px">
-            {images.map((image, i) => (
-              <img key={i} src={image} style={styles.image} alt="" />
-            ))}
-          </Masonry>
-        </ResponsiveMasonry>
+      <ImageList
+      sx={{ width: 500, height: 450 }}
+      variant="quilted"
+      cols={4}
+      rowHeight={121}
+    >
+      {itemData.map((item) => (
+        <ImageListItem key={item.img} cols={item.cols || 1} rows={item.rows || 1}>
+          <img
+            {...srcset(item.img, 121, item.rows, item.cols)}
+            alt={item.title}
+            loading="lazy"
+          />
+        </ImageListItem>
+      ))}
+    </ImageList>
       </div>
       <Button variant="contained" color="primary" style={styles.button}>Book</Button>
     </div>

@@ -1,15 +1,12 @@
 import React from 'react';
-import Masonry, { ResponsiveMasonry } from 'react-responsive-masonry';
-import ArtOne from '../../assets/images/artisticinnovatinsImages/artOne.jpeg';
-import ArtTwo from '../../assets/images/artisticinnovatinsImages/artTwo.jpeg';
-import ArtThree from '../../assets/images/artisticinnovatinsImages/artThree.jpeg';
-import ArtFour from '../../assets/images/artisticinnovatinsImages/artFour.jpeg';
+import ImageList from '@mui/material/ImageList';
+import ImageListItem from '@mui/material/ImageListItem';
 import Container from '@mui/material/Container';
 import { Button } from '@material-ui/core';
+import itemData from './itemdata';
 
 
 
-const images = [ArtOne, ArtTwo, ArtThree, ArtFour];
 
 const styles = {
   container: {
@@ -35,21 +32,6 @@ const styles = {
     textAlign: 'center',
     margin: '1em 0',
   },
-  imageContainer: {
-    display: 'flex',
-    justifyContent: 'center',
-    flexWrap: 'wrap',
-    margin: '2em 0',
-    width: "100%"
-  },
-  image: {
-    width: '100%',
-    height: 'auto',
-    margin: '1em',
-    objectFit: 'cover',
-    cursor: 'pointer',
-    
-  },
 };
 
 const ArtisticInnovations = () => {
@@ -64,13 +46,18 @@ const ArtisticInnovations = () => {
         murals, faux finishes, and window art for both residential and commercial properties - both inside and out."
       </h3>
       <div style={styles.imageContainer}>
-      <ResponsiveMasonry columnsCountBreakPoints={{ 100: 1, 200: 2 }} style={{ width: "25%" }}>
-          <Masonry gutter="20px">
-            {images.map((image, i) => (
-              <img key={i} src={image} style={styles.image} alt="" />
-            ))}
-          </Masonry>
-        </ResponsiveMasonry>
+      <ImageList sx={{ width: 500, height: 450 }} variant="woven" cols={3} gap={8}>
+      {itemData.map((item) => (
+        <ImageListItem key={item.img}>
+          <img
+            src={`${item.img}?w=161&fit=crop&auto=format`}
+            srcSet={`${item.img}?w=161&fit=crop&auto=format&dpr=2 2x`}
+            alt={item.title}
+            loading="lazy"
+          />
+        </ImageListItem>
+      ))}
+    </ImageList>
       </div>
       <Button variant="contained" color="primary" style={styles.button}>Book</Button>
     </div>
