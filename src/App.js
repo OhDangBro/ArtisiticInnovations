@@ -28,7 +28,6 @@ const styles = {
     height: '100vh', // add this to make the navbar take up the full height of the screen
   },
   artisticInnovations: {
-    marginLeft: '15vh',
     marginTop: '10em', // add margin to move the content below the navbar
     paddingBottom: '4em', // add padding to make room for the footer
   },
@@ -54,7 +53,7 @@ function App() {
     if (currentPage === "CommercialWindowArt") {
       return <CommercialWindowArt handleClick={handlePageChange}  />;
     }
-    if (currentPage === "CustomAndCommercial") {
+    if (currentPage === "Custom") {
       return <CustomAndCommercial handleClick={handlePageChange}  />;
     }
     if (currentPage === "Contact") {

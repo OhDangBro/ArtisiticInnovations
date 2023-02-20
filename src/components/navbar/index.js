@@ -1,47 +1,90 @@
-const styles = {
-  container: {
-    width: '100%',
-    backgroundColor: '#F5F5F5',
-    display: 'flex',
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    alignItems: 'center',
-    border: '2px solid black',
-    position: 'fixed',
-    top: 0,
-    left: 0,
-    right: 0,
-    zIndex: 1,
-  },
-  link: {
-    display: 'flex',
-    color: 'black',
-    padding: '20px 40px',
-    textDecoration: 'none',
-    fontFamily: 'Arial, sans-serif',
-    fontSize: '1em',
-    textTransform: 'uppercase',
-    letterSpacing: '2px',
-    transition: 'all 0.2s ease-in-out',
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-  linkActive: {
-    fontWeight: 'bold',
-    color: '#FF4D4D',
-  }
-};
+import React, { useState } from 'react';
+import "./navbar.css"
 
-const NavBar = ({ currentPage, handleClick }) => {
+const Navbar = ({ handleClick }) => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleNav = () => {
+    setIsOpen(!isOpen);
+  };
+
+  const closeNav = () => {
+    setIsOpen(false);
+  };
+
   return (
-    <div style={styles.container}>
-      <a href="#artistic-innovations" style={currentPage === 'Home' ? { ...styles.link, ...styles.linkActive } : styles.link} onClick={() => handleClick("Home")}>Artistic Innovations</a>
-      <a href="#murals" style={currentPage === 'Murals' ? { ...styles.link, ...styles.linkActive } : styles.link} onClick={() => handleClick("Murals")}>Murals</a>
-      <a href="#commercialwindowart" style={currentPage === 'CommercialWindowArt' ? { ...styles.link, ...styles.linkActive } : styles.link} onClick={() => handleClick("CommercialWindowArt")}>Commercial Window Art</a>
-      <a href="#custom-and-commercial" style={styles.link} onClick={() => handleClick("CustomAndCommercial")}>Custom</a>
-      <a href="#contact" style={styles.link} onClick={() => handleClick("Contact")}>Contact</a>
-    </div>
+    <nav style={{
+        height: '10vh',
+        background: '#F5F5F5',
+        display: 'flex',
+        justifyContent: 'space-between',
+        alignItems: 'center',
+        position: 'fixed',
+        top: 0,
+        width: '100%',
+        zIndex: 1
+        }}>
+      <button className="hamburger" onClick={toggleNav}>&#9776;</button>
+      <div className={`navbar-collapse ${isOpen ? "show" : ""}`} style={{
+          display: "flex",
+          justifyContent: "flex-end",
+          alignItems: "center",
+          flex: 1,
+  
+        }}>
+        <a className="navLink" href="#Home" style={{ 
+            fontSize: "1.3rem",
+            fontFamily: "regularFont",
+            textDecoration: "none",
+            color: "black",
+            flex: "1",
+            textAlign: "center",
+            padding: "20px",
+            display: "block",
+          }} onClick={() => { handleClick('Home'); closeNav(); }}>Artistic Innovations</a>
+        <a className="navLink" href="#Services" style={{ 
+            fontSize: "1.3rem",
+            fontFamily: "regularFont",
+            textDecoration: "none",
+            color: "black",
+            flex: "1",
+            textAlign: "center",
+            padding: "20px",
+            display: "block",
+          }} onClick={() => { handleClick('Murals'); closeNav(); }}>Murals</a>
+        <a className="navLink" href="#About" style={{ 
+            fontSize: "1.3rem",
+            fontFamily: "regularFont",
+            textDecoration: "none",
+            color: "black",
+            flex: "1",
+            textAlign: "center",
+            padding: "20px",
+            display: "block",
+          }} onClick={() => { handleClick('CommercialWindowArt'); closeNav(); }}>Commercial Window Art</a>
+        <a className="navLink" href="#About" style={{ 
+            fontSize: "1.3rem",
+            fontFamily: "regularFont",
+            textDecoration: "none",
+            color: "black",
+            flex: "1",
+            textAlign: "center",
+            padding: "20px",
+            display: "block",
+          }} onClick={() => { handleClick('Custom'); closeNav(); }}>Custom</a>
+        <a className="navLink" href="#Contact" style={{ 
+            fontSize: "1.3rem",
+            fontFamily: "regularFont",
+            textDecoration: "none",
+            color: "black",
+            flex: "1",
+            textAlign: "center",
+            padding: "20px",
+            display: "block",
+          }} onClick={() => { handleClick('Contact'); closeNav(); }}>Contact</a>
+      </div>
+    </nav>
   );
 };
 
-export default NavBar;
+export default Navbar;

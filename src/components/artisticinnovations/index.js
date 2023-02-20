@@ -4,6 +4,7 @@ import ImageListItem from '@mui/material/ImageListItem';
 import Container from '@mui/material/Container';
 import { Button } from '@material-ui/core';
 import itemData from './itemdata';
+import { useMediaQuery } from '@mui/material';
 
 
 
@@ -32,9 +33,11 @@ const styles = {
     textAlign: 'center',
     margin: '1em 0',
   },
+
 };
 
 const ArtisticInnovations = ({handleClick}) => {
+  const isMobile = useMediaQuery('(max-width:600px)');
   return (
     <React.Fragment> 
     <Container maxWidth="xl">
@@ -45,8 +48,8 @@ const ArtisticInnovations = ({handleClick}) => {
         "Bringing 30 years of expertise in custom design painting to your walls, we specialize in creating stunning wall
         murals, faux finishes, and window art for both residential and commercial properties - both inside and out."
       </h3>
-      <div style={styles.imageContainer}>
-      <ImageList sx={{ width: 500, height: 450 }} variant="woven" cols={3} gap={8}>
+      <div className="imageContainer" >
+      <ImageList className="imageList" sx={{ width: 500, height: 450 }} variant="woven" cols={isMobile ? 2 : 3} gap={8}>
       {itemData.map((item) => (
         <ImageListItem key={item.img}>
           <img
