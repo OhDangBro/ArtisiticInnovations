@@ -47,8 +47,8 @@ const CustomAndCommercial = ({handleClick}) => {
         <React.Fragment>
           <Container maxWidth="xl">
             <div style={styles.container}>
-              <h2 style={styles.h2}>Custom Art</h2>
-              <h3 style={styles.h3}>
+              <h2 className="h2Header" style={styles.h2}>Custom Art</h2>
+              <h3 className="h3Description" style={styles.h3}>
               Custom Painting is a powerful medium that can be used to express your individualism and unique sense of self through the use of design and color. Whether it's a small piece of artwork in a room or a large-scale mural, custom painting can truly personalize a space and make it your own. This is especially true for children's rooms, where a personalized touch can help foster creativity and imagination. By working closely with you, I can help match your decor with your own unique vision, while incorporating your needs with creative flair. The end result is a one-of-a-kind piece that truly reflects your individuality and brings your creative vision to life.
               </h3>
               <div style={styles.imageContainer}>
@@ -68,7 +68,7 @@ const CustomAndCommercial = ({handleClick}) => {
 <Box sx={{ backgroundColor: '#F5F5F5', padding: '2em', marginTop: '2em', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
 <div style={styles.container}>
               <h3 style={styles.h3}>Also See Faux Painting Finishes:</h3>
-              <h3 style={styles.h4}>
+              <h3 className="h3Description" style={styles.h4}>
               "The word faux, derived from French, literally means 'false' and in the context of decorative painting, it refers to the technique of creating realistic finishes on surfaces that mimic other materials such as marble, wood, leather, and stone. This artistic approach allows for the transformation of plain and unremarkable surfaces into stunning and sophisticated works of art. Some examples of popular faux finishes include crackling, linen texture, ragging, distressed, sponge painting, and granite finish. These simple techniques can not only add warmth and character to a room, but also improve the appearance of aging walls and hide imperfections like fingerprints."              </h3>
               <div style={styles.imageContainer}>
               <ImageList className='imageList' sx={{ width: 400, height: 350 }} cols={2} rowHeight={164}>

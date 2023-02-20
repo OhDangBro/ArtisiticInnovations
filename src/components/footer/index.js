@@ -45,7 +45,7 @@ const Footer = () => {
               <Typography variant="body1" align="center" style={{ fontSize: '12px' }} >NJ STATE LICENSED/CERTIFIED</Typography> */}
             </div>
           </Grid>
-          <div style={styles.divider}></div>
+          {/* <div style={styles.divider}></div> */}
           <Grid item xs={4} style={{ ...styles.section, flexBasis: '33.33%', justifyContent: 'center' }}>
             <div style={styles.contactInfo}>
               <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
@@ -55,7 +55,7 @@ const Footer = () => {
               </div>
             </div>
           </Grid>
-          <div style={styles.divider}></div>
+          {/* <div style={styles.divider}></div> */}
           <Grid item xs={4} style={{ ...styles.section, flexBasis: '33.33%', justifyContent: 'flex-end' }}>
             <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'right' }}>
               {/* <Typography variant="body1" align="center" style={{ fontSize: '12px' }}>Pricing is based on your specific requirements. </Typography>

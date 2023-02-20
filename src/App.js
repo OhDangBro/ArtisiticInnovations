@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import './App.css';
-import Hero from './components/hero';
 import NavBar from './components/navbar';
 import Footer from './components/footer';
 import ArtisticInnovations from './components/artisticinnovations';
@@ -28,7 +27,7 @@ const styles = {
     height: '100vh', // add this to make the navbar take up the full height of the screen
   },
   artisticInnovations: {
-    marginTop: '10em', // add margin to move the content below the navbar
+    marginTop: '3em', // add margin to move the content below the navbar
     paddingBottom: '4em', // add padding to make room for the footer
   },
   footer: {
