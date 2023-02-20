@@ -11,6 +11,7 @@ const styles = {
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
+    paddingTop: "5%"
   },
   h2: {
     fontSize: '2em',

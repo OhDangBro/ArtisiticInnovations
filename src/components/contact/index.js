@@ -14,6 +14,8 @@ const styles = {
     alignItems: 'center',
     textAlign: 'center',
     margin: '1em 0',
+    paddingTop: "10%"
+
   },
   header: {
     fontSize: '2.5em',

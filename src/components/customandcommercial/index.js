@@ -12,6 +12,7 @@ const styles = {
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
+    paddingTop: "5%"
   },
   header: {
     fontSize: '2.5em',

@@ -10,6 +10,7 @@ const styles = {
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
+    paddingTop: "5%"
   },
   header: {
     fontSize: '2.5em',
@@ -52,7 +53,7 @@ const CommercialWindowArt = ({handleClick}) => {
               <h3 className="h3Description" style={styles.h3}>
               Commercial Window Art is a highly effective way to create an eye-catching focal point that draws customers into your business. Each window is a 'work of art' in its own right, and as such, Commercial Window Art is custom-designed for your business, utilizing color and imagination to entice customers to your front door. With the ability to create seasonal or permanent works, your business can maintain a fresh and exciting window scene that's sure to catch the eye of passersby. As an experienced professional, I take great pride in maintaining my seasonal work throughout the year, ensuring that your window art always looks its best.              </h3>
               <div style={styles.imageContainer}></div>
-              <Box sx={{ width: 900, minHeight: 829 }}>
+              <Box className="imageList" sx={{ width: 900, minHeight: 400 }}>
       <Masonry columns={3} spacing={2}>
         {itemData.map((item, index) => (
           <div key={index}>
