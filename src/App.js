@@ -7,6 +7,7 @@ import Murals from './components/murals';
 import CommercialWindowArt from './components/commercialwindowart';
 import CustomAndCommercial from './components/customandcommercial';
 import ContactInfo from './components/contact';
+import ArtisticInnovationsTwo from './components/artisticinnovationsoptionstwo';
 
 const styles = {
   container: {
@@ -46,6 +47,9 @@ function App() {
     if (currentPage === "Home") {
       return <ArtisticInnovations currentPage={currentPage} handleClick={handlePageChange}/>;
     }
+    if (currentPage === "HomeTwo") {
+      return <ArtisticInnovationsTwo currentPage={currentPage} handleClick={handlePageChange}/>;
+    }
     if (currentPage === "Murals") {
       return <Murals handleClick={handlePageChange}  />;
     }
@@ -61,7 +65,7 @@ function App() {
   };
 
   return (
-<div style={styles.container}>
+<div id='Main' style={styles.container}>
       <div style={styles.navBarContainer}>
         <div style={styles.navBar}>
           <NavBar handleClick={handlePageChange}/>

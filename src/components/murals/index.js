@@ -18,11 +18,15 @@ const styles = {
     fontWeight: 'bold',
     textAlign: 'center',
     margin: '1em 0',
+    fontFamily: "Segoe",
+    color: 'hsl(274deg 53% 63%)',
+
   },
   h3: {
     fontSize: '1.2em',
     textAlign: 'center',
     margin: '1em 0',
+    width: "80%"
   },
   imageContainer: {
     display: 'flex',
@@ -62,7 +66,7 @@ const Murals = ({handleClick}) => {
   return (
     <React.Fragment> 
       <Container className="container" maxWidth="xl">
-        <div  style={styles.container}>
+        <div id="Murals"  style={styles.container}>
           <h2 className="h2Header" style={styles.h2}>Murals</h2>
           <h3 className="h3Description" style={styles.h3}>
             Mural painting is a distinctive art form that blends the line between fine art and house painting. As a medium that's applied directly to a wall surface, each mural is uniquely crafted and custom designed to capture the essence of a particular space. The result is a stunning visual representation of architecture, atmosphere, color, and design that expresses a range of ideas, thoughts, imagination, and emotions. With murals, you have the opportunity to bring your space to life in a way that's both creative and transformative.

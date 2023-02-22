@@ -20,18 +20,21 @@ const styles = {
     fontWeight: 'bold',
     textAlign: 'center',
     marginTop: '2em',
-    color: 'black',
+    color: 'hsl(274deg 53% 63%)',
+    fontFamily: 'Segoe',
   },
   h2: {
     fontSize: '2em',
     fontWeight: 'bold',
     textAlign: 'center',
     margin: '1em 0',
+    fontFamily: 'Segoe',
   },
   h3: {
     fontSize: '1.2em',
     textAlign: 'center',
     margin: '1em 0',
+    fontFamily: 'Segoe',
   },
 
 };

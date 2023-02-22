@@ -18,11 +18,13 @@ const styles = {
 
   },
   header: {
-    fontSize: '2.5em',
+    fontSize: '3.5em',
     fontWeight: 'bold',
     textAlign: 'center',
     marginTop: '2em',
-    color: 'black',
+    color: 'hsl(274deg 53% 63%)',
+    fontFamily: 'Segoe',
+    textDecoration: 'underline',
   },
   h2: {
     fontSize: '2em',
@@ -35,55 +37,50 @@ const styles = {
     textAlign: 'center',
     margin: '1em 0',
   },
-  phone: {
-    display: 'flex',
-    alignItems: 'center',
-    marginTop: '1em',
-  },
   phoneIcon: {
     marginRight: '0.5em',
-  },
-  email: {
-    marginTop: '1em',
+    borderRadius: '50%',
+    backgroundColor: 'hsl(274deg 53% 63%)',
+    color: 'white',
+    padding: '0.5em',
   },
 };
 
 const ContactInfo = () => {
   return (
     <React.Fragment>
-      <Container maxWidth="xl">
-        <div style={styles.container}>
-          <header style={styles.header}>Contact Us</header>
-          <h2 style={styles.h3}>
-            We're always happy to hear from you. Please feel free to get in touch with us using the contact information below.
-          </h2>
-          <h3 style={styles.h3}>
-            Pricing is based on your specific requirements. Please contact me for more information.
-          </h3>
-          <h3 style={styles.h3}>
-            We're fully insured and NJ state licensed/certified.
-          </h3>
+    <Container maxWidth="xl">
+      <div style={styles.container}>
+        <header style={styles.header}>Contact Us</header>
+        <h2 style={styles.h3}>
+          We're always happy to hear from you. Please feel free to get in touch with us using the contact information below.
+        </h2>
+        <h3 style={styles.h3}>
+          Pricing is based on your specific requirements. Please contact me for more information.
+        </h3>
+        <h3 style={styles.h3}>
+          We're fully insured and NJ state licensed/certified.
+        </h3>
 
-
-          <Box sx={styles.container}>
-            <Typography variant="h5">Call or Text at:</Typography>
-            <div style={styles.phone}>
-              <LocalPhoneIcon style={styles.phoneIcon} />
-              <a href="tel:555-555-5555">
-                <Typography variant="subtitle1">555-555-5555</Typography>
-              </a>
-            </div>
-            <Typography variant="h5">Or Send Me an Email at:</Typography>
-            <div style={styles.phone}>
-              <EmailIcon style={styles.phoneIcon} />
-              <a href="mailto:info@email.com">
-                <Typography variant="subtitle1">info@email.com</Typography>
-              </a>
-            </div>
-          </Box>
-        </div>
-      </Container>
-    </React.Fragment>
+        <Box sx={{ display: 'flex', alignItems: 'center', flexDirection: 'row', justifyContent: 'space-between', flex: 2 }}>
+  <Box sx={{ display: 'flex', alignItems: 'center', flexDirection: 'column', flex: 1, margin: "40px" }}>
+    <LocalPhoneIcon style={styles.phoneIcon} />
+    <Typography variant="h5">Call/Text:</Typography>
+    <a href="tel:555-555-5555">
+      <Typography variant="subtitle1">555-555-5555</Typography>
+    </a>
+  </Box>
+  <Box sx={{ display: 'flex', alignItems: 'center', flexDirection: 'column', flex: 1, margin: "40px" }}>
+    <EmailIcon style={styles.phoneIcon} />
+    <Typography variant="h5">Email:</Typography>
+    <a href="mailto:info@email.com">
+      <Typography variant="subtitle1">info@email.com</Typography>
+    </a>
+  </Box>
+</Box>
+      </div>
+    </Container>
+  </React.Fragment>
   );
 };
 
