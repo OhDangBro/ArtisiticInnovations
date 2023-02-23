@@ -1,62 +1,85 @@
+import muralOne from "../../assets/images/murals/muralOne.jpg";
+import muralTwo from "../../assets/images/murals/muralTwo.jpg";
+import muralThree from "../../assets/images/murals/muralThree.jpg";
+import muralFour from "../../assets/images/murals/muralFour.jpg";
+import muralFive from "../../assets/images/murals/muralFive.jpg";
+import muralSix from "../../assets/images/murals/muralSix.jpg";
+import muralSeven from "../../assets/images/murals/muralSeven.jpg";
+import muralEight from "../../assets/images/murals/muralEight.jpg";
+import muralNine from "../../assets/images/murals/muralNine.jpg";
+import muralTen from "../../assets/images/murals/muralTen.jpg";
+import muralEleven from "../../assets/images/murals/muralEleven.jpg";
+import muralTwelve from "../../assets/images/murals/muralTwelve.jpg";
+import muralThirteen from "../../assets/images/murals/muralThirteen.jpg";
+import muralFourteen from "../../assets/images/murals/muralFourteen.jpg";
+
 const itemData = [
     {
-      img: 'https://images.unsplash.com/photo-1551963831-b3b1ca40c98e',
-      title: 'Breakfast',
+      img: muralOne,
+      title: 'Mural One',
       rows: 2,
       cols: 2,
     },
     {
-      img: 'https://images.unsplash.com/photo-1551782450-a2132b4ba21d',
-      title: 'Burger',
+      img: muralTwo,
+      title: 'Mural Two',
     },
     {
-      img: 'https://images.unsplash.com/photo-1522770179533-24471fcdba45',
-      title: 'Camera',
+      img: muralThree,
+      title: 'Mural Three',
     },
     {
-      img: 'https://images.unsplash.com/photo-1444418776041-9c7e33cc5a9c',
-      title: 'Coffee',
+      img: muralFour,
+      title: 'Mural Four',
       cols: 2,
     },
     {
-      img: 'https://images.unsplash.com/photo-1533827432537-70133748f5c8',
-      title: 'Hats',
+      img: muralFive,
+      title: 'Mural Five',
       cols: 2,
     },
     {
-      img: 'https://images.unsplash.com/photo-1558642452-9d2a7deb7f62',
-      title: 'Honey',
-      author: '@arwinneil',
+      img: muralSix,
+      title: 'Mural Six',
       rows: 2,
       cols: 2,
     },
     {
-      img: 'https://images.unsplash.com/photo-1516802273409-68526ee1bdd6',
-      title: 'Basketball',
+      img: muralSeven,
+      title: 'Mural Seven',
     },
     {
-      img: 'https://images.unsplash.com/photo-1518756131217-31eb79b20e8f',
-      title: 'Fern',
+      img: muralEight,
+      title: 'Mural Eight',
     },
     {
-      img: 'https://images.unsplash.com/photo-1597645587822-e99fa5d45d25',
-      title: 'Mushrooms',
+      img: muralNine,
+      title: 'Mural Nine',
       rows: 2,
       cols: 2,
     },
     {
-      img: 'https://images.unsplash.com/photo-1567306301408-9b74779a11af',
-      title: 'Tomato basil',
+      img: muralTen,
+      title: 'Mural Ten',
     },
     {
-      img: 'https://images.unsplash.com/photo-1471357674240-e1a485acb3e1',
-      title: 'Sea star',
+      img: muralEleven,
+      title: 'Mural Eleven',
     },
     {
-      img: 'https://images.unsplash.com/photo-1589118949245-7d38baf380d6',
-      title: 'Bike',
+      img: muralTwelve,
+      title: 'Mural Twelve',
+      cols: 2,
+    },
+    {
+      img: muralThirteen,
+      title: 'Mural Thirteen',
+    },
+    {
+      img: muralFourteen,
+      title: 'Mural Fourteen',
       cols: 2,
     },
   ];
 
-  export default itemData;
+export default itemData;

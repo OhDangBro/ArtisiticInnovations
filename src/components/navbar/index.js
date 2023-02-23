@@ -42,16 +42,6 @@ const Navbar = ({ handleClick }) => {
             padding: "20px",
             display: "block",
           }} onClick={() => { handleClick('Home'); closeNav(); }}>Artistic Innovations</a>
-          <a className="navLink" href="#Home" style={{ 
-            fontSize: "1.3rem",
-            fontFamily: "regularFont",
-            textDecoration: "none",
-            color: "black",
-            flex: "1",
-            textAlign: "center",
-            padding: "20px",
-            display: "block",
-          }} onClick={() => { handleClick('HomeTwo'); closeNav(); }}>Artistic Innovations</a>
         <a className="navLink" href="#Services" style={{ 
             fontSize: "1.3rem",
             fontFamily: "regularFont",

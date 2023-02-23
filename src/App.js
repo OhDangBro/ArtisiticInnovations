@@ -7,12 +7,15 @@ import Murals from './components/murals';
 import CommercialWindowArt from './components/commercialwindowart';
 import CustomAndCommercial from './components/customandcommercial';
 import ContactInfo from './components/contact';
-import ArtisticInnovationsTwo from './components/artisticinnovationsoptionstwo';
+import FauxBackground from "../src/assets/images/fauxBack.jpg"
 
 const styles = {
   container: {
     minHeight: '100vh',
+    minWidth: '100vw',
     position: 'relative',
+    backgroundImage: ` url(${FauxBackground})`,
+
   },
   hero: {
     height: '39vh', // adjust the height to your preference
@@ -46,9 +49,6 @@ function App() {
    
     if (currentPage === "Home") {
       return <ArtisticInnovations currentPage={currentPage} handleClick={handlePageChange}/>;
-    }
-    if (currentPage === "HomeTwo") {
-      return <ArtisticInnovationsTwo currentPage={currentPage} handleClick={handlePageChange}/>;
     }
     if (currentPage === "Murals") {
       return <Murals handleClick={handlePageChange}  />;

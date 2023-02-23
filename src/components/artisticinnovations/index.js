@@ -5,6 +5,7 @@ import Container from '@mui/material/Container';
 import { Button } from '@material-ui/core';
 import itemData from './itemdata';
 import { useMediaQuery } from '@mui/material';
+import Hero from '../hero';
 
 
 
@@ -45,7 +46,7 @@ const ArtisticInnovations = ({handleClick}) => {
     <React.Fragment> 
     <Container maxWidth="xl">
     <div style={styles.container}>
-      <header style={styles.header}>Artistic Innovations</header>
+<Hero/>
       <h2 style={styles.h2}>Custom Design & Painting Services</h2>
       <h3 style={styles.h3}>
         "Bringing 30 years of expertise in custom design painting to your walls, we specialize in creating stunning wall
