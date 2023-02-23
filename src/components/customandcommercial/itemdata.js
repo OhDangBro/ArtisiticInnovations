@@ -1,52 +1,115 @@
+import customOne from "../../assets/images/custom/customOne.jpg";
+import customTwo from "../../assets/images/custom/customTwo.jpg";
+import customThree from "../../assets/images/custom/customThree.jpg";
+import customFour from "../../assets/images/custom/customFour.jpg";
+import customFive from "../../assets/images/custom/customFive.jpg";
+import customSix from "../../assets/images/custom/customSix.jpg";
+import customSeven from "../../assets/images/custom/customSeven.jpg";
+import customEight from "../../assets/images/custom/customEight.jpg";
+import customNine from "../../assets/images/custom/customNine.jpg";
+import customTen from "../../assets/images/custom/customTen.jpg";
+import customEleven from "../../assets/images/custom/customEleven.jpg";
+import customTwelve from "../../assets/images/custom/customTwelve.jpg";
+import customThirteen from "../../assets/images/custom/customThirteen.jpg";
+import customFourteen from "../../assets/images/custom/customFourteen.jpg";
+import customFifteen from "../../assets/images/custom/customFifteen.jpg";
+import customSixteen from "../../assets/images/custom/customSixteen.jpg";
+import customSeventeen from "../../assets/images/custom/customSeventeen.jpg";
+import customEighteen from "../../assets/images/custom/customEighteen.jpg";
+import customNineteen from "../../assets/images/custom/customNineteen.jpg";
+
 const itemData = [
     {
-      img: 'https://images.unsplash.com/photo-1551963831-b3b1ca40c98e',
-      title: 'Breakfast',
+      img: customOne,
+      title: 'custom One',
+      rows: 2,
+      cols: 2,
     },
     {
-      img: 'https://images.unsplash.com/photo-1551782450-a2132b4ba21d',
-      title: 'Burger',
+      img: customTwo,
+      title: 'custom Two',
     },
     {
-      img: 'https://images.unsplash.com/photo-1522770179533-24471fcdba45',
-      title: 'Camera',
+      img: customThree,
+      title: 'custom Three',
     },
     {
-      img: 'https://images.unsplash.com/photo-1444418776041-9c7e33cc5a9c',
-      title: 'Coffee',
+      img: customFour,
+      title: 'custom Four',
+      cols: 2,
     },
     {
-      img: 'https://images.unsplash.com/photo-1533827432537-70133748f5c8',
-      title: 'Hats',
+      img: customFive,
+      title: 'custom Five',
+      cols: 2,
     },
     {
-      img: 'https://images.unsplash.com/photo-1558642452-9d2a7deb7f62',
-      title: 'Honey',
+      img: customSix,
+      title: 'custom Six',
+      rows: 2,
+      cols: 2,
     },
     {
-      img: 'https://images.unsplash.com/photo-1516802273409-68526ee1bdd6',
-      title: 'Basketball',
+      img: customSeven,
+      title: 'custom Seven',
     },
     {
-      img: 'https://images.unsplash.com/photo-1518756131217-31eb79b20e8f',
-      title: 'Fern',
+      img: customEight,
+      title: 'custom Eight',
     },
     {
-      img: 'https://images.unsplash.com/photo-1597645587822-e99fa5d45d25',
-      title: 'Mushrooms',
+      img: customNine,
+      title: 'custom Nine',
+      rows: 2,
+      cols: 2,
     },
     {
-      img: 'https://images.unsplash.com/photo-1567306301408-9b74779a11af',
-      title: 'Tomato basil',
+      img: customTen,
+      title: 'custom Ten',
     },
     {
-      img: 'https://images.unsplash.com/photo-1471357674240-e1a485acb3e1',
-      title: 'Sea star',
+      img: customEleven,
+      title: 'custom Eleven',
     },
     {
-      img: 'https://images.unsplash.com/photo-1589118949245-7d38baf380d6',
-      title: 'Bike',
+      img: customTwelve,
+      title: 'custom Twelve',
+      cols: 2,
+    },
+    {
+      img: customThirteen,
+      title: 'custom Thirteen',
+    },
+    {
+      img: customFourteen,
+      title: 'custom Fourteen',
+      cols: 2,
+    },
+    {
+      img: customFifteen,
+      title: 'custom Fifteen',
+      cols: 2,
+    },
+    {
+      img: customSixteen,
+      title: 'custom Sixteen',
+      cols: 2,
+    },
+    {
+      img: customSeventeen,
+      title: 'custom Seventeen',
+      cols: 2,
+    },
+    {
+      img: customEighteen,
+      title: 'custom Eighteen',
+      cols: 2,
+    },
+    {
+      img: customNineteen,
+      title: 'custom Nineteen',
+      cols: 2,
     },
   ];
 
-  export default itemData;
+export default itemData;
