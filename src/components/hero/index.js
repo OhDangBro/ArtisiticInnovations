@@ -1,13 +1,15 @@
 import React from 'react';
 import { Typography } from '@material-ui/core';
-import HeroImage from "../../assets/images/hero.png"
+import HeroImage from "../../assets/images/IMG_4963.jpg"
 import ArtisticInnovationsLogo from '../../assets/images/artisticinnovations.png';
 
 const styles = {
   container: {
-    height: '30vh',
-    width: '100%',
+    height: '50vh',
+    width: '110%',
     position: 'relative',
+    top: 0,
+    left: 0,
     backgroundColor: '#F5F5F5',
     backgroundImage: `linear-gradient(rgba(255,255,255,0.3), rgba(255,255,255,0.3)), url(${HeroImage})`,
     backgroundPosition: 'center',
@@ -24,7 +26,6 @@ const styles = {
     top: '70%', // position the header below the logo
     left: '50%',
     transform: 'translate(-50%, -50%)', // center the header
-    zIndex: 2, // bring the header to the front
   },
   logo: {
     margin: 'auto',
@@ -32,7 +33,6 @@ const styles = {
     top: '30%',
     left: '50%',
     transform: 'translate(-50%, -50%)',
-    zIndex: 3,
     width: '50%',
   },
 };

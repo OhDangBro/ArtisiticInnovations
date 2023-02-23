@@ -86,7 +86,7 @@ const Murals = ({ handleClick }) => {
           </h3>
           <div style={styles.imageContainer}>
           <ImageList
-  sx={{ width: 1000, height: 550 }}
+  sx={{ width: 1200, height: 550 }}
   variant="quilted"
   cols={4}
   rowHeight={121}
