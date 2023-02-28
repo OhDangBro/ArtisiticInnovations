@@ -1,20 +1,20 @@
 import React from 'react';
 import { Typography } from '@material-ui/core';
-import HeroImage from "../../assets/images/IMG_4963.jpg"
+import HeroImage from "../../assets/images/hero.jpeg"
 import ArtisticInnovationsLogo from '../../assets/images/artisticinnovations.png';
 
 const styles = {
   container: {
-    height: '50vh',
-    width: '110%',
+    height: '40vh',
+    width: '55%',
     position: 'relative',
     top: 0,
     left: 0,
     backgroundColor: '#F5F5F5',
-    backgroundImage: `linear-gradient(rgba(255,255,255,0.3), rgba(255,255,255,0.3)), url(${HeroImage})`,
+    backgroundImage: `linear-gradient(rgba(255,255,255,0.45), rgba(255,255,255,0.45)), url(${HeroImage})`,
     backgroundPosition: 'center',
     backgroundSize: 'cover',
-    marginTop: '10%',
+    marginTop: '5%',
   },
   header: {
     fontWeight: 'bold',
@@ -23,9 +23,10 @@ const styles = {
     marginBottom: '0.5em',
     textAlign: 'center',
     position: 'absolute', // make the header position absolute
-    top: '70%', // position the header below the logo
+    top: '60%', // position the header below the logo
     left: '50%',
     transform: 'translate(-50%, -50%)', // center the header
+    fontFamily: "segoeFont"
   },
   logo: {
     margin: 'auto',
@@ -43,6 +44,8 @@ const Hero = () => {
       <img src={ArtisticInnovationsLogo} alt="Artistic Innovations Logo" style={styles.logo} />
       <Typography variant="h1" style={styles.header}>
         artistic innovations
+        <br></br>
+        Deborah Stair
       </Typography>
     </div>
   );

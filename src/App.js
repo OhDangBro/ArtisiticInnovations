@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './App.css';
+import Hero from './components/hero';
 import NavBar from './components/navbar';
 import Footer from './components/footer';
 import ArtisticInnovations from './components/artisticinnovations';
@@ -8,6 +9,9 @@ import CommercialWindowArt from './components/commercialwindowart';
 import CustomAndCommercial from './components/customandcommercial';
 import ContactInfo from './components/contact';
 import FauxBackground from "../src/assets/images/fauxBack.jpg"
+import Divider from '@mui/material/Divider';
+
+
 
 const styles = {
   container: {
@@ -15,20 +19,26 @@ const styles = {
     minWidth: '100vw',
     position: 'relative',
     backgroundImage: ` url(${FauxBackground})`,
-
+    backgroundPosition: 'center',
+    backgroundSize: 'cover',
+    backgroundRepeat: 'no-repeat'
   },
   hero: {
+    position: 'absolute',
+    top: '50%',
+    transform: 'translateY(-50%)',
     height: '39vh', // adjust the height to your preference
   },
   navBarContainer: {
     position: 'relative',
     top: '-5em', // adjust the top value to move the navbar down
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
   },
   navBar: {
-    position: 'absolute',
     top: '100%',
     left: 0,
-    height: '100vh', // add this to make the navbar take up the full height of the screen
   },
   artisticInnovations: {
     marginTop: '3em', // add margin to move the content below the navbar
@@ -37,7 +47,7 @@ const styles = {
   footer: {
     paddingTop: '2em', // add the desired margin value here
   },
-};
+}
 
 function App() {
   const [currentPage, setCurrentPage] = useState("Home");
@@ -65,20 +75,22 @@ function App() {
   };
 
   return (
-<div id='Main' style={styles.container}>
-      <div style={styles.navBarContainer}>
-        <div style={styles.navBar}>
+      <div id='Main' style={styles.container}>
+        <div style={styles.navBarContainer}>
+        <Hero style={styles.hero} />
+          <div style={styles.navBar}>
           <NavBar handleClick={handlePageChange}/>
+<Divider variant="middle" sx={{ position: 'relative', top: '-3vh', width: '95%', borderTop: '1px solid rgba(0,0,0,1)' }} />
+          </div>
+        </div>
+        <div style={styles.artisticInnovations}>
+          <main id="Main">{renderPage()}</main>
+        </div>
+        <div style={styles.footer}>
+          <Footer/>
         </div>
       </div>
-      <div style={styles.artisticInnovations}>
-        <main id="Main">{renderPage()}</main>
-      </div>
-      <div style={styles.footer}>
-        <Footer/>
-      </div>
-    </div>
-  );
-};
+    );
+  };
 
 export default App;

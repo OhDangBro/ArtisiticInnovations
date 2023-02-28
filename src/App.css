@@ -1,11 +1,27 @@
+
+@font-face {
+    font-family: segoeFont;
+    src: url("./assets/fonts/Segoe-Print-Font.ttf")
+  }
+
+
+
+
 .h2Header {
-    margin-top: 3rem !important;
-    font-size: 35px !important;
+    margin-top: .2rem !important;
+    font-size: 25px !important;
+    font-family: segoeFont !important;
 }
 
 .h3Description {
     font-size: 20px !important;
+    width: 98%;
+    font-family: segoeFont !important;
 }
+
+
+
+
 
 @media (max-width: 768px) {
 
@@ -16,11 +32,11 @@
 
     .h2Header {
         margin-top: 3rem !important;
-        font-size: 25px !important;
+        font-size: 35px !important;
     }
     
     .h3Description {
-        font-size: 12px !important;
+        font-size: 14px !important;
     }
 
 }

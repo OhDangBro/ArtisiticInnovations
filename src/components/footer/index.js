@@ -3,14 +3,12 @@ import { Container, Grid, Typography } from '@material-ui/core';
 const styles = {
   container: {
     backgroundColor: '#F5F5F5',
-    padding: '1em',
     display: 'flex',
     flexDirection: 'column',
     minHeight: '3vh',
     position: 'absolute',
     bottom: 0,
     left: 0,
-    width: '100%',
   },
   section: {
     display: 'flex',
@@ -36,7 +34,7 @@ const styles = {
 
 const Footer = () => {
   return (
-    <footer style={styles.container}>
+    <footer style={{...styles.container, width: "100vw"}} >
       <Container maxWidth="xl">
         <Grid container spacing={1} style={{ display: 'flex', flexWrap: 'wrap' }}>
           <Grid item xs={4} style={{ ...styles.section, flexBasis: '33%', justifyContent: 'flex-start' }}>

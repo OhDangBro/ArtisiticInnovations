@@ -14,8 +14,6 @@ const styles = {
     alignItems: 'center',
     textAlign: 'center',
     margin: '1em 0',
-    paddingTop: "10%"
-
   },
   header: {
     fontSize: '3.5em',
@@ -23,19 +21,21 @@ const styles = {
     textAlign: 'center',
     marginTop: '2em',
     color: 'hsl(274deg 53% 63%)',
-    fontFamily: 'Segoe',
-    textDecoration: 'underline',
+    fontFamily: 'segoeFont',
   },
   h2: {
     fontSize: '2em',
     fontWeight: 'bold',
     textAlign: 'center',
+    fontFamily: 'segoeFont',
     margin: '1em 0',
   },
   h3: {
     fontSize: '1.2em',
     textAlign: 'center',
     margin: '1em 0',
+    fontFamily: 'segoeFont',
+
   },
   phoneIcon: {
     marginRight: '0.5em',
@@ -44,6 +44,9 @@ const styles = {
     color: 'white',
     padding: '0.5em',
   },
+  h5: {
+    fontFamily: "segoeFont"
+  }
 };
 
 const ContactInfo = () => {
@@ -51,7 +54,7 @@ const ContactInfo = () => {
     <React.Fragment>
     <Container maxWidth="xl">
       <div style={styles.container}>
-        <header style={styles.header}>Contact Us</header>
+        <header style={styles.header}>Contact Us:</header>
         <h2 style={styles.h3}>
           We're always happy to hear from you. Please feel free to get in touch with us using the contact information below.
         </h2>

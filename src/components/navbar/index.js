@@ -15,14 +15,12 @@ const Navbar = ({ handleClick }) => {
   return (
     <nav style={{
         height: '10vh',
-        background: '#F5F5F5',
         display: 'flex',
-        justifyContent: 'space-between',
-        alignItems: 'center',
-        position: 'fixed',
         top: 0,
-        width: '100%',
-        zIndex: 1
+        width: '70vw',
+        zIndex: 1,
+        margin: '0 auto',
+
         }}>
       <button className="hamburger" onClick={toggleNav}>&#9776;</button>
       <div className={`navbar-collapse ${isOpen ? "show" : ""}`} style={{
@@ -34,7 +32,7 @@ const Navbar = ({ handleClick }) => {
         }}>
         <a className="navLink" href="#Home" style={{ 
             fontSize: "1.3rem",
-            fontFamily: "regularFont",
+            fontFamily: "segoeFont",
             textDecoration: "none",
             color: "black",
             flex: "1",
@@ -44,7 +42,7 @@ const Navbar = ({ handleClick }) => {
           }} onClick={() => { handleClick('Home'); closeNav(); }}>Artistic Innovations</a>
         <a className="navLink" href="#Services" style={{ 
             fontSize: "1.3rem",
-            fontFamily: "regularFont",
+            fontFamily: "segoeFont",
             textDecoration: "none",
             color: "black",
             flex: "1",
@@ -54,7 +52,7 @@ const Navbar = ({ handleClick }) => {
           }} onClick={() => { handleClick('Murals'); closeNav(); }}>Murals</a>
         <a className="navLink" href="#About" style={{ 
             fontSize: "1.3rem",
-            fontFamily: "regularFont",
+            fontFamily: "segoeFont",
             textDecoration: "none",
             color: "black",
             flex: "1",
@@ -64,7 +62,7 @@ const Navbar = ({ handleClick }) => {
           }} onClick={() => { handleClick('CommercialWindowArt'); closeNav(); }}>Commercial Window Art</a>
         <a className="navLink" href="#About" style={{ 
             fontSize: "1.3rem",
-            fontFamily: "regularFont",
+            fontFamily: "segoeFont",
             textDecoration: "none",
             color: "black",
             flex: "1",
@@ -74,7 +72,7 @@ const Navbar = ({ handleClick }) => {
           }} onClick={() => { handleClick('Custom'); closeNav(); }}>Custom</a>
         <a className="navLink" href="#Contact" style={{ 
             fontSize: "1.3rem",
-            fontFamily: "regularFont",
+            fontFamily: "segoeFont",
             textDecoration: "none",
             color: "black",
             flex: "1",

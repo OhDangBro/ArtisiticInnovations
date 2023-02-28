@@ -6,6 +6,7 @@ import ImageListItem from '@mui/material/ImageListItem';
 import itemData from './itemdata';
 import 'react-image-lightbox/style.css';
 import Lightbox from 'react-image-lightbox';
+import MuralOne from "../../assets/images/murals/muralOne.jpg"
 
 const styles = {
   container: {
@@ -14,26 +15,35 @@ const styles = {
     alignItems: 'center',
     paddingTop: '5%',
   },
-  h2: {
-    fontSize: '2em',
+  h1: {
+    fontSize: '4em',
     fontWeight: 'bold',
-    textAlign: 'center',
-    margin: '1em 0',
-    fontFamily: 'Segoe',
+    textAlign: 'left',
+    fontFamily: 'segoeFont',
     color: 'hsl(274deg 53% 63%)',
+  },
+  h2: {
+    fontSize: '1.5em',
+    fontWeight: 'bold',
+    textAlign: 'left',
+    fontFamily: 'segoeFont',
+    color: 'hsl(274deg 53% 63%)',
+    width: '60%',
   },
   h3: {
     fontSize: '1.2em',
     textAlign: 'center',
     margin: '1em 0',
     width: '80%',
+    fontFamily: 'segoeFont',
   },
   imageContainer: {
     display: 'flex',
     justifyContent: 'center',
     flexWrap: 'wrap',
     margin: '2em 0',
-    width: '100%',
+    width: '100vw',
+    
   },
   button: {
     margin: '2em 0',
@@ -72,21 +82,32 @@ const Murals = ({ handleClick }) => {
     <React.Fragment>
       <Container className="container" maxWidth="xl">
         <div id="Murals" style={styles.container}>
-          <h2 className="h2Header" style={styles.h2}>
-            Murals
-          </h2>
-          <h3 className="h3Description" style={styles.h3}>
-            Mural painting is a distinctive art form that blends the line between fine art and house
-            painting. As a medium that's applied directly to a wall surface, each mural is uniquely
-            crafted and custom designed to capture the essence of a particular space. The result is a
-            stunning visual representation of architecture, atmosphere, color, and design that
-            expresses a range of ideas, thoughts, imagination, and emotions. With murals, you have
-            the opportunity to bring your space to life in a way that's both creative and
-            transformative.
-          </h3>
+        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '2rem' }}>
+  <div>
+    <h1 className="h1Header" style={styles.h1}>
+      Murals
+    </h1>
+    <h2 className="h2Header" style={styles.h2}>
+      Mural painting is a distinctive art form that blends the line between fine art and house painting.
+    </h2>
+    <h3 className="h3Description" style={styles.h3}>
+      As a medium that's applied directly to a wall surface, each mural is uniquely
+      crafted and custom designed to capture the essence of a particular space. The result is a
+      stunning visual representation of architecture, atmosphere, color, and design that
+      expresses a range of ideas, thoughts, imagination, and emotions. With murals, you have
+      the opportunity to bring your space to life in a way that's both creative and
+      transformative.
+    </h3>
+  </div>
+  <div>
+  <img src={MuralOne} alt="your-image-alt-text" style={{ height: '400px', width: '400px' }} />
+
+
+</div>
+</div>
           <div style={styles.imageContainer}>
           <ImageList
-  sx={{ width: 1200, height: 550 }}
+  sx={{ width: "100vw", height: 550 }}
   variant="quilted"
   cols={4}
   rowHeight={121}
