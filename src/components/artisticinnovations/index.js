@@ -39,7 +39,6 @@ const styles = {
     fontSize: '3.2em',
     fontWeight: 'bold',
     textAlign: 'center',
-    margin: '1em 0',
     fontFamily: 'segoeFont',
   },
   h3: {
@@ -89,6 +88,15 @@ const styles = {
       backgroundColor: 'hsl(274deg 53% 50%)',
     },
   },
+      // Add a media query for smaller screens
+      '@media (max-width: 1200px)': {
+        container: {
+          padding: '1em',
+        },
+        '.MuiGrid-container': {
+          flexDirection: 'column',
+        },
+      },
 };
 
 const ArtisticInnovations = ({ handleClick }) => {
@@ -100,9 +108,9 @@ const ArtisticInnovations = ({ handleClick }) => {
           <h2 style={styles.h2}>Custom Design & Painting Services</h2>
           <h3 style={styles.h3}>
             "Bringing 30 years of expertise in custom design painting to your walls, we specialize in creating stunning wall
-            murals, faux finishes, and window art for both residential and commercial properties - both inside and out."
+            murals, custom pieces, both large and small, faux finishes, and window art for both residential and commercial properties - both inside and out."
           </h3>
-          <Grid container spacing={2}>
+          <Grid container spacing={2} className="homeGrid">
             <Grid item xs={6}>
               <Item>     
                 <div style={styles.text}>
@@ -123,17 +131,17 @@ const ArtisticInnovations = ({ handleClick }) => {
             </Grid>
             <Divider variant="middle" sx={{ width: '120%', borderTop: '1px solid rgba(0,0,0,0.2)' }} />
 
-            <Grid container spacing={2}>
+            <Grid container spacing={2} className="homeGrid">
             <Grid item xs={6}>
               <Item>
-                <div style={styles.image}>
+                <div className="homeMiddleImage" style={styles.image}>
                   <img src={windowArtHome} alt="custom commercial window art painting" style={{ width: '400px', height: '400px' }} />
                 </div>
               </Item>
             </Grid>
             <Grid item xs={6}>
               <Item>
-                <div style={styles.text}>
+                <div className="homeMiddleText" style={styles.text}>
                   <h4 style={styles.h4}>Commercial Window Art</h4>
                   <p style={styles.p}>Commercial Window Art is a highly effective way to create an eye-catching focal point that draws customers into your business. Each window is a 'work of art' in its own right, and as such, Commercial Window Art is custom-designed for your business, utilizing color and imagination to entice customers to your front door.</p>
                   <Button variant="contained" color="primary" style={styles.button} onClick={() => { handleClick('CommercialWindowArt'); }}>See more</Button>
@@ -142,7 +150,7 @@ const ArtisticInnovations = ({ handleClick }) => {
             </Grid>
             </Grid>
             <Divider variant="middle" sx={{ width: '120%', borderTop: '1px solid rgba(0,0,0,0.2)' }} />
-            <Grid container spacing={2}>
+            <Grid container spacing={2} className="homeGrid">
             <Grid item xs={6}>
               <Item>
                 <div style={styles.text}>

@@ -46,6 +46,7 @@ const styles = {
   },
   footer: {
     paddingTop: '2em', // add the desired margin value here
+    marginTop: '2em', // add the desired margin value here
   },
 }
 

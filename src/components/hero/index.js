@@ -40,9 +40,9 @@ const styles = {
 
 const Hero = () => {
   return (
-    <div style={styles.container}>
-      <img src={ArtisticInnovationsLogo} alt="Artistic Innovations Logo" style={styles.logo} />
-      <Typography variant="h1" style={styles.header}>
+    <div className="heroContainer" style={styles.container}>
+      <img className="heroImage" src={ArtisticInnovationsLogo} alt="Artistic Innovations Logo" style={styles.logo} />
+      <Typography className="heroFont" variant="h1" style={styles.header}>
         artistic innovations
         <br></br>
         Deborah Stair
