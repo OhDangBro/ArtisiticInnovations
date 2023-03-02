@@ -16,8 +16,6 @@ const Item = styled(Paper)(({ theme }) => ({
   ...theme.typography.body2,
   padding: theme.spacing(1),
   textAlign: 'center',
-  height: '500px',
-  width: '700px',
   boxShadow: "none"
 }));
 
@@ -54,11 +52,13 @@ const styles = {
     margin: '1em 0',
     fontFamily: 'segoeFont',
     color: 'hsl(274deg 53% 63%)',
+    
   },
   p: {
     fontSize: '1.6em',
     margin: '1em 0',
     fontFamily: 'segoeFont',
+    width: '100%',
   },
   text: {
     marginRight: '1em',
@@ -71,6 +71,7 @@ const styles = {
     maxHeight: '100%',
     width: '100%',
     margin: '5em 0',
+    
   },
   button: {
     backgroundColor: 'hsl(274deg 53% 63%)',
@@ -87,20 +88,52 @@ const styles = {
     '&:hover': {
       backgroundColor: 'hsl(274deg 53% 50%)',
     },
+
   },
-      // Add a media query for smaller screens
-      '@media (max-width: 1200px)': {
-        container: {
-          padding: '1em',
-        },
-        '.MuiGrid-container': {
-          flexDirection: 'column',
-        },
-      },
+  '@media (max-width: 800px)': {
+    container: {
+      padding: '1em',
+    },
+    '.MuiGrid-container': {
+      flexDirection: 'column',
+    },
+    image: {
+      marginLeft: 'auto',
+      marginRight: 'auto',
+      maxWidth: '375px',
+      maxHeight: '375px',
+      width: 'auto',
+      height: 'auto',
+      margin: '1em 0',
+    },
+    text: {
+      marginRight: 'auto',
+      marginLeft: 'auto',
+      width: '90%',
+      margin: '1em 0',
+    },
+    h2: {
+      fontSize: '2.2em',
+    },
+    h3: {
+      fontSize: '1.2em',
+      paddingBottom: "2%",
+    },
+    h4: {
+      fontSize: '2.5em',
+    },
+    p: {
+      fontSize: '1.2em',
+    },
+    button: {
+      fontSize: '1em',
+    },
+    
+  },
 };
 
 const ArtisticInnovations = ({ handleClick }) => {
-  const isMobile = useMediaQuery('(max-width:600px)');
+  const isMobile = useMediaQuery('(max-width:800px)');
   return (
     <React.Fragment> 
       <Container maxWidth="xl">
@@ -110,18 +143,19 @@ const ArtisticInnovations = ({ handleClick }) => {
             "Bringing 30 years of expertise in custom design painting to your walls, we specialize in creating stunning wall
             murals, custom pieces, both large and small, faux finishes, and window art for both residential and commercial properties - both inside and out."
           </h3>
-          <Grid container spacing={2} className="homeGrid">
-            <Grid item xs={6}>
-              <Item>     
-                <div style={styles.text}>
-                  <h4 style={styles.h4}>Murals</h4>
-                  <p style={styles.p}>Mural painting is a distinctive art form that blends the line between fine art and house painting. As a medium that's applied directly to a wall surface, each mural is uniquely
-                  crafted and custom designed to capture the essence of a particular space. </p>
-                  <Button variant="contained" color="primary" style={styles.button} onClick={() => { handleClick('Murals'); }}>See more</Button>
-                </div>
-              </Item>
-            </Grid>
-            <Grid item xs={6}>
+          <div className="homeGrid">
+          <Grid container spacing={2} >
+          <Grid item xs={12} sm={6}>
+  <Item>
+    <div style={{ ...styles.text, textAlign: isMobile ? 'center' : 'left' }}>
+      <h4 style={styles.h4}>Murals</h4>
+      <p  style={styles.p}>Mural painting is a distinctive art form that blends the line between fine art and house painting. As a medium that's applied directly to a wall surface, each mural is uniquely
+        crafted and custom designed to capture the essence of a particular space. </p>
+      <Button variant="contained" color="primary" style={styles.button} onClick={() => { handleClick('Murals'); }}>See more</Button>
+    </div>
+  </Item>
+</Grid>
+            <Grid item xs={12} sm={6}>
               <Item>   
                 <div style={styles.image}>
                   <img src={muralHome} alt="custom artistic mural painting" style={{ width: '400px', height: '400px' }} />
@@ -129,17 +163,16 @@ const ArtisticInnovations = ({ handleClick }) => {
               </Item>
             </Grid>
             </Grid>
-            <Divider variant="middle" sx={{ width: '120%', borderTop: '1px solid rgba(0,0,0,0.2)' }} />
-
+            <Divider variant="middle" sx={{ width: '100%', borderTop: '1px solid rgba(0,0,0,0.2)' }} className="divider" />
             <Grid container spacing={2} className="homeGrid">
-            <Grid item xs={6}>
+            <Grid item xs={12} sm={6}>
               <Item>
                 <div className="homeMiddleImage" style={styles.image}>
                   <img src={windowArtHome} alt="custom commercial window art painting" style={{ width: '400px', height: '400px' }} />
                 </div>
               </Item>
             </Grid>
-            <Grid item xs={6}>
+            <Grid item xs={12} sm={6}>
               <Item>
                 <div className="homeMiddleText" style={styles.text}>
                   <h4 style={styles.h4}>Commercial Window Art</h4>
@@ -149,11 +182,11 @@ const ArtisticInnovations = ({ handleClick }) => {
               </Item>
             </Grid>
             </Grid>
-            <Divider variant="middle" sx={{ width: '120%', borderTop: '1px solid rgba(0,0,0,0.2)' }} />
+            <Divider variant="middle" sx={{ width: '100%', borderTop: '1px solid rgba(0,0,0,0.2)' }} className="divider"  />
             <Grid container spacing={2} className="homeGrid">
-            <Grid item xs={6}>
+            <Grid item xs={12} sm={6}>
               <Item>
-                <div style={styles.text}>
+                <div className="homeMiddleText"  style={styles.text} >
                   <h4 style={styles.h4}>Custom</h4>
                   <p style={styles.p}>Custom Painting is a powerful medium that can be used to express your individualism and unique sense of self through the use of design and color. Whether it's a small piece of artwork in a room or a large-scale mural, custom painting can truly personalize a space and make it your own. This is especially true for children's rooms, where a personalized touch can help foster creativity and imagination. </p>
                   <Button variant="contained" color="primary" style={styles.button} onClick={() => { handleClick('Custom'); }}>See more</Button>
@@ -168,6 +201,7 @@ const ArtisticInnovations = ({ handleClick }) => {
                   </Item>
                   </Grid>
         </Grid>
+        </div>
       </div>
     </Container>
   </React.Fragment>

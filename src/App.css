@@ -1,8 +1,7 @@
-
 @font-face {
     font-family: segoeFont;
     src: url("./assets/fonts/Segoe-Print-Font.ttf")
-  }
+}
 
 
 
@@ -23,348 +22,455 @@
 
 
 
-@media (max-width: 768px) {
 
-    .imageList{
+
+
+/* Media Query for Mobile Devices */
+@media (max-width: 480px) {
+    body {
+        background-color: red;
+    }
+    .homeGrid {
+        overflow: hidden !important;
+        margin: none !important;
+    }
+    .homeGrid img {
+        width: 375px !important;
+        height: 375px !important;
+        margin: none !important;
+    }
+    .divider {
+        width: 90% !important;
+    }
+    .heroContainer {
+        transform: scale(0.4);
+        margin-top: 5%;
+        top: 50px !important;
+        width: 110vh !important;
+        height: 40vh !important;
+    }
+    .heroImage {
+        width: 30% !important;
+        height: 30% !important;
+    }
+    .heroFont {
+        font-size: 35px !important;
+    }
+    h1 {
+        font-size: 1.2em;
+    }
+
+    h2 {
+        font-size: 1.6rem !important;
+    }
+
+    h3 {
+        font-size: 1.2rem !important;
+    }
+
+    h4 {
+        font-size: 1.5rem !important;
+    }
+
+    p {
+        font-size: 1rem !important;
+    }
+}
+
+/* Media Query for low resolution  Tablets, Ipads */
+@media (min-width: 481px) and (max-width: 600px) {
+    body {
+        background-color: yellow;
+    }
+
+    .heroContainer {
+        transform: scale(.6);
+        margin-top: 5%;
+        top: 50px !important;
+        width: 100% !important;
+        height: 20vh !important;
+    }
+
+    .heroImage {
+        width: 30% !important;
+        height: 30% !important;
+    }
+
+    .heroFont {
+        font-size: 15px !important;
+    }
+
+    
+}
+
+@media (min-width: 600px) and (max-width: 767px) {
+    body {
+        background-color: yellow;
+    }
+
+    .heroContainer {
+        transform: scale(.6);
+        margin-top: 5%;
+        top: 50px !important;
+        width: 100% !important;
+        height: 25vh !important;
+    }
+
+    .heroImage {
+        width: 30% !important;
+        height: 30% !important;
+    }
+
+    .heroFont {
+        font-size: 15px !important;
+    }
+
+    .imageList {
         width: 350px !important;
-    height: 300px !important;
+        height: 300px !important;
     }
 
     .h2Header {
         margin-top: 3rem !important;
         font-size: 35px !important;
     }
-    
+
     .h3Description {
         font-size: 14px !important;
     }
 
+    .homeGrid {
+        width: 50% !important;
+    }
 }
 
-
-    /* Media Query for Mobile Devices */
-    @media (max-width: 480px) {
-        body {
-            background-color: red;
-        }
-    }
-      
-    /* Media Query for low resolution  Tablets, Ipads */
-    @media (min-width: 481px) and (max-width: 600px) {
-        body {
-            background-color: yellow;
-        }
-        .heroContainer {
-            transform: scale(.6);
-            margin-top: 5%;
-            top: 50px !important;
-            width: 100% !important;
-            height: 20vh !important;
-        }
-        .heroImage {
-            width: 30% !important;
-            height: 30% !important;
-        }
-        .heroFont{
-            font-size: 15px !important;
-        }
+/* Media Query for Tablets Ipads portrait mode */
+@media (min-width: 768px) and (max-width: 1024px) {
+    body {
+        background-color: blue;
     }
 
-    @media (min-width: 600px) and (max-width: 767px) {
-        body {
-            background-color: yellow;
-        }
-        .heroContainer {
-            transform: scale(.6);
-            margin-top: 5%;
-            top: 50px !important;
-            width: 100% !important;
-            height: 25vh !important;
-        }
-        .heroImage {
-            width: 30% !important;
-            height: 30% !important;
-        }
-        .heroFont{
-            font-size: 15px !important;
-        }
-    }
-      
-    /* Media Query for Tablets Ipads portrait mode */
-    @media (min-width: 768px) and (max-width: 1024px){
-        body {
-            background-color: blue;
-        }
-        .navLink {
-            font-size: 10px !important;
-        }
-        .heroContainer {
-            transform: scale(.6);
-            margin-top: 5%;
-            top: 30px;
-            width: 100% !important;
-            height: 35vh !important;
-        }
-        .heroImage {
-            width: 50% !important;
-            height: 50% !important;
-        }
-        .heroFont {
-            font-size: 1.4em !important;
-        }
-        h1 { 
-            font-size: 1.2em;
-        }
-
-        h2 {
-            font-size: 1.6rem !important;
-        }
-        h3 {
-            font-size: 1.2rem !important;
-        }
-        h4 {
-            font-size: 1.5rem !important;
-        }
-        p {
-            font-size: 1rem !important;
-        }
-
-        .homeGrid {
-            flex-direction: column !important;
-        }
-    }
-      
-    /* Media Query for Laptops and Desktops */
-    @media (min-width: 1025px) and (max-width: 1280px){
-        .navLink {
-            font-size: 12px !important;
-        }
-        .heroContainer {
-            transform: scale(.7);
-            margin-top: 5%;
-            top: 30px;
-            width: 100% !important;
-            height: 45vh !important;
-        }
-        .heroImage {
-            width: 50% !important;
-            height: 50% !important;
-        }
-        .heroFont {
-            font-size: 1.4em !important;
-        }
-        h1 { 
-            font-size: 1.2em;
-        }
-
-        h2 {
-            font-size: 1.6rem !important;
-        }
-        h3 {
-            font-size: 1.2rem !important;
-        }
-        h4 {
-            font-size: 1.5rem !important;
-        }
-        p {
-            font-size: 1rem !important;
-        }
-        .homeGridMiddle {
-            padding-right: 10% !important;
-        }
-
-      
-    }
-      
-    /* Media Query for Large screens */
-    @media (min-width: 1281px) {
-
-        body {
-            background-color: white;
-        }
-        .navLink {
-            font-size: .6rem !important;
-        }
-        .heroContainer {
-            transform: scale(.7);
-            margin-top: 5%;
-            top: 30px;
-            width: 70% !important;
-            height: 40vh !important;
-        }
-        .heroImage {
-            width: 40% !important;
-            height: 40% !important;
-        }
-        .heroFont {
-            font-size: 1.9em !important;
-        }
-        h1 { 
-            font-size: 1.2em;
-        }
-
-        h2 {
-            font-size: 1.5rem !important;
-        }
-        h3 {
-            font-size: 1.1rem !important;
-        }
-        h4 {
-            font-size: 1.9rem !important;
-        }
-        p {
-            font-size: 1.2rem !important;
-        }
-
-        .homeMiddleImage {
-            margin-left: -80px !important;
-        }
-
-        .homeMiddleText {
-            margin-left: -85px !important;
-        }
-        
-    }
-    @media (min-width: 1481px) {
-        body {
-            background-color: white;
-        }
-        .navLink {
-            font-size: .8rem !important;
-        }
-        .heroContainer {
-            transform: scale(.7);
-            margin-top: 5%;
-            top: 30px;
-            width: 70% !important;
-            height: 40vh !important;
-        }
-        .heroImage {
-            width: 40% !important;
-            height: 40% !important;
-        }
-        .heroFont {
-            font-size: 1.9em !important;
-        }
-        h1 { 
-            font-size: 1.2em;
-        }
-
-        h2 {
-            font-size: 1.6rem !important;
-        }
-        h3 {
-            font-size: 1.2rem !important;
-        }
-        h4 {
-            font-size: 2rem !important;
-        }
-        p {
-            font-size: 1.3rem !important;
-        }
-      
-
+    .navLink {
+        font-size: 10px !important;
     }
 
-    @media (min-width: 1681px) {
-        body {
-            background-color: white;
-        }
-        .navLink {
-            font-size: .9rem !important;
-        }
-        .heroContainer {
-            transform: scale(.7);
-            margin-top: 5%;
-            top: 30px;
-            width: 80% !important;
-            height: 60vh !important;
-        }
-        .heroImage {
-            width: 30% !important;
-            height: 30% !important;
-        }
-        h1 { 
-            font-size: 1.2em;
-        }
-
-        h2 {
-            font-size: 1.6rem !important;
-        }
-        h3 {
-            font-size: 1.2rem !important;
-        }
-        h4 {
-            font-size: 1.5rem !important;
-        }
-        p {
-            font-size: 1rem !important;
-        }
-
+    .heroContainer {
+        transform: scale(.6);
+        margin-top: 5%;
+        top: 30px;
+        width: 100% !important;
+        height: 35vh !important;
     }
 
-    @media (min-width: 1881px) {
-        body {
-            background-color: white;
-        }
-        .navLink {
-            font-size: 1rem !important;
-        }
-        .heroContainer {
-            transform: scale(.7);
-            margin-top: 5%;
-            top: 30px;
-            width: 80% !important;
-            height: 60vh !important;
-        }
-        .heroImage {
-            width: 40% !important;
-            height: 40% !important;
-        }
-        .heroFont {
-            font-size: 2.5rem !important;
-        }
-        h1 { 
-            font-size: 1.9em;
-        }
-
-        h2 {
-            font-size: 2.2rem !important;
-        }
-        h3 {
-            font-size: 1.6rem !important;
-        }
-        h4 {
-            font-size: 2rem !important;
-        }
-        p {
-            font-size: 1.4rem !important;
-        }
-     
-
+    .heroImage {
+        width: 50% !important;
+        height: 50% !important;
     }
 
-    @media (min-width: 2100px) {
-        body {
-            background-color: white;
-        }
-        .navLink {
-            font-size: 1.3rem !important;
-        }
-        .heroContainer {
-            margin-top: 5%;
-            top: 30px;
-            width: 80% !important;
-            height: 60vh !important;
-        }
-        .heroImage {
-            width: 40% !important;
-            height: 40% !important;
-        }
-        .heroFont {
-            font-size: 4rem !important;
-        }
-      
-     
-
+    .heroFont {
+        font-size: 1.4em !important;
     }
+
+    h1 {
+        font-size: 1.2em;
+    }
+
+    h2 {
+        font-size: 1.6rem !important;
+    }
+
+    h3 {
+        font-size: 1.2rem !important;
+    }
+
+    h4 {
+        font-size: 1.5rem !important;
+    }
+
+    p {
+        font-size: 1rem !important;
+    }
+
+    .homeGrid {
+        flex-direction: column !important;
+    }
+}
+
+/* Media Query for Laptops and Desktops */
+@media (min-width: 1025px) and (max-width: 1280px) {
+    .navLink {
+        font-size: 12px !important;
+    }
+
+    .heroContainer {
+        transform: scale(.7);
+        margin-top: 5%;
+        top: 30px;
+        width: 100% !important;
+        height: 45vh !important;
+    }
+
+    .heroImage {
+        width: 50% !important;
+        height: 50% !important;
+    }
+
+    .heroFont {
+        font-size: 1.4em !important;
+    }
+
+    h1 {
+        font-size: 1.2em;
+    }
+
+    h2 {
+        font-size: 1.6rem !important;
+    }
+
+    h3 {
+        font-size: 1.2rem !important;
+    }
+
+    h4 {
+        font-size: 1.5rem !important;
+    }
+
+    p {
+        font-size: 1rem !important;
+    }
+
+    .homeGridMiddle {
+        padding-right: 10% !important;
+    }
+
+
+}
+
+/* Media Query for Large screens */
+@media (min-width: 1281px) {
+
+    body {
+        background-color: white;
+    }
+
+    .navLink {
+        font-size: .6rem !important;
+    }
+
+    .heroContainer {
+        transform: scale(.7);
+        margin-top: 5%;
+        top: 30px;
+        width: 70% !important;
+        height: 40vh !important;
+    }
+
+    .heroImage {
+        width: 40% !important;
+        height: 40% !important;
+    }
+
+    .heroFont {
+        font-size: 1.9em !important;
+    }
+
+    h1 {
+        font-size: 1.2em;
+    }
+
+    h2 {
+        font-size: 1.5rem !important;
+    }
+
+    h3 {
+        font-size: 1.1rem !important;
+    }
+
+    h4 {
+        font-size: 1.9rem !important;
+    }
+
+    p {
+        font-size: 1.2rem !important;
+    }
+
+    .homeMiddleImage {
+        margin-left: -80px !important;
+    }
+
+    .homeMiddleText {
+        margin-left: -85px !important;
+    }
+
+}
+
+@media (min-width: 1481px) {
+    body {
+        background-color: white;
+    }
+
+    .navLink {
+        font-size: .8rem !important;
+    }
+
+    .heroContainer {
+        transform: scale(.7);
+        margin-top: 5%;
+        top: 30px;
+        width: 70% !important;
+        height: 40vh !important;
+    }
+
+    .heroImage {
+        width: 40% !important;
+        height: 40% !important;
+    }
+
+    .heroFont {
+        font-size: 1.9em !important;
+    }
+
+    h1 {
+        font-size: 1.2em;
+    }
+
+    h2 {
+        font-size: 1.6rem !important;
+    }
+
+    h3 {
+        font-size: 1.2rem !important;
+    }
+
+    h4 {
+        font-size: 2rem !important;
+    }
+
+    p {
+        font-size: 1.3rem !important;
+    }
+
+
+}
+
+@media (min-width: 1681px) {
+    body {
+        background-color: white;
+    }
+
+    .navLink {
+        font-size: .9rem !important;
+    }
+
+    .heroContainer {
+        transform: scale(.7);
+        margin-top: 5%;
+        top: 30px;
+        width: 80% !important;
+        height: 60vh !important;
+    }
+
+    .heroImage {
+        width: 30% !important;
+        height: 30% !important;
+    }
+
+    h1 {
+        font-size: 1.2em;
+    }
+
+    h2 {
+        font-size: 1.6rem !important;
+    }
+
+    h3 {
+        font-size: 1.2rem !important;
+    }
+
+    h4 {
+        font-size: 1.5rem !important;
+    }
+
+    p {
+        font-size: 1rem !important;
+    }
+
+}
+
+@media (min-width: 1881px) {
+    body {
+        background-color: white;
+    }
+
+    .navLink {
+        font-size: 1rem !important;
+    }
+
+    .heroContainer {
+        transform: scale(.7);
+        margin-top: 5%;
+        top: 30px;
+        width: 80% !important;
+        height: 60vh !important;
+    }
+
+    .heroImage {
+        width: 40% !important;
+        height: 40% !important;
+    }
+
+    .heroFont {
+        font-size: 2.5rem !important;
+    }
+
+    h1 {
+        font-size: 1.9em;
+    }
+
+    h2 {
+        font-size: 2.2rem !important;
+    }
+
+    h3 {
+        font-size: 1.6rem !important;
+    }
+
+    h4 {
+        font-size: 2rem !important;
+    }
+
+    p {
+        font-size: 1.4rem !important;
+    }
+
+
+}
+
+@media (min-width: 2100px) {
+    body {
+        background-color: white;
+    }
+
+    .navLink {
+        font-size: 1.3rem !important;
+    }
+
+    .heroContainer {
+        margin-top: 5%;
+        top: 30px;
+        width: 80% !important;
+        height: 60vh !important;
+    }
+
+    .heroImage {
+        width: 40% !important;
+        height: 40% !important;
+    }
+
+    .heroFont {
+        font-size: 4rem !important;
+    }
+
+
+
+}

@@ -7,13 +7,15 @@
   }
   
   @media (max-width: 768px) {
-  .hamburger {
-  display: block;
-  color: rgb(0, 0, 0);
-  background-color: transparent;
-  border: aliceblue;
-  
-  }
+    .hamburger {
+      display: block;
+      color: rgb(0, 0, 0);
+      background-color: transparent;
+      border: aliceblue;
+      position: fixed;
+      top: 0;
+      right: 0;
+    }
   
   .navbar-collapse {
   height: 0;
@@ -53,6 +55,9 @@
   .navbar.open {
     height: 100vh;
     width: 100vw;
+  }
+  .css-4362oc-MuiDivider-root {
+    display: none;
   }
 
   
