@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/ArtisiticInnovations/static/css/main.134283c3.css",
-    "main.js": "/ArtisiticInnovations/static/js/main.6e1502a5.js",
+    "main.css": "/ArtisiticInnovations/static/css/main.6a9435c5.css",
+    "main.js": "/ArtisiticInnovations/static/js/main.92446343.js",
     "static/js/787.05c66b2b.chunk.js": "/ArtisiticInnovations/static/js/787.05c66b2b.chunk.js",
     "static/media/customTwo.jpg": "/ArtisiticInnovations/static/media/customTwo.66e196ce54e04b46c35e.jpg",
     "static/media/customOne.jpg": "/ArtisiticInnovations/static/media/customOne.7715e75ceda8bfb68f2b.jpg",
@@ -65,12 +65,12 @@
     "static/media/fauxFinishFour.jpeg": "/ArtisiticInnovations/static/media/fauxFinishFour.d0f820fa6fa3c27ed0b9.jpeg",
     "static/media/fauxFinishTwo.jpeg": "/ArtisiticInnovations/static/media/fauxFinishTwo.46e73cc0606f5d8851c1.jpeg",
     "index.html": "/ArtisiticInnovations/index.html",
-    "main.134283c3.css.map": "/ArtisiticInnovations/static/css/main.134283c3.css.map",
-    "main.6e1502a5.js.map": "/ArtisiticInnovations/static/js/main.6e1502a5.js.map",
+    "main.6a9435c5.css.map": "/ArtisiticInnovations/static/css/main.6a9435c5.css.map",
+    "main.92446343.js.map": "/ArtisiticInnovations/static/js/main.92446343.js.map",
     "787.05c66b2b.chunk.js.map": "/ArtisiticInnovations/static/js/787.05c66b2b.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.134283c3.css",
-    "static/js/main.6e1502a5.js"
+    "static/css/main.6a9435c5.css",
+    "static/js/main.92446343.js"
   ]
 }
