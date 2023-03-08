@@ -8,7 +8,6 @@ import Murals from './components/murals';
 import CommercialWindowArt from './components/commercialwindowart';
 import CustomAndCommercial from './components/customandcommercial';
 import ContactInfo from './components/contact';
-import FauxBackground from "../src/assets/images/fauxBack.jpg"
 import Divider from '@mui/material/Divider';
 
 
@@ -18,10 +17,6 @@ const styles = {
     minHeight: '100vh',
     minWidth: '100vw',
     position: 'relative',
-    backgroundImage: ` url(${FauxBackground})`,
-    backgroundPosition: 'center',
-    backgroundSize: 'cover',
-    backgroundRepeat: 'no-repeat'
   },
   hero: {
     position: 'absolute',

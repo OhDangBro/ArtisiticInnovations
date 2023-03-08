@@ -45,14 +45,14 @@ const styles = {
     padding: '0.5em',
   },
   h5: {
-    fontFamily: "segoeFont"
+    fontFamily: "segoeFont",
   }
 };
 
 const ContactInfo = () => {
   return (
     <React.Fragment>
-    <Container maxWidth="xl">
+    <Container maxWidth="xl" id="Contact">
       <div style={styles.container}>
         <header style={styles.header}>Contact Us:</header>
         <h2 style={styles.h3}>
@@ -68,16 +68,16 @@ const ContactInfo = () => {
         <Box sx={{ display: 'flex', alignItems: 'center', flexDirection: 'row', justifyContent: 'space-between', flex: 2 }}>
   <Box sx={{ display: 'flex', alignItems: 'center', flexDirection: 'column', flex: 1, margin: "40px" }}>
     <LocalPhoneIcon style={styles.phoneIcon} />
-    <Typography variant="h5">Call/Text:</Typography>
-    <a href="tel:555-555-5555">
-      <Typography variant="subtitle1">555-555-5555</Typography>
+    <Typography style={styles.h5} variant="h5">Call/Text:</Typography>
+    <a href="tel:732-893-7440">
+      <Typography variant="subtitle1">732-893-7440</Typography>
     </a>
   </Box>
   <Box sx={{ display: 'flex', alignItems: 'center', flexDirection: 'column', flex: 1, margin: "40px" }}>
     <EmailIcon style={styles.phoneIcon} />
-    <Typography variant="h5">Email:</Typography>
-    <a href="mailto:info@email.com">
-      <Typography variant="subtitle1">info@email.com</Typography>
+    <Typography style={styles.h5} variant="h5">Email:</Typography>
+    <a href="mailto:artinnovations.deborah@email.com">
+      <Typography variant="subtitle1">artinnovations.deborah@email.com</Typography>
     </a>
   </Box>
 </Box>
