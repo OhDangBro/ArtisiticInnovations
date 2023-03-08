@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/ArtisiticInnovations/static/css/main.6a9435c5.css",
-    "main.js": "/ArtisiticInnovations/static/js/main.92446343.js",
+    "main.css": "/ArtisiticInnovations/static/css/main.1a5217d7.css",
+    "main.js": "/ArtisiticInnovations/static/js/main.ff9af2de.js",
     "static/js/787.05c66b2b.chunk.js": "/ArtisiticInnovations/static/js/787.05c66b2b.chunk.js",
     "static/media/customTwo.jpg": "/ArtisiticInnovations/static/media/customTwo.66e196ce54e04b46c35e.jpg",
     "static/media/customOne.jpg": "/ArtisiticInnovations/static/media/customOne.7715e75ceda8bfb68f2b.jpg",
@@ -9,6 +9,7 @@
     "static/media/windowArtThree.jpg": "/ArtisiticInnovations/static/media/windowArtThree.615458b19f9540af7040.jpg",
     "static/media/customThree.jpg": "/ArtisiticInnovations/static/media/customThree.9dab7eed9375001c5720.jpg",
     "static/media/muralThree.jpg": "/ArtisiticInnovations/static/media/muralThree.343fda57ead8430c51cc.jpg",
+    "static/media/hero.png": "/ArtisiticInnovations/static/media/hero.0f427036e31d2422c174.png",
     "static/media/customSeven.jpg": "/ArtisiticInnovations/static/media/customSeven.207c9c11c75a25cd44ee.jpg",
     "static/media/muralSeven.jpg": "/ArtisiticInnovations/static/media/muralSeven.e899a403358053d86e31.jpg",
     "static/media/muralFour.jpg": "/ArtisiticInnovations/static/media/muralFour.c6bd37aa32905061d028.jpg",
@@ -55,7 +56,6 @@
     "static/media/windowArtSeven.jpg": "/ArtisiticInnovations/static/media/windowArtSeven.fbe80cc1b33eb0e63932.jpg",
     "static/media/windowArtFourteen.jpg": "/ArtisiticInnovations/static/media/windowArtFourteen.01f535129888e79238f8.jpg",
     "static/media/windowArtSeventeen.jpg": "/ArtisiticInnovations/static/media/windowArtSeventeen.850495391e5ba5ebaa12.jpg",
-    "static/media/hero.jpeg": "/ArtisiticInnovations/static/media/hero.da493b11600d674d4f89.jpeg",
     "static/media/windowArtEighteen.jpg": "/ArtisiticInnovations/static/media/windowArtEighteen.2509158d14e6323f91fa.jpg",
     "static/media/Segoe-Print-Font.ttf": "/ArtisiticInnovations/static/media/Segoe-Print-Font.864fbd6a2a6ec19899f5.ttf",
     "static/media/artisticinnovations.png": "/ArtisiticInnovations/static/media/artisticinnovations.8c2a8c9842d694ba9acc.png",
@@ -65,12 +65,12 @@
     "static/media/fauxFinishFour.jpeg": "/ArtisiticInnovations/static/media/fauxFinishFour.d0f820fa6fa3c27ed0b9.jpeg",
     "static/media/fauxFinishTwo.jpeg": "/ArtisiticInnovations/static/media/fauxFinishTwo.46e73cc0606f5d8851c1.jpeg",
     "index.html": "/ArtisiticInnovations/index.html",
-    "main.6a9435c5.css.map": "/ArtisiticInnovations/static/css/main.6a9435c5.css.map",
-    "main.92446343.js.map": "/ArtisiticInnovations/static/js/main.92446343.js.map",
+    "main.1a5217d7.css.map": "/ArtisiticInnovations/static/css/main.1a5217d7.css.map",
+    "main.ff9af2de.js.map": "/ArtisiticInnovations/static/js/main.ff9af2de.js.map",
     "787.05c66b2b.chunk.js.map": "/ArtisiticInnovations/static/js/787.05c66b2b.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.6a9435c5.css",
-    "static/js/main.92446343.js"
+    "static/css/main.1a5217d7.css",
+    "static/js/main.ff9af2de.js"
   ]
 }
