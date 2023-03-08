@@ -1,11 +1,7 @@
 import React from 'react';
-import Container from '@mui/material/Container';
-import { Button } from '@material-ui/core';
+import { Container, Grid, Paper, Button, Divider } from '@mui/material';
 import { styled } from '@mui/material/styles';
-import Paper from '@mui/material/Paper';
-import Grid from '@mui/material/Grid';
 import { useMediaQuery } from '@mui/material';
-import Divider from '@mui/material/Divider';
 import muralHome from "../../assets/images/murals/muralFive.jpg";
 import windowArtHome from "../../assets/images/windowArt/windowArtThirteen.jpg";
 import customHome from  "../../assets/images/custom/customOne.jpg";
@@ -18,6 +14,7 @@ const Item = styled(Paper)(({ theme }) => ({
   textAlign: 'center',
   boxShadow: "none"
 }));
+
 
 const styles = {
   container: {
@@ -100,8 +97,8 @@ const styles = {
     image: {
       marginLeft: 'auto',
       marginRight: 'auto',
-      maxWidth: '375px',
-      maxHeight: '375px',
+      maxWidth: '300px',
+      maxHeight: '300px',
       width: 'auto',
       height: 'auto',
       margin: '1em 0',
@@ -136,15 +133,17 @@ const ArtisticInnovations = ({ handleClick }) => {
   const isMobile = useMediaQuery('(max-width:800px)');
   return (
     <React.Fragment> 
-      <Container maxWidth="xl">
+      <Container maxWidth="xl" id="Landing">
         <div style={styles.container}>
           <h2 style={styles.h2}>Custom Design & Painting Services</h2>
           <h3 style={styles.h3}>
             "Bringing 30 years of expertise in custom design painting to your walls, we specialize in creating stunning wall
             murals, custom pieces, both large and small, faux finishes, and window art for both residential and commercial properties - both inside and out."
           </h3>
+          <Divider variant="middle" sx={{ width: '100%', borderTop: '1px solid rgba(0,0,0,0.2)' }} className="divider" />
+<br></br>
           <div className="homeGrid">
-          <Grid container spacing={2} >
+          <Grid className="homeContainer reverseColumn" container spacing={2} >
           <Grid item xs={12} sm={6}>
   <Item>
     <div style={{ ...styles.text, textAlign: isMobile ? 'center' : 'left' }}>
@@ -157,7 +156,7 @@ const ArtisticInnovations = ({ handleClick }) => {
 </Grid>
             <Grid item xs={12} sm={6}>
               <Item>   
-                <div style={styles.image}>
+                <div className="imageMargin" style={styles.image}>
                   <img src={muralHome} alt="custom artistic mural painting" style={{ width: '400px', height: '400px' }} />
                 </div>
               </Item>
@@ -167,7 +166,7 @@ const ArtisticInnovations = ({ handleClick }) => {
             <Grid container spacing={2} className="homeGrid">
             <Grid item xs={12} sm={6}>
               <Item>
-                <div className="homeMiddleImage" style={styles.image}>
+                <div className="homeMiddleImage imageMargin" style={styles.image}>
                   <img src={windowArtHome} alt="custom commercial window art painting" style={{ width: '400px', height: '400px' }} />
                 </div>
               </Item>
@@ -183,7 +182,7 @@ const ArtisticInnovations = ({ handleClick }) => {
             </Grid>
             </Grid>
             <Divider variant="middle" sx={{ width: '100%', borderTop: '1px solid rgba(0,0,0,0.2)' }} className="divider"  />
-            <Grid container spacing={2} className="homeGrid">
+            <Grid container spacing={2} className="homeGrid reverseColumn">
             <Grid item xs={12} sm={6}>
               <Item>
                 <div className="homeMiddleText"  style={styles.text} >
@@ -193,10 +192,10 @@ const ArtisticInnovations = ({ handleClick }) => {
                 </div>
               </Item>
             </Grid>
-            <Grid item xs={6}>
+            <Grid item xs={12} sm={6}>
               <Item>
-                <div style={styles.image}>
-                  <img src={customHome} alt="custom artistic mural painting" style={{ width: '400px', height: '400px' }} />
+                <div style={styles.image} className="imageMargin">
+                  <img  src={customHome} alt="custom artistic mural painting" style={{ width: '400px', height: '400px' }} />
                   </div>
                   </Item>
                   </Grid>

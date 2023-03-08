@@ -81,7 +81,7 @@ function App() {
         <Hero style={styles.hero} />
           <div style={styles.navBar}>
           <NavBar handleClick={handlePageChange}/>
-<Divider variant="middle" sx={{ position: 'relative', top: '-3vh', width: '95%', borderTop: '1px solid rgba(0,0,0,1)' }} />
+<Divider className="navDivider" variant="middle" sx={{ position: 'relative', top: '-3vh', width: '95%', borderTop: '1px solid rgba(0,0,0,1)' }} />
           </div>
         </div>
         <div style={styles.artisticInnovations}>

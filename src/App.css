@@ -18,6 +18,13 @@
     font-family: segoeFont !important;
 }
 
+#Hero {
+    background-image:  url("../src/assets/images/hero.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
 
 
 
@@ -34,27 +41,28 @@
         overflow: hidden !important;
         margin: none !important;
     }
+
+
     .homeGrid img {
-        width: 375px !important;
-        height: 375px !important;
+        width: 300px !important;
+        height: 100% !important;
         margin: none !important;
     }
     .divider {
         width: 90% !important;
     }
     .heroContainer {
-        transform: scale(0.4);
-        margin-top: 5%;
-        top: 50px !important;
-        width: 110vh !important;
-        height: 40vh !important;
+        padding-top: 15%;
+        top: 100px !important;
+        width: 100% !important;
+        height: 10vh !important;
     }
     .heroImage {
-        width: 30% !important;
-        height: 30% !important;
+        width: 60% !important;
+        height: 40% !important;
     }
     .heroFont {
-        font-size: 35px !important;
+        font-size: 15px !important;
     }
     h1 {
         font-size: 1.2em;
@@ -75,74 +83,111 @@
     p {
         font-size: 1rem !important;
     }
-}
+    .h2Header {
+        font-size: 25px !important;
+    }
+    
+    .h3Description {
+        font-size: 15px !important;
+    }
 
+    #Hero {
+        background-size: contain;
+      }
+
+      .navDivider {
+        display: none !important;
+    }
+
+    .imageMargin {
+        margin: 0% !important;
+    }
+
+    .reverseColumn {
+        flex-direction: column-reverse !important;
+    }
+
+   .footerText {
+        font-size: 10px !important;
+        width: 50% !important; 
+    }
+}
 /* Media Query for low resolution  Tablets, Ipads */
-@media (min-width: 481px) and (max-width: 600px) {
+@media (min-width: 480px) and (max-width: 767px) {
     body {
         background-color: yellow;
     }
 
     .heroContainer {
-        transform: scale(.6);
         margin-top: 5%;
         top: 50px !important;
-        width: 100% !important;
-        height: 20vh !important;
+
     }
 
+    #Hero {
+        background-size: contain;
+      }
+
     .heroImage {
-        width: 30% !important;
+        width: 30vw !important;
         height: 30% !important;
     }
 
     .heroFont {
         font-size: 15px !important;
     }
+
+    .homeGrid {
+        overflow: hidden !important;
+        margin: none !important;
+    }
+    .homeGrid img {
+        width: 250px !important;
+        height: 250px !important;
+        margin: none !important;
+    }
+
+    h2 {
+        font-size: 1.5rem !important;
+    }
+
+    h3 {
+        font-size: 1.2rem !important;
+    }
+
+    h4 {
+        font-size: 1.5rem !important;
+    }
+
+   p {
+    font-size: 11px !important;
+   }
+
+   button {
+    font-size: .7rem !important;
+   }
+
+   .hamburger {
+    font-size: 1.5rem !important;
+   }
+
+   .heroContainer {
+    padding-top: 15%;
+    top: 100px !important;
+    width: 100vw !important;
+    height:10vh !important;
+}
+
+.navDivider {
+    display: none !important;
+}
+
+  
 
     
 }
 
-@media (min-width: 600px) and (max-width: 767px) {
-    body {
-        background-color: yellow;
-    }
 
-    .heroContainer {
-        transform: scale(.6);
-        margin-top: 5%;
-        top: 50px !important;
-        width: 100% !important;
-        height: 25vh !important;
-    }
-
-    .heroImage {
-        width: 30% !important;
-        height: 30% !important;
-    }
-
-    .heroFont {
-        font-size: 15px !important;
-    }
-
-    .imageList {
-        width: 350px !important;
-        height: 300px !important;
-    }
-
-    .h2Header {
-        margin-top: 3rem !important;
-        font-size: 35px !important;
-    }
-
-    .h3Description {
-        font-size: 14px !important;
-    }
-
-    .homeGrid {
-        width: 50% !important;
-    }
-}
 
 /* Media Query for Tablets Ipads portrait mode */
 @media (min-width: 768px) and (max-width: 1024px) {
@@ -150,50 +195,48 @@
         background-color: blue;
     }
 
-    .navLink {
-        font-size: 10px !important;
-    }
-
-    .heroContainer {
-        transform: scale(.6);
-        margin-top: 5%;
-        top: 30px;
-        width: 100% !important;
-        height: 35vh !important;
-    }
-
-    .heroImage {
-        width: 50% !important;
-        height: 50% !important;
-    }
-
-    .heroFont {
-        font-size: 1.4em !important;
-    }
-
-    h1 {
-        font-size: 1.2em;
-    }
-
-    h2 {
-        font-size: 1.6rem !important;
+    h2{
+        font-size: 2rem !important;
     }
 
     h3 {
-        font-size: 1.2rem !important;
-    }
-
-    h4 {
-        font-size: 1.5rem !important;
-    }
-
-    p {
         font-size: 1rem !important;
     }
 
-    .homeGrid {
-        flex-direction: column !important;
+    h4 {
+        font-size: 2rem !important;
     }
+
+    p {
+        font-size: 15px !important;
+    }
+
+    .homeGrid  img {
+        width: 300px !important;
+        height: 300px !important;
+        margin: none !important;
+    }
+
+    .navLink {
+        font-size: .6rem !important;
+    }
+
+    .heroContainer {
+        transform: scale(.8);
+        margin-top: 5%;
+         width: 100% !important;
+        height: 35vh !important;
+    }
+
+    #Hero h1 {
+        font-size: 30px !important;
+    }
+
+    #Hero {
+        background-size: contain;
+      }
+
+   
 }
 
 /* Media Query for Laptops and Desktops */

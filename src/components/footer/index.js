@@ -1,4 +1,5 @@
-import { Container, Grid, Typography } from '@material-ui/core';
+import { Container, Grid, Typography, IconButton } from '@material-ui/core';
+import { Email, Phone } from '@material-ui/icons';
 
 const styles = {
   container: {
@@ -9,8 +10,7 @@ const styles = {
     position: 'absolute',
     bottom: 0,
     left: 0,
-    borderTop: '1px solid black', // add this line to add a border to the top black line
-
+    borderTop: '1px solid black',
   },
   section: {
     display: 'flex',
@@ -26,7 +26,6 @@ const styles = {
     flexDirection: 'column',
     alignItems: 'center',
     justifyContent: 'center',
-
   },
   link: {
     textDecoration: 'none',
@@ -36,31 +35,38 @@ const styles = {
 };
 
 const Footer = () => {
+  const handleEmailClick = () => {
+    window.location.href = "mailto:artinnovations.deborah@gmail.com";
+  };
+
+  const handlePhoneClick = () => {
+    window.location.href = "tel:+17328937440";
+  };
+
   return (
-    <footer style={{...styles.container, width: "100vw"}} >
+    <footer id="#Footer" style={{...styles.container, width: "100vw"}} >
       <Container maxWidth="xl">
         <Grid container spacing={1} style={{ display: 'flex', flexWrap: 'wrap' }}>
           <Grid item xs={4} style={{ ...styles.section, flexBasis: '33%', justifyContent: 'flex-start' }}>
             <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'left' }}>
-            <Typography variant="body1" align="center" style={{ fontSize: '12px' }}>artinnovations.deborah@gmail.com</Typography>
-
+              <IconButton aria-label="Email" onClick={handleEmailClick}>
+                <Email />
+              </IconButton>
             </div>
           </Grid>
-          {/* <div style={styles.divider}></div> */}
           <Grid item xs={4} style={{ ...styles.section, flexBasis: '33.33%', justifyContent: 'center' }}>
             <div style={styles.contactInfo}>
               <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-                <Typography variant="body1" align="center" style={{ fontSize: '12px' }}>Deborah Stair</Typography>
-                <Typography variant="body1" align="center" style={{ fontSize: '12px' }}>artistic innovations &copy; {new Date().getFullYear()}</Typography>
-
+                <Typography className="footerText" variant="body1" align="center" style={{ fontSize: '12px' }}>Deborah Stair</Typography>
+                <Typography className="footerText" variant="body1" align="center" style={{ fontSize: '12px' }}>artistic innovations &copy; {new Date().getFullYear()}</Typography>
               </div>
             </div>
           </Grid>
-          {/* <div style={styles.divider}></div> */}
           <Grid item xs={4} style={{ ...styles.section, flexBasis: '33.33%', justifyContent: 'flex-end' }}>
             <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'right' }}>
-            <Typography variant="body1" align="center" style={{ fontSize: '12px' }}>732-893-7440</Typography>
-
+              <IconButton aria-label="Phone" onClick={handlePhoneClick}>
+                <Phone />
+              </IconButton>
             </div>
           </Grid>
         </Grid>
