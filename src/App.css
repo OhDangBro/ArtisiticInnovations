@@ -5,10 +5,10 @@
 
 
 #Main {
-    background-image: url("../src/assets/images/fauxBack.jpg");
-    background-size: cover;
+    background-image: url("../src/assets/images/fauxBack1.jpg");
     background-position: center;
     background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
 .h2Header {
@@ -24,10 +24,12 @@
 }
 
 #Hero {
-    background-image:  url("../src/assets/images/hero.png");
+    background-image: url("../src/assets/images/hero.png");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+   
+    
   }
 
 

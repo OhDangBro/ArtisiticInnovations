@@ -19,7 +19,7 @@ const styles = {
     fontSize: '3.5em',
     fontWeight: 'bold',
     textAlign: 'center',
-    marginTop: '2em',
+  
     color: 'hsl(274deg 53% 63%)',
     fontFamily: 'segoeFont',
   },

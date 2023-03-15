@@ -3,6 +3,11 @@ import fauxTwo from "../../assets/images/faux/fauxFinishTwo.jpeg";
 import fauxThree from "../../assets/images/faux/fauxFinishThree.jpeg";
 import fauxFour from "../../assets/images/faux/fauxFinishFour.jpeg";
 import fauxFive from "../../assets/images/faux/fauxFinishFive.jpeg";
+import fauxSix from "../../assets/images/faux/fauxFinishSix.jpg";
+import fauxSeven from "../../assets/images/faux/fauxFinishSeven.jpg";
+import fauxEight from "../../assets/images/faux/fauxFinishEight.jpg";
+import fauxNine from "../../assets/images/faux/fauxFinishNine.jpg";
+import fauxTen from "../../assets/images/faux/fauxFinishTen.jpg";
 
 const itemData = [
     {
@@ -28,6 +33,31 @@ const itemData = [
       img: fauxFive,
       title: 'custom Five',
       cols: 2,
+    },
+    {
+      img: fauxSix,
+      title: 'faux Finish Six',
+      cols: 1,
+    },
+    {
+      img: fauxSeven,
+      title: 'faux Finish Seven',
+      cols: 1,
+    },
+    {
+      img: fauxEight,
+      title: 'faux Finish Eight',
+      cols: 1,
+    },
+    {
+      img: fauxNine,
+      title: 'faux Finish Nine',
+      cols: 2,
+    },
+    {
+      img: fauxTen,
+      title: 'faux Finish Ten',
+      cols: 1,
     },
   ];
 

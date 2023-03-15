@@ -2,8 +2,6 @@ import customOne from "../../assets/images/custom/customOne.jpg";
 import customTwo from "../../assets/images/custom/customTwo.jpg";
 import customThree from "../../assets/images/custom/customThree.jpg";
 import customFour from "../../assets/images/custom/customFour.jpg";
-import customFive from "../../assets/images/custom/customFive.jpg";
-import customSix from "../../assets/images/custom/customSix.jpg";
 import customSeven from "../../assets/images/custom/customSeven.jpg";
 import customEight from "../../assets/images/custom/customEight.jpg";
 import customNine from "../../assets/images/custom/customNine.jpg";
@@ -36,17 +34,6 @@ const itemData = [
     {
       img: customFour,
       title: 'custom Four',
-      cols: 2,
-    },
-    {
-      img: customFive,
-      title: 'custom Five',
-      cols: 2,
-    },
-    {
-      img: customSix,
-      title: 'custom Six',
-      rows: 2,
       cols: 2,
     },
     {

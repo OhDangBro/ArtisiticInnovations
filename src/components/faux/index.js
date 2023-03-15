@@ -1,7 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Button } from '@material-ui/core';
 import Container from '@mui/material/Container';
+import Masonry from '@mui/lab/Masonry';
 import itemData from "./itemdata.js";
+import 'react-image-lightbox/style.css';
+import Lightbox from 'react-image-lightbox';
 
 const styles = {
   container: {
@@ -23,18 +26,14 @@ const styles = {
     fontFamily: 'segoeFont',
   },
   imageContainer: {
-    display: 'flex',
-    justifyContent: 'center',
     margin: '2em 0',
     width: '70vw',
-    flexDirection: 'row',
-    flexWrap: 'wrap',
   },
   img: {
     borderBottomLeftRadius: 4,
     borderBottomRightRadius: 4,
     display: 'block',
-    width: 'calc(20% - 4px)',
+    width: 'calc(33.3333% - 4px)',
     margin: '2px',
     cursor: 'pointer',
   },
@@ -59,36 +58,53 @@ const styles = {
 };
 
 const FauxFinishes = ({handleClick}) => {
+  const [photoIndex, setPhotoIndex] = useState(0);
+  const [isOpen, setIsOpen] = useState(false);
 
   return (
     <React.Fragment>
       <Container maxWidth="xl">
         <div id="Commercial" style={styles.container}>
-          <h2 style={styles.h2}>
-            Also See Faux Finishes:
-          </h2>
-          <h3  style={styles.h3}>
+          <h2 style={styles.h2}>Also See Faux Finishes:</h2>
+          <h3 style={styles.h3}>
             "The word faux, derived from French, literally means 'false' and in the context of decorative painting, it refers to the technique of creating realistic finishes on surfaces that mimic other materials such as marble, wood, leather, and stone. This artistic approach allows for the transformation of plain and unremarkable surfaces into stunning and sophisticated works of art. Some examples of popular faux finishes include wood, linen texture, ragging, distressed, sponge painting, and granite finish. These simple techniques can not only add warmth and character to a room, but also improve the appearance of aging walls and hide imperfections, goodbye fingerprints."
           </h3>
           <Button variant="contained" color="primary" style={styles.button} onClick={() => { handleClick('Contact'); }}>
             Contact us
           </Button>
-          <div style={styles.imageContainer}>
+          <Masonry columns={{ xs: 1, sm: 2, md: 3 }} spacing={2} style={styles.imageContainer}>
             {itemData.map((item, index) => (
-              <img
-                key={index}
-                src={`${item.img}?w=200&auto=format`}
-                srcSet={`${item.img}?w=200&auto=format&dpr=2 2x`}
-                alt={item.title}
-                loading="lazy"
-                style={styles.img}
-              />
+              <div key={index} onClick={() => { setPhotoIndex(index); setIsOpen(true); }}>
+                <img
+                  src={`${item.img}?w=200&auto=format`}
+                  srcSet={`${item.img}?w=200&auto=format&dpr=2 2x`}
+                  alt={item.title}
+                  loading="lazy"
+                  style={{
+                    borderBottomLeftRadius: 4,
+                    borderBottomRightRadius: 4,
+                    display: 'block',
+                    width: '100%',
+                    cursor: 'pointer',
+                  }}
+                />
+              </div>
             ))}
-          </div>
+          </Masonry>
+          {isOpen && (
+            <Lightbox
+              mainSrc={itemData[photoIndex].img}
+              nextSrc={itemData[(photoIndex + 1) % itemData.length].img}
+              prevSrc={itemData[(photoIndex + itemData.length - 1) % itemData.length].img}
+              onCloseRequest={() => setIsOpen(false)}
+              onMovePrevRequest={() => setPhotoIndex((photoIndex + itemData.length - 1) % itemData.length)}
+              onMoveNextRequest={() => setPhotoIndex((photoIndex + 1) % itemData.length)}
+            />
+          )}
         </div>
       </Container>
     </React.Fragment>
   );
-};
-
-export default FauxFinishes;
+          };
+          
+  export default FauxFinishes;

@@ -86,7 +86,7 @@ const CommercialWindowArt = ({handleClick}) => {
   }, []);
 
   if (!imagesLoaded) {
-    return null;
+    return null; // or a loading spinner, message or any other loading indicator
   }
 
   return (

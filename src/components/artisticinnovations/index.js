@@ -3,7 +3,7 @@ import { Container, Grid, Paper, Button, Divider } from '@mui/material';
 import { styled } from '@mui/material/styles';
 import { useMediaQuery } from '@mui/material';
 import muralHome from "../../assets/images/murals/muralFive.jpg";
-import windowArtHome from "../../assets/images/windowArt/windowArtThirteen.jpg";
+import windowArtHome from "../../assets/images/windowArt/windowArtSeventeen.jpg";
 import customHome from  "../../assets/images/custom/customOne.jpg";
 
 
@@ -138,7 +138,7 @@ const ArtisticInnovations = ({ handleClick }) => {
           <h2 style={styles.h2}>Custom Design & Painting Services</h2>
           <h3 style={styles.h3}>
             "Bringing 30 years of expertise in custom design painting to your walls, we specialize in creating stunning wall
-            murals, custom pieces, both large and small, faux finishes, and window art for both residential and commercial properties - both inside and out."
+            murals, custom pieces, both large and small, faux finishes, and window art for residential and commercial properties - inside and out."
           </h3>
           <Divider variant="middle" sx={{ width: '100%', borderTop: '1px solid rgba(0,0,0,0.2)' }} className="divider" />
 <br></br>
