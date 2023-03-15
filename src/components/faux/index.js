@@ -5,6 +5,8 @@ import Masonry from '@mui/lab/Masonry';
 import itemData from "./itemdata.js";
 import 'react-image-lightbox/style.css';
 import Lightbox from 'react-image-lightbox';
+import Fade from 'react-reveal/Fade';
+
 
 const styles = {
   container: {
@@ -65,6 +67,7 @@ const FauxFinishes = ({handleClick}) => {
     <React.Fragment>
       <Container maxWidth="xl">
         <div id="Commercial" style={styles.container}>
+          <Fade timeout={3000}>
           <h2 style={styles.h2}>Also See Faux Finishes:</h2>
           <h3 style={styles.h3}>
             "The word faux, derived from French, literally means 'false' and in the context of decorative painting, it refers to the technique of creating realistic finishes on surfaces that mimic other materials such as marble, wood, leather, and stone. This artistic approach allows for the transformation of plain and unremarkable surfaces into stunning and sophisticated works of art. Some examples of popular faux finishes include wood, linen texture, ragging, distressed, sponge painting, and granite finish. These simple techniques can not only add warmth and character to a room, but also improve the appearance of aging walls and hide imperfections, goodbye fingerprints."
@@ -72,6 +75,7 @@ const FauxFinishes = ({handleClick}) => {
           <Button variant="contained" color="primary" style={styles.button} onClick={() => { handleClick('Contact'); }}>
             Contact us
           </Button>
+          </Fade>
           <Masonry columns={{ xs: 1, sm: 2, md: 3 }} spacing={2} style={styles.imageContainer}>
             {itemData.map((item, index) => (
               <div key={index} onClick={() => { setPhotoIndex(index); setIsOpen(true); }}>

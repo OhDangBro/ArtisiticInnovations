@@ -6,6 +6,7 @@ import Masonry from '@mui/lab/Masonry';
 import itemData from "./itemdata.js";
 import 'react-image-lightbox/style.css';
 import Lightbox from 'react-image-lightbox';
+import Fade from 'react-reveal/Fade';
 
 const styles = {
   container: {
@@ -93,11 +94,13 @@ const CommercialWindowArt = ({handleClick}) => {
     <React.Fragment>
       <Container maxWidth="xl">
         <div id="Commercial" style={styles.container}>
+        <Fade timeout={3000}>
           <h2 style={styles.h2}>Commercial Window Art</h2>
           <h3 className="h3Description" style={styles.h3}>
             Commercial Window Art is a highly effective way to create an eye-catching focal point that draws customers into your business. Each window is a 'work of art' in its own right, and as such, Commercial Window Art is custom-designed for your business, utilizing color and imagination to entice customers to your front door. With the ability to create seasonal or permanent works, your business can maintain a fresh and exciting window scene that's sure to catch the eye of passersby. As an experienced professional, I take great pride in maintaining my seasonal work throughout the year, ensuring that your window art always looks its best.
           </h3>
           <Button variant="contained" color="primary" style={styles.button} onClick={() => { handleClick('Contact'); }}>Contact us</Button>
+          </Fade>
           <div style={styles.imageContainer}>
             <Masonry columns={3} spacing={2}>
               {itemData.map((item, index) => (

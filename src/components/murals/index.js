@@ -6,6 +6,8 @@ import Masonry from '@mui/lab/Masonry';
 import itemData from "./itemdata.js";
 import 'react-image-lightbox/style.css';
 import Lightbox from 'react-image-lightbox';
+import Fade from 'react-reveal/Fade';
+
 
 const styles = {
   container: {
@@ -71,6 +73,7 @@ const Murals = ({handleClick}) => {
     <React.Fragment>
       <Container maxWidth="xl">
         <div id="Commercial" style={styles.container}>
+          <Fade timeout={3000}>
 <h2 style={styles.h2}>
 Murals
 </h2>
@@ -78,7 +81,7 @@ Murals
           Mural painting is a distinctive art form that blends the line between fine art and house painting.
 As a medium that's applied directly to a wall surface, each mural is uniquely crafted and custom designed to capture the essence of a particular space. The result is a stunning visual representation of architecture, atmosphere, color, and design that expresses a range of ideas, thoughts, imagination, and emotions. With murals, you have the opportunity to bring your space to life in a way that's both creative and transformative. </h3>
           <Button variant="contained" color="primary" style={styles.button} onClick={() => { handleClick('Contact'); }}>Contact us</Button>
-
+          </Fade>
           <div style={styles.imageContainer}>
             <Masonry columns={3} spacing={2}>
               {itemData.map((item, index) => (

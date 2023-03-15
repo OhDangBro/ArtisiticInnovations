@@ -30,7 +30,7 @@ const Navbar = ({ handleClick }) => {
           flex: 1,
   
         }}>
-        <a className="navLink" href="#Home" style={{ 
+        <a className="navLink" href="#top"  style={{ 
             fontSize: "1.3rem",
             fontFamily: "segoeFont",
             textDecoration: "none",
@@ -40,7 +40,7 @@ const Navbar = ({ handleClick }) => {
             padding: "20px",
             display: "block",
           }} onClick={() => { handleClick('Home'); closeNav(); }}>Artistic Innovations</a>
-        <a className="navLink" href="#Services" style={{ 
+        <a className="navLink" href="#top" style={{ 
             fontSize: "1.3rem",
             fontFamily: "segoeFont",
             textDecoration: "none",
@@ -50,7 +50,7 @@ const Navbar = ({ handleClick }) => {
             padding: "20px",
             display: "block",
           }} onClick={() => { handleClick('Murals'); closeNav(); }}>Murals</a>
-        <a className="navLink" href="#About" style={{ 
+        <a className="navLink" href="#top" style={{ 
             fontSize: "1.3rem",
             fontFamily: "segoeFont",
             textDecoration: "none",
@@ -60,7 +60,7 @@ const Navbar = ({ handleClick }) => {
             padding: "20px",
             display: "block",
           }} onClick={() => { handleClick('CommercialWindowArt'); closeNav(); }}>Commercial Window Art</a>
-        <a className="navLink" href="#About" style={{ 
+        <a className="navLink" href="#top" style={{ 
             fontSize: "1.3rem",
             fontFamily: "segoeFont",
             textDecoration: "none",
@@ -70,7 +70,7 @@ const Navbar = ({ handleClick }) => {
             padding: "20px",
             display: "block",
           }} onClick={() => { handleClick('Custom'); closeNav(); }}>Custom</a>
-        <a className="navLink" href="#Contact" style={{ 
+        <a className="navLink" href="#top" style={{ 
             fontSize: "1.3rem",
             fontFamily: "segoeFont",
             textDecoration: "none",
