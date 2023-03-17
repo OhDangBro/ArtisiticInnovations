@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Button } from '@material-ui/core';
 import Container from '@mui/material/Container';
 import Masonry from '@mui/lab/Masonry';
@@ -15,29 +15,23 @@ const styles = {
     alignItems: 'center',
   },
   h2: {
-    fontSize: '2em',
+    fontSize: '2.6em',
     fontWeight: 'bold',
     textAlign: 'center',
     fontFamily: 'segoeFont',
   },
   h3: {
-    fontSize: '1.2em !important',
+    fontSize: '1.4em',
     textAlign: 'center',
     margin: '1em 0',
-    width: "90%",
-    fontFamily: 'segoeFont',
+    width: "90%"
   },
   imageContainer: {
+    display: 'flex',
+    justifyContent: 'center',
     margin: '2em 0',
-    width: '70vw',
-  },
-  img: {
-    borderBottomLeftRadius: 4,
-    borderBottomRightRadius: 4,
-    display: 'block',
-    width: 'calc(33.3333% - 4px)',
-    margin: '2px',
-    cursor: 'pointer',
+    width: '90vw',
+    flexDirection: 'row',
   },
   button: {
     backgroundColor: 'hsl(274deg 53% 63%)',
@@ -57,45 +51,67 @@ const styles = {
       color: 'blue',
     },
   }
+  
 };
 
-const FauxFinishes = ({handleClick}) => {
+const FauxFinish = ({handleClick}) => {
   const [photoIndex, setPhotoIndex] = useState(0);
   const [isOpen, setIsOpen] = useState(false);
+  const [firstImageLoaded, setFirstImageLoaded] = useState(false);
 
+  useEffect(() => {
+    const img = new Image();
+    img.src = itemData[0].img;
+    img.onload = () => {
+      setFirstImageLoaded(true);
+    };
+  }, []);
+
+  
   return (
     <React.Fragment>
       <Container maxWidth="xl">
         <div id="Commercial" style={styles.container}>
           <Fade timeout={3000}>
-          <h2 style={styles.h2}>Also See Faux Finishes:</h2>
-          <h3 style={styles.h3}>
-            "The word faux, derived from French, literally means 'false' and in the context of decorative painting, it refers to the technique of creating realistic finishes on surfaces that mimic other materials such as marble, wood, leather, and stone. This artistic approach allows for the transformation of plain and unremarkable surfaces into stunning and sophisticated works of art. Some examples of popular faux finishes include wood, linen texture, ragging, distressed, sponge painting, and granite finish. These simple techniques can not only add warmth and character to a room, but also improve the appearance of aging walls and hide imperfections, goodbye fingerprints."
-          </h3>
-          <Button variant="contained" color="primary" style={styles.button} onClick={() => { handleClick('Contact'); }}>
-            Contact us
-          </Button>
+<h2 style={styles.h2}>
+Also See Faux Finishes:
+</h2>
+          <h3 className="h3Description" style={styles.h3}>
+          "The word faux, derived from French, literally means 'false' and in
+              the context of decorative painting, it refers to the technique of
+              creating realistic finishes on surfaces that mimic other materials
+              such as marble, wood, leather, and stone. This artistic approach
+              allows for the transformation of plain and unremarkable surfaces
+              into stunning and sophisticated works of art. Some examples of
+              popular faux finishes include wood, linen texture, ragging,
+              distressed, sponge painting, and granite finish. These simple
+              techniques can not only add warmth and character to a room, but
+              also improve the appearance of aging walls and hide imperfections,
+              goodbye fingerprints." </h3>
+          <Button variant="contained" color="primary" style={styles.button} onClick={() => { handleClick('Contact'); }}>Contact us</Button>
           </Fade>
-          <Masonry columns={{ xs: 1, sm: 2, md: 3 }} spacing={2} style={styles.imageContainer}>
-            {itemData.map((item, index) => (
-              <div key={index} onClick={() => { setPhotoIndex(index); setIsOpen(true); }}>
-                <img
-                  src={`${item.img}?w=200&auto=format`}
-                  srcSet={`${item.img}?w=200&auto=format&dpr=2 2x`}
-                  alt={item.title}
-                  loading="lazy"
-                  style={{
-                    borderBottomLeftRadius: 4,
-                    borderBottomRightRadius: 4,
-                    display: 'block',
-                    width: '100%',
-                    cursor: 'pointer',
-                  }}
-                />
-              </div>
-            ))}
-          </Masonry>
-          {isOpen && (
+          <div style={styles.imageContainer}>
+            <Masonry columns={3} spacing={2}>
+              {itemData.map((item, index) => (
+                <div key={index} onClick={() => { setPhotoIndex(index); setIsOpen(true); }}>
+                  <img
+                    src={`${item.img}?w=200&auto=format`}
+                    srcSet={`${item.img}?w=200&auto=format&dpr=2 2x`}
+                    alt={item.title}
+                    loading="lazy"
+                    style={{
+                      borderBottomLeftRadius: 4,
+                      borderBottomRightRadius: 4,
+                      display: 'block',
+                      width: '100%',
+                      cursor: 'pointer',
+                    }}
+                  />
+                </div>
+              ))}
+            </Masonry>
+            </div>
+            {isOpen && firstImageLoaded && (
             <Lightbox
               mainSrc={itemData[photoIndex].img}
               nextSrc={itemData[(photoIndex + 1) % itemData.length].img}
@@ -105,10 +121,11 @@ const FauxFinishes = ({handleClick}) => {
               onMoveNextRequest={() => setPhotoIndex((photoIndex + 1) % itemData.length)}
             />
           )}
-        </div>
-      </Container>
-    </React.Fragment>
-  );
-          };
-          
-  export default FauxFinishes;
+          </div>
+        </Container>
+      </React.Fragment>
+
+);
+};
+
+export default FauxFinish;

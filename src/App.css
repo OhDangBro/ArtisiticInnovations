@@ -23,6 +23,12 @@
     font-family: segoeFont !important;
 }
 
+.fauxDescription {
+    font-size: 20px !important;
+    width: 98%;
+    font-family: segoeFont !important;
+}
+
 #Hero {
     background-image: url("../src/assets/images/hero.png");
     background-size: cover;
@@ -115,6 +121,9 @@
    .footerText {
         font-size: 10px !important;
         width: 100% !important; 
+    }
+    .contactIconText {
+        transform: scale(.7);
     }
 }
 /* Media Query for low resolution  Tablets, Ipads */

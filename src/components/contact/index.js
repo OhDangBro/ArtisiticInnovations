@@ -46,7 +46,7 @@ const styles = {
   },
   h5: {
     fontFamily: "segoeFont",
-  }
+  },
 };
 
 const ContactInfo = () => {
@@ -65,7 +65,7 @@ const ContactInfo = () => {
           We're fully insured and NJ state licensed/certified.
         </h3>
 
-        <Box sx={{ display: 'flex', alignItems: 'center', flexDirection: 'row', justifyContent: 'space-between', flex: 2 }}>
+        <Box className="contactIconText" sx={{ display: 'flex', alignItems: 'center', flexDirection: 'row', justifyContent: 'space-between', flex: 2 }}>
   <Box sx={{ display: 'flex', alignItems: 'center', flexDirection: 'column', flex: 1, margin: "40px" }}>
     <LocalPhoneIcon style={styles.phoneIcon} />
     <Typography style={styles.h5} variant="h5">Call/Text:</Typography>
