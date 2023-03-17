@@ -64,7 +64,6 @@ const ContactInfo = () => {
         <h3 style={styles.h3}>
           We're fully insured and NJ state licensed/certified.
         </h3>
-
         <Box className="contactIconText" sx={{ display: 'flex', alignItems: 'center', flexDirection: 'row', justifyContent: 'space-between', flex: 2 }}>
   <Box sx={{ display: 'flex', alignItems: 'center', flexDirection: 'column', flex: 1, margin: "40px" }}>
     <LocalPhoneIcon style={styles.phoneIcon} />

@@ -52,7 +52,7 @@ const Footer = () => {
   return (
     <footer id="#Footer" style={{...styles.container, width: "100vw"}} >
       <Container maxWidth="xl">
-        <Grid container spacing={1} style={{ display: 'flex', flexWrap: 'wrap' }}>
+      <Grid container spacing={1}  style={{ display: 'flex', flexWrap: 'wrap', margin: "0" }}>
           <Grid item xs={4} style={{ ...styles.section, flexBasis: '33%', justifyContent: 'flex-start' }}>
             <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'left' }}>
               <IconButton aria-label="Email" onClick={handleEmailClick} style={styles.icon}>
