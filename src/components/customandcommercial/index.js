@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Button } from '@material-ui/core';
+import { Button, CircularProgress } from '@material-ui/core';
 import Container from '@mui/material/Container';
 import Masonry from '@mui/lab/Masonry';
 import itemData from "./itemdata.js";
@@ -58,9 +58,19 @@ const styles = {
 const CustomAndCommercial = ({handleClick}) => {
   const [photoIndex, setPhotoIndex] = useState(0);
   const [isOpen, setIsOpen] = useState(false);
+  const [imagesLoaded, setImagesLoaded] = useState(false);
   
+  const handleImageLoad = () => {
+    setImagesLoaded(true);
+  };
+
   return (
     <React.Fragment>
+      {!imagesLoaded && (
+        <div style={{display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh'}}>
+          <CircularProgress />
+        </div>
+      )}
       <Container maxWidth="xl">
         <div id="Commercial" style={styles.container}>
           <Fade timeout={3000}>

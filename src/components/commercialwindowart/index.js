@@ -6,6 +6,7 @@ import itemData from "./itemdata.js";
 import 'react-image-lightbox/style.css';
 import Lightbox from 'react-image-lightbox';
 import Fade from 'react-reveal/Fade';
+import CircularProgress from '@mui/material/CircularProgress';
 
 const styles = {
   container: {
@@ -49,14 +50,23 @@ const styles = {
       backgroundColor: 'hsl(274deg 53% 50%)',
       color: 'blue',
     },
+  },
+  loadingContainer: {
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    minHeight: '50vh',
+  },
+  loading: {
+    color: '#666',
   }
-  
 };
 
 const CommercialWindowArt = ({handleClick}) => {
   const [photoIndex, setPhotoIndex] = useState(0);
   const [isOpen, setIsOpen] = useState(false);
   const [imagesLoaded, setImagesLoaded] = useState(false);
+  
 
   useEffect(() => {
     const images = document.querySelectorAll('img');
@@ -86,9 +96,12 @@ const CommercialWindowArt = ({handleClick}) => {
   }, []);
 
   if (!imagesLoaded) {
-    return null; // or a loading spinner, message or any other loading indicator
+    return (
+      <div style={styles.loadingContainer}>
+        <CircularProgress style={styles.loading} />
+      </div>
+    ); 
   }
-
   return (
     <React.Fragment>
       <Container maxWidth="xl">
