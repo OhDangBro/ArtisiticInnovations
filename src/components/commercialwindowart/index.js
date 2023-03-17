@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Button } from '@material-ui/core';
 import Container from '@mui/material/Container';
-import Box from '@mui/material/Box';
 import Masonry from '@mui/lab/Masonry';
 import itemData from "./itemdata.js";
 import 'react-image-lightbox/style.css';

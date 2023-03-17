@@ -9,12 +9,13 @@
   @media (max-width: 768px) {
     .hamburger {
       display: block;
-      color: rgb(0, 0, 0);
+      color: hsl(274deg 53% 63%);
       background-color: transparent;
       border: aliceblue;
       position: fixed;
       top: 0;
       right: 0;
+      z-index: 1 !important;
     }
   
     .navbar-collapse {

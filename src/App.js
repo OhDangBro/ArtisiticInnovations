@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './App.css';
 import Hero from './components/hero';
 import NavBar from './components/navbar';
@@ -9,6 +9,8 @@ import CommercialWindowArt from './components/commercialwindowart';
 import CustomAndCommercial from './components/customandcommercial';
 import ContactInfo from './components/contact';
 import Divider from '@mui/material/Divider';
+import CircularProgress from '@mui/material/CircularProgress';
+
 
 
 
@@ -51,6 +53,31 @@ function App() {
     setCurrentPage(page);
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    // Update the loading state after all components have been loaded
+    setIsLoading(false);
+  }, []);
+
+  const LoadingScreen = () => (
+    <div
+      style={{
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        minHeight: '100vh',
+        minWidth: '100vw',
+        backgroundColor: 'rgba(255, 255, 255, 0.7)',
+        position: 'absolute',
+        zIndex: 1000,
+      }}
+    >
+      <CircularProgress />
+    </div>
+  );
+
+
   const renderPage = () => {
    
     if (currentPage === "Home") {
@@ -71,6 +98,8 @@ function App() {
   };
 
   return (
+    <>
+      {isLoading && <LoadingScreen />}
       <div id='Main' style={styles.container}>
         <div style={styles.navBarContainer}>
         <Hero style={styles.hero} />
@@ -86,6 +115,7 @@ function App() {
           <Footer/>
         </div>
       </div>
+      </>
     );
   };
 
