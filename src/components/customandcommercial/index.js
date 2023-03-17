@@ -66,47 +66,47 @@ const CustomAndCommercial = ({handleClick}) => {
 
   return (
     <React.Fragment>
-      {!imagesLoaded && (
-        <div style={{display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh'}}>
-          <CircularProgress />
-        </div>
-      )}
-      <Container maxWidth="xl">
-        <div id="Commercial" style={styles.container}>
-          <Fade timeout={3000}>
-<h2 style={styles.h2}>
-Custom Art
-</h2>
-          <h3 className="h3Description" style={styles.h3}>
-          Custom Painting is a powerful medium that can be used to express your individualism and unique sense of self through the use of design and color on most any object. Whether it's a small piece of artwork in a room or a large-scale mural, custom painting can truly personalize a space and make it your own. This is especially true for children's rooms, where a personalized touch can help foster creativity and imagination. By working closely with you, I can help match your decor with your own unique vision, while incorporating your needs with creative flair. The end result is a one-of-a-kind piece that truly reflects your individuality and brings your creative vision to life.          </h3>
-          <Button variant="contained" color="primary" style={styles.button} onClick={() => { handleClick('Contact'); }}>Contact us</Button>
-          </Fade>
-          <div style={styles.imageContainer}>
-            <Masonry columns={3} spacing={2}>
-              {itemData.map((item, index) => (
-                <div key={index} onClick={() => { setPhotoIndex(index); setIsOpen(true); }}>
-                  <img
-                    src={`${item.img}?w=200&auto=format`}
-                    srcSet={`${item.img}?w=200&auto=format&dpr=2 2x`}
-                    alt={item.title}
-                    loading="lazy"
-                    style={{
-                      borderBottomLeftRadius: 4,
-                      borderBottomRightRadius: 4,
-                      display: 'block',
-                      width: '100%',
-                      cursor: 'pointer',
-                    }}
-                  />
-                </div>
-              ))}
-            </Masonry>
+      {imagesLoaded ? (
+        <Container maxWidth="xl">
+          <div id="Commercial" style={styles.container}>
+            <Fade timeout={3000}>
+              <h2 style={styles.h2}>
+                Custom Art
+              </h2>
+              <h3 className="h3Description" style={styles.h3}>
+                Custom Painting is a powerful medium that can be used to express your individualism and unique sense of self through the use of design and color on most any object. Whether it's a small piece of artwork in a room or a large-scale mural, custom painting can truly personalize a space and make it your own. This is especially true for children's rooms, where a personalized touch can help foster creativity and imagination. By working closely with you, I can help match your decor with your own unique vision, while incorporating your needs with creative flair. The end result is a one-of-a-kind piece that truly reflects your individuality and brings your creative vision to life.
+              </h3>
+              <Button variant="contained" color="primary" style={styles.button} onClick={() => { handleClick('Contact'); }}>
+                Contact us
+              </Button>
+            </Fade>
+            <div style={styles.imageContainer}>
+              <Masonry columns={3} spacing={2}>
+                {itemData.map((item, index) => (
+                  <div key={index} onClick={() => { setPhotoIndex(index); setIsOpen(true); }}>
+                    <img
+                      src={`${item.img}?w=200&auto=format`}
+                      srcSet={`${item.img}?w=200&auto=format&dpr=2 2x`}
+                      alt={item.title}
+                      loading="lazy"
+                      style={{
+                        borderBottomLeftRadius: 4,
+                        borderBottomRightRadius: 4,
+                        display: 'block',
+                        width: '100%',
+                        cursor: 'pointer',
+                      }}
+                      onLoad={handleImageLoad}
+                    />
+                  </div>
+                ))}
+              </Masonry>
             </div>
-          {isOpen && (
-            <Lightbox
-              mainSrc={itemData[photoIndex].img}
-              nextSrc={itemData[(photoIndex + 1)
-                % itemData.length].img}
+            {isOpen && (
+              <Lightbox
+                mainSrc={itemData[photoIndex].img}
+                nextSrc={itemData[(photoIndex + 1)
+                  % itemData.length].img}
                 prevSrc={itemData[(photoIndex + itemData.length - 1) % itemData.length].img}
                 onCloseRequest={() => setIsOpen(false)}
                 onMovePrevRequest={() => setPhotoIndex((photoIndex + itemData.length - 1) % itemData.length)}
@@ -116,9 +116,13 @@ Custom Art
           </div>
           <FauxFinishes/>
         </Container>
-      </React.Fragment>
-
-);
+      ) : (
+        <div style={{display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh'}}>
+          <CircularProgress />
+        </div>
+      )}
+    </React.Fragment>
+  );
 };
 
 export default CustomAndCommercial;
