@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Button, CircularProgress } from '@material-ui/core';
 import Container from '@mui/material/Container';
 import Masonry from '@mui/lab/Masonry';
@@ -64,6 +64,25 @@ const CustomAndCommercial = ({handleClick}) => {
     setImagesLoaded(true);
   };
 
+  useEffect(() => {
+    const loadedImages = itemData.map((item) => {
+      return new Promise((resolve, reject) => {
+        const img = new Image();
+        img.src = `${item.img}?w=200&auto=format`;
+        img.onload = resolve;
+        img.onerror = reject;
+      });
+    });
+
+    Promise.all(loadedImages)
+      .then(() => {
+        setImagesLoaded(true);
+      })
+      .catch((error) => {
+        console.error(error);
+      });
+  }, []);
+
   return (
     <React.Fragment>
       {imagesLoaded ? (
@@ -105,8 +124,7 @@ const CustomAndCommercial = ({handleClick}) => {
             {isOpen && (
               <Lightbox
                 mainSrc={itemData[photoIndex].img}
-                nextSrc={itemData[(photoIndex + 1)
-                  % itemData.length].img}
+                nextSrc={itemData[(photoIndex + 1) % itemData.length].img}
                 prevSrc={itemData[(photoIndex + itemData.length - 1) % itemData.length].img}
                 onCloseRequest={() => setIsOpen(false)}
                 onMovePrevRequest={() => setPhotoIndex((photoIndex + itemData.length - 1) % itemData.length)}
@@ -114,10 +132,10 @@ const CustomAndCommercial = ({handleClick}) => {
               />
             )}
           </div>
-          <FauxFinishes/>
+          <FauxFinishes />
         </Container>
       ) : (
-        <div style={{display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh'}}>
+        <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh' }}>
           <CircularProgress />
         </div>
       )}
