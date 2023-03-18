@@ -1,6 +1,6 @@
 import muralOne from "../../assets/images/murals/muralOne.jpg";
 import muralTwo from "../../assets/images/murals/muralTwo.jpg";
-import muralThree from "../../assets/images/murals/muralThree.jpg";
+import muralThree from "../../assets/images/murals/muralThree.png";
 import muralFive from "../../assets/images/murals/muralFive.jpg";
 import muralSeven from "../../assets/images/murals/muralSeven.jpg";
 import muralNine from "../../assets/images/murals/muralNine.jpg";

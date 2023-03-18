@@ -2,9 +2,9 @@ import React from 'react';
 import { Container, Grid, Paper, Button, Divider } from '@mui/material';
 import { styled } from '@mui/material/styles';
 import { useMediaQuery } from '@mui/material';
-import muralHome from "../../assets/images/murals/muralFive.jpg";
+import muralHome from "../../assets/images/murals/muralThree.png";
 import windowArtHome from "../../assets/images/windowArt/windowArtSeventeen.jpg";
-import customHome from  "../../assets/images/custom/customOne.jpg";
+import customHome from  "../../assets/images/custom/customNine.jpg";
 import Slide from 'react-reveal/Slide';
 import Fade from 'react-reveal/Fade';
 
