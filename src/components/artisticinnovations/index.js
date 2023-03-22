@@ -203,13 +203,16 @@ const ArtisticInnovations = ({ handleClick }) => {
             <Grid container spacing={2} className="homeGrid reverseColumn">
             <Grid item xs={12} sm={6}>
             <Slide left>
-              <Item>
-                <div className="homeMiddleText"  style={styles.text} >
-                  <h4 style={styles.h4}>Custom</h4>
-                  <p style={styles.p}>Custom Painting is a powerful medium that can be used to express your individualism and unique sense of self through the use of design and color. Whether it's a small piece of artwork in a room or a large-scale mural, custom painting can truly personalize a space and make it your own. This is especially true for children's rooms, where a personalized touch can help foster creativity and imagination. </p>
-                  <Button variant="contained" color="primary" style={styles.button} onClick={() => { handleClick('Custom'); }}>See more</Button>
-                </div>
-              </Item>
+            <Item>
+    <div style={{ ...styles.text, textAlign: isMobile ? 'center' : 'left' }}>
+    <Slide left>
+
+      <h4 style={styles.h4}>Custom</h4>
+      <p style={styles.p}>Custom Painting is a powerful medium that can be used to express your individualism and unique sense of self through the use of design and color. Whether it's a small piece of artwork in a room or a large-scale mural, custom painting can truly personalize a space and make it your own. This is especially true for children's rooms, where a personalized touch can help foster creativity and imagination.</p>
+    <Button variant="contained" color="primary" style={styles.button} onClick={() => { handleClick('Custom'); }}>See more</Button>
+      </Slide>
+    </div>
+  </Item>
               </Slide>
             </Grid>
             <Grid item xs={12} sm={6}>
