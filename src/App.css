@@ -80,11 +80,11 @@
     }
 
     h2 {
-        font-size: 1.6rem !important;
+        font-size: 1.6rem !important; 
     }
 
     h3 {
-        font-size: 1.2rem !important;
+        font-size:.9rem !important;
     }
 
     h4 {
@@ -124,6 +124,18 @@
     }
     .contactIconText {
         transform: scale(.7);
+    }
+
+    header {
+        font-size: 2.5rem !important;
+    }
+
+   .contacth2 {
+        font-size: 1rem !important;
+    }
+
+    .contacth3 {
+        font-size: .5rem !important;
     }
 }
 /* Media Query for low resolution  Tablets, Ipads */

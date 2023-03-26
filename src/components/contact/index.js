@@ -28,7 +28,7 @@ const styles = {
     fontWeight: 'bold',
     textAlign: 'center',
     fontFamily: 'segoeFont',
-    margin: '1em 0',
+    margin: '.5em 0',
   },
   h3: {
     fontSize: '1.2em',
@@ -55,15 +55,9 @@ const ContactInfo = () => {
     <Container maxWidth="xl" id="Contact">
       <div style={styles.container}>
         <header style={styles.header}>Contact Us:</header>
-        <h2 style={styles.h3}>
+        <h2 style={styles.h3} className="contacth2">
           We're always happy to hear from you. Please feel free to get in touch with us using the contact information below.
         </h2>
-        <h3 style={styles.h3}>
-          Pricing is based on your specific requirements. Please contact me for more information.
-        </h3>
-        <h3 style={styles.h3}>
-          We're fully insured and NJ state licensed/certified.
-        </h3>
         <Box className="contactIconText" sx={{ display: 'flex', alignItems: 'center', flexDirection: 'row', justifyContent: 'space-between', flex: 2 }}>
   <Box sx={{ display: 'flex', alignItems: 'center', flexDirection: 'column', flex: 1, margin: "40px" }}>
     <LocalPhoneIcon style={styles.phoneIcon} />
@@ -80,6 +74,12 @@ const ContactInfo = () => {
     </a>
   </Box>
 </Box>
+<h3 style={styles.h3} className="contacth3">
+          Pricing is based on your specific requirements. Please contact me for more information.
+        </h3>
+        <h3 style={styles.h3} className="contacth3">
+          We're fully insured and NJ state licensed/certified.
+        </h3>
       </div>
     </Container>
   </React.Fragment>

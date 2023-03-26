@@ -1,6 +1,7 @@
 import { Container, Grid, Typography, IconButton } from '@material-ui/core';
 import { Email, Phone } from '@material-ui/icons';
 
+
 const styles = {
   container: {
     backgroundColor: 'transparent',
@@ -33,10 +34,16 @@ const styles = {
     fontWeight: 'bold',
   },
   icon: {
+    fontSize: '10rem',
     color: 'hsl(274deg 53% 63%)',
   },
   text: {
     color: 'black',
+  },
+  '@media (min-width: 600px)': {
+    icon: {
+      fontSize: '1rem',
+    },
   },
 };
 

@@ -38,7 +38,7 @@ const styles = {
     left: 0,
   },
   artisticInnovations: {
-    marginTop: '3em', // add margin to move the content below the navbar
+    marginTop: '0em', // add margin to move the content below the navbar
     paddingBottom: '4em', // add padding to make room for the footer
   },
   footer: {
@@ -59,6 +59,8 @@ function App() {
     // Update the loading state after all components have been loaded
     setIsLoading(false);
   }, []);
+
+  
 
   const LoadingScreen = () => (
     <div

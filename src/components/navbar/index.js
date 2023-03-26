@@ -12,6 +12,12 @@ const Navbar = ({ handleClick }) => {
     setIsOpen(false);
   };
 
+  const handleNavLinkClick = (section) => {
+    handleClick(section);
+    closeNav();
+    document.documentElement.scrollTop = 0;
+  };
+
   return (
     <nav style={{
         height: '10vh',
@@ -39,7 +45,7 @@ const Navbar = ({ handleClick }) => {
             textAlign: "center",
             padding: "20px",
             display: "block",
-          }} onClick={() => { handleClick('Home'); closeNav(); }}>Artistic Innovations</a>
+          }} onClick={() => handleNavLinkClick('Home')}>Artistic Innovations</a>
         <a className="navLink" href="#top" style={{ 
             fontSize: "1.3rem",
             fontFamily: "segoeFont",
@@ -49,7 +55,7 @@ const Navbar = ({ handleClick }) => {
             textAlign: "center",
             padding: "20px",
             display: "block",
-          }} onClick={() => { handleClick('Murals'); closeNav(); }}>Murals</a>
+          }} onClick={() => handleNavLinkClick('Murals')}>Murals</a>
         <a className="navLink" href="#top" style={{ 
             fontSize: "1.3rem",
             fontFamily: "segoeFont",
@@ -59,7 +65,7 @@ const Navbar = ({ handleClick }) => {
             textAlign: "center",
             padding: "20px",
             display: "block",
-          }} onClick={() => { handleClick('CommercialWindowArt'); closeNav(); }}>Commercial Window Art</a>
+          }} onClick={() => handleNavLinkClick('CommercialWindowArt')}>Commercial Window Art</a>
         <a className="navLink" href="#top" style={{ 
             fontSize: "1.3rem",
             fontFamily: "segoeFont",
@@ -69,7 +75,7 @@ const Navbar = ({ handleClick }) => {
             textAlign: "center",
             padding: "20px",
             display: "block",
-          }} onClick={() => { handleClick('Custom'); closeNav(); }}>Custom</a>
+          }} onClick={() => handleNavLinkClick('Custom')}>Custom</a>
         <a className="navLink" href="#top" style={{ 
             fontSize: "1.3rem",
             fontFamily: "segoeFont",
@@ -79,7 +85,7 @@ const Navbar = ({ handleClick }) => {
             textAlign: "center",
             padding: "20px",
             display: "block",
-          }} onClick={() => { handleClick('Contact'); closeNav(); }}>Contact</a>
+          }} onClick={() => handleNavLinkClick('Contact')}>Contact</a>
       </div>
     </nav>
   );
