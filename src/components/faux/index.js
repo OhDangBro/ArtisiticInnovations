@@ -57,7 +57,7 @@ const FauxFinish = ({handleClick}) => {
                       borderBottomLeftRadius: 4,
                       borderBottomRightRadius: 4,
                       display: 'block',
-                      width: '100%',
+                      width: '90%',
                       cursor: 'pointer',
                     }}
                   />

@@ -70,7 +70,7 @@ const ContactInfo = () => {
     <EmailIcon style={styles.phoneIcon} />
     <Typography style={styles.h5} variant="h5">Email:</Typography>
     <a href="mailto:artinnovations.deborah@email.com">
-      <Typography variant="subtitle1">artinnovations.deborah@email.com</Typography>
+      <Typography variant="subtitle1">artinnovations.deborah@gmail.com</Typography>
     </a>
   </Box>
 </Box>
