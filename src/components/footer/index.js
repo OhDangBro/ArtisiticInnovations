@@ -1,5 +1,7 @@
 import { Container, Grid, Typography, IconButton } from '@material-ui/core';
 import { Email, Phone } from '@material-ui/icons';
+import Jump from 'react-reveal/Jump';
+
 
 
 const styles = {
@@ -61,11 +63,14 @@ const Footer = () => {
       <Container maxWidth="xl">
       <Grid container spacing={1}  style={{ display: 'flex', flexWrap: 'wrap', margin: "0" }}>
           <Grid item xs={4} style={{ ...styles.section, flexBasis: '33%', justifyContent: 'flex-start' }}>
+          <Jump>
             <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'left' }}>
               <IconButton aria-label="Email" onClick={handleEmailClick} style={styles.icon}>
                 <Email />
               </IconButton>
+              <Typography className="footerText" variant="body1" align="center" style={{ fontSize: '10px', ...styles.text, color: 'hsl(274deg 53% 63%)' }} onClick={handleEmailClick}>Email Me</Typography>
             </div>
+            </Jump>
           </Grid>
           <Grid item xs={4} style={{ ...styles.section, flexBasis: '33.33%', justifyContent: 'center' }}>
             <div style={styles.contactInfo}>
@@ -76,11 +81,14 @@ const Footer = () => {
             </div>
           </Grid>
           <Grid item xs={4} style={{ ...styles.section, flexBasis: '33.33%', justifyContent: 'flex-end' }}>
+          <Jump>
             <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'right' }}>
               <IconButton aria-label="Phone" onClick={handlePhoneClick} style={styles.icon}>
                 <Phone />
               </IconButton>
+              <Typography className="footerText" variant="body1" align="center" style={{ fontSize: '10px', ...styles.text, color: 'hsl(274deg 53% 63%)' }} onClick={handlePhoneClick}>Call/Text Me</Typography>
             </div>
+            </Jump>
           </Grid>
         </Grid>
       </Container>
