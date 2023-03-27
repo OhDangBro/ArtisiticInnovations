@@ -90,7 +90,7 @@ const CustomAndCommercial = ({handleClick}) => {
             />
           )}
         </div>
-        <FauxFinishes />
+        <FauxFinishes handleClick={handleClick} />
       </Container>
     </React.Fragment>
   );
