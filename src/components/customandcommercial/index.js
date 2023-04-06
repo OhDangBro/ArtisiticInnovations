@@ -12,7 +12,7 @@ import styles from './styles'; // Import styles
 
 
 
-const CustomAndCommercial = ({handleClick}) => {
+const Custom = ({handleClick}) => {
   const [photoIndex, setPhotoIndex] = useState(0);
   const [isOpen, setIsOpen] = useState(false);
   const [imagesLoaded, setImagesLoaded] = useState(false);
@@ -47,7 +47,7 @@ return (
   <React.Fragment>
     <Container maxWidth="xl">
       <div id="Commercial" style={styles.container}>
-        <Fade timeout={3000}>
+        <Fade timeout={2000}>
           <h2 style={styles.h2}>
             Custom Art
           </h2>
@@ -103,4 +103,4 @@ return (
 );
 };
 
-export default CustomAndCommercial;
+export default Custom;

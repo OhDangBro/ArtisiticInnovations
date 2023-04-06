@@ -45,7 +45,7 @@ return (
   <React.Fragment>
     <Container maxWidth="xl">
       <div id="Commercial" style={styles.container}>
-        <Fade timeout={3000}>
+        <Fade timeout={2000}>
           <h2 style={styles.h2}>
             Commercial Window Art
           </h2>
@@ -59,8 +59,8 @@ return (
       </Link>
         </Fade>
         {imagesLoaded ? (
-          <div style={styles.imageContainer}>
-            <Masonry columns={3} spacing={2}>
+          <div style={{ ...styles.imageContainer, position: 'relative' }}>
+          <Masonry columns={3} spacing={2}>
               {itemData.map((item, index) => (
                 <div key={index} onClick={() => { setPhotoIndex(index); setIsOpen(true); }}>
                   <img

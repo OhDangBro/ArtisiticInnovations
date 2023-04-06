@@ -56,7 +56,7 @@ const ArtisticInnovations = ({ handleClick }) => {
                 <Slide right>
                   <Item>
                     <div className="imageMargin" style={styles.image}>
-                      <img src={muralHome} alt="custom artistic mural painting" style={{ width: '400px', height: '400px' }} />
+                      <img src={muralHome} alt="custom artistic mural painting" style={{ width: '400px', height: '400px' }} loading="lazy" />
                     </div>
                   </Item>
                 </Slide>
@@ -68,7 +68,7 @@ const ArtisticInnovations = ({ handleClick }) => {
                 <Slide left>
                   <Item>
                     <div className="homeMiddleImage imageMargin" style={styles.image}>
-                      <img src={windowArtHome} alt="custom commercial window art painting" style={{ width: '400px', height: '400px' }} />
+                      <img src={windowArtHome} alt="custom commercial window art painting" style={{ width: '400px', height: '400px' }} loading="lazy" />
                     </div>
                   </Item>
                 </Slide>
@@ -112,7 +112,7 @@ const ArtisticInnovations = ({ handleClick }) => {
 
                   <Item>
                     <div style={styles.image} className="imageMargin">
-                      <img src={customHome} alt="custom artistic mural painting" style={{ width: '400px', height: '400px' }} />
+                      <img src={customHome} alt="custom artistic mural painting" style={{ width: '400px', height: '400px' }} loading="lazy" />
                     </div>
                   </Item>
                 </Slide>

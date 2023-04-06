@@ -28,7 +28,7 @@ const FauxFinish = ({handleClick}) => {
     <React.Fragment>
       <Container maxWidth="xl">
         <div id="Commercial" style={styles.container}>
-          <Fade timeout={3000}>
+          <Fade timeout={2000}>
             <h2 style={styles.h2}>Also See Faux Finishes:</h2>
             <h3 className="h3Description" style={styles.h3}>"The word faux, derived from French, literally means 'false' and in
               the context of decorative painting, it refers to the technique of

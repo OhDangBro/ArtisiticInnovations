@@ -94,7 +94,7 @@ const Navbar = ({ handleClick }) => {
         </Link>
         <Link
           className="navLink"
-          to="/custom-and-commercial"
+          to="/custom"
           onClick={() => handleNavLinkClick('Custom')}
           style={{
             fontSize: '1.3rem',
