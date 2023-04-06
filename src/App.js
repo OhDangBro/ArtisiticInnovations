@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './App.css';
 import Hero from './components/hero';
 import NavBar from './components/navbar';
@@ -10,9 +11,6 @@ import CustomAndCommercial from './components/customandcommercial';
 import ContactInfo from './components/contact';
 import Divider from '@mui/material/Divider';
 import CircularProgress from '@mui/material/CircularProgress';
-
-
-
 
 const styles = {
   container: {
@@ -45,22 +43,25 @@ const styles = {
     paddingTop: '2em', // add the desired margin value here
     marginTop: '2em', // add the desired margin value here
   },
-}
+  contentStyle: {
+    minHeight: '100vh',
+    backgroundColor: '#f2f2f2',
+    padding: '2rem',
+  },
+};
 
 function App() {
-  const [currentPage, setCurrentPage] = useState("Home");
+  const [currentPage, setCurrentPage] = useState('Home');
   const handlePageChange = (page) => {
     setCurrentPage(page);
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    window.scrollTo(0, 0);
   };
-  const [isLoading, setIsLoading] = useState(true);
+  const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
     // Update the loading state after all components have been loaded
     setIsLoading(false);
   }, []);
-
-  
 
   const LoadingScreen = () => (
     <div
@@ -79,46 +80,31 @@ function App() {
     </div>
   );
 
-
-  const renderPage = () => {
-   
-    if (currentPage === "Home") {
-      return <ArtisticInnovations currentPage={currentPage} handleClick={handlePageChange}/>;
-    }
-    if (currentPage === "Murals") {
-      return <Murals handleClick={handlePageChange}  />;
-    }
-    if (currentPage === "CommercialWindowArt") {
-      return <CommercialWindowArt handleClick={handlePageChange}  />;
-    }
-    if (currentPage === "Custom") {
-      return <CustomAndCommercial handleClick={handlePageChange}  />;
-    }
-    if (currentPage === "Contact") {
-      return <ContactInfo handleClick={handlePageChange}  />;
-    }
-  };
-
   return (
-    <>
-      {isLoading && <LoadingScreen />}
+    <BrowserRouter>
       <div id='Main' style={styles.container}>
         <div style={styles.navBarContainer}>
-        <Hero style={styles.hero} />
+          <Hero style={styles.hero} />
           <div style={styles.navBar}>
-          <NavBar handleClick={handlePageChange}/>
-<Divider className="navDivider" variant="middle" sx={{ position: 'relative', top: '-3vh', width: '95%', borderTop: '1px solid rgba(0,0,0,1)' }} />
+            <NavBar handleClick={handlePageChange}/>
+            <Divider className="navDivider" variant="middle" sx={{ position: 'relative', top: '-3vh', width: '95%', borderTop: '1px solid rgba(0,0,0,1)' }} />
           </div>
         </div>
         <div style={styles.artisticInnovations}>
-          <main id="Main">{renderPage()}</main>
+        <Routes>
+    <Route path="/" element={<ArtisticInnovations currentPage={currentPage} handleClick={handlePageChange} style={styles.contentStyle} />} />
+    <Route path="/murals" element={<Murals handleClick={handlePageChange} style={styles.contentStyle} />} />
+    <Route path="/commercial-window-art" element={<CommercialWindowArt handleClick={handlePageChange} style={styles.contentStyle} />} />
+    <Route path="/custom-and-commercial" element={<CustomAndCommercial handleClick={handlePageChange} style={styles.contentStyle} />} />
+    <Route path="/contact" element={<ContactInfo handleClick={handlePageChange} style={styles.contentStyle} />} />
+  </Routes>
         </div>
         <div style={styles.footer}>
           <Footer/>
         </div>
       </div>
-      </>
-    );
+    </BrowserRouter>
+  );
   };
 
-export default App;
+  export default App;

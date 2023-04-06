@@ -10,67 +10,92 @@ import muralFifteen from "../../assets/images/murals/muralFifteen.jpg";
 import muralSixteen from "../../assets/images/murals/muralSixteen.jpg";
 import muralEighteen from "../../assets/images/murals/muralEighteen.jpg";
 import muralNineteen from "../../assets/images/murals/muralNineteen.jpg";
+import muralOneThumbnail from "../../assets/images/muralsThumbnail/muralOneThumbnail.jpg";
+import muralTwoThumbnail from "../../assets/images/muralsThumbnail/muralTwoThumbnail.jpg";
+import muralThreeThumbnail from "../../assets/images/muralsThumbnail/muralThreeThumbnail.png";
+import muralFiveThumbnail from "../../assets/images/muralsThumbnail/muralFiveThumbnail.jpg";
+import muralSevenThumbnail from "../../assets/images/muralsThumbnail/muralSevenThumbnail.jpg";
+import muralNineThumbnail from "../../assets/images/muralsThumbnail/muralNineThumbnail.jpg";
+import muralThirteenThumbnail from "../../assets/images/muralsThumbnail/muralThirteenThumbnail.jpg";
+import muralFourteenThumbnail from "../../assets/images/muralsThumbnail/muralFourteenThumbnail.jpg";
+import muralFifteenThumbnail from "../../assets/images/muralsThumbnail/muralFifteenThumbnail.jpg";
+import muralSixteenThumbnail from "../../assets/images/muralsThumbnail/muralSixteenThumbnail.jpg";
+import muralEighteenThumbnail from "../../assets/images/muralsThumbnail/muralEighteenThumbnail.jpg";
+import muralNineteenThumbnail from "../../assets/images/muralsThumbnail/muralNineteenThumbnail.jpg";
+
 
 const itemData = [
-    {
-      img: muralOne,
-      title: 'Mural One',
-      rows: 2,
-      cols: 2,
-    },
-    {
-      img: muralTwo,
-      title: 'Mural Two',
-    },
-    {
-      img: muralThree,
-      title: 'Mural Three',
-    },
-    {
-      img: muralFive,
-      title: 'Mural Five',
-      cols: 2,
-    },
+  {
+    img: muralOne,
+    thumbnail: muralOneThumbnail,
+    title: 'Mural One',
+    rows: 2,
+    cols: 2,
+  },
+  {
+    img: muralTwo,
+    thumbnail: muralTwoThumbnail,
+    title: 'Mural Two',
+  },
+  {
+    img: muralThree,
+    thumbnail: muralThreeThumbnail,
+    title: 'Mural Three',
+  },
+  {
+    img: muralFive,
+    thumbnail: muralFiveThumbnail,
+    title: 'Mural Five',
+    cols: 2,
+  },
+  {
+    img: muralSeven,
+    thumbnail: muralSevenThumbnail,
+    title: 'Mural Seven',
+  },
+  {
+    img: muralNine,
+    thumbnail: muralNineThumbnail,
+    title: 'Mural Nine',
+    rows: 2,
+    cols: 2,
+  },
+  {
+    img: muralThirteen,
+    thumbnail: muralThirteenThumbnail,
+    title: 'Mural Thirteen',
+  },
+  {
+    img: muralFourteen,
+    thumbnail: muralFourteenThumbnail,
+    title: 'Mural Fourteen',
+    cols: 2,
+  },
+  {
+    img: muralFifteen,
+    thumbnail: muralFifteenThumbnail,
+    title: 'Mural Fourteen',
+    cols: 2,
+  },
+  {
+    img: muralSixteen,
+    thumbnail: muralSixteenThumbnail,
+    title: 'Mural Fourteen',
+    cols: 2,
+  },
+  {
+    img: muralEighteen,
+    thumbnail: muralEighteenThumbnail,
+    title: 'Mural Fourteen',
+    cols: 2,
+  },
+  {
+    img: muralNineteen,
+    thumbnail: muralNineteenThumbnail,
+    title: 'Mural Fourteen',
+    cols: 2,
+  },
+];
 
-    {
-      img: muralSeven,
-      title: 'Mural Seven',
-    },
-    {
-      img: muralNine,
-      title: 'Mural Nine',
-      rows: 2,
-      cols: 2,
-    },
-    {
-      img: muralThirteen,
-      title: 'Mural Thirteen',
-    },
-    {
-      img: muralFourteen,
-      title: 'Mural Fourteen',
-      cols: 2,
-    },
-    {
-      img: muralFifteen,
-      title: 'Mural Fourteen',
-      cols: 2,
-    },
-    {
-      img: muralSixteen,
-      title: 'Mural Fourteen',
-      cols: 2,
-    },
-    {
-      img: muralEighteen,
-      title: 'Mural Fourteen',
-      cols: 2,
-    },
-    {
-      img: muralNineteen,
-      title: 'Mural Fourteen',
-      cols: 2,
-    },
-  ];
 
 export default itemData;

@@ -63,6 +63,7 @@ const styles = {
       fontFamily: 'segoeFont',
       fontWeight: 'bold',
       fontSize: '1em',
+      textDecoration: "none",
       textTransform: 'none',
       '&:hover': {
         backgroundColor: 'hsl(274deg 53% 50%)',

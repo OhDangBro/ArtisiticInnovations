@@ -2,12 +2,14 @@ import React from 'react';
 import { Container, Grid, Paper, Button, Divider } from '@mui/material';
 import { styled } from '@mui/material/styles';
 import { useMediaQuery } from '@mui/material';
-import muralHome from "../../assets/images/murals/muralThree.png";
-import windowArtHome from "../../assets/images/windowArt/windowArtSeventeen.jpg";
-import customHome from "../../assets/images/custom/customNine.jpg";
+import muralHome from "../../assets/images/muralsThumbnail/muralThreeThumbnail.png";
+import windowArtHome from "../../assets/images/windowArtThumbnail/windowArtSeventeenThumbnail.jpg";
+import customHome from "../../assets/images/customThumbnail/customNineThumbnail.jpg";
 import Slide from 'react-reveal/Slide';
 import Fade from 'react-reveal/Fade';
 import styles from './styles'; // Import styles
+import { Link } from 'react-router-dom';
+
 
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: theme.palette.mode === 'dark' ? 'transparent' : 'transparent',
@@ -19,12 +21,6 @@ const Item = styled(Paper)(({ theme }) => ({
 
 const ArtisticInnovations = ({ handleClick }) => {
   const isMobile = useMediaQuery('(max-width:800px)');
-
-  const handleButtonClick = (section) => {
-    handleClick(section);
-    window.scrollTo(0, 0);
-  };
-
 
   return (
     <React.Fragment>
@@ -48,8 +44,11 @@ const ArtisticInnovations = ({ handleClick }) => {
                       <h4 style={styles.h4}>Murals</h4>
                       <p style={styles.p}>Mural painting is a distinctive art form that blends the line between fine art and house painting. As a medium that's applied directly to a wall surface, each mural is uniquely
                         crafted and custom designed to capture the essence of a particular space. </p>
-                      <Button variant="contained" color="primary" style={styles.button} onClick={() => { handleButtonClick('Murals'); }}>See more</Button>
-                    </Slide>
+                        <Link to="/murals" onClick={() => window.scrollTo(0, 0)} style={{textDecoration: 'none'}}>
+                        <Button variant="contained" color="primary" style={{...styles.button, textDecoration: 'none'}}>
+          See More
+        </Button>
+      </Link>                    </Slide>
                   </div>
                 </Item>
               </Grid>
@@ -80,8 +79,11 @@ const ArtisticInnovations = ({ handleClick }) => {
                     <div className="homeMiddleText" style={styles.text}>
                       <h4 style={styles.h4}>Commercial Window Art</h4>
                       <p style={styles.p}>Commercial Window Art is a highly effective way to create an eye-catching focal point that draws customers into your business. Each window is a 'work of art' in its own right, and as such, Commercial Window Art is custom-designed for your business, utilizing color and imagination to entice customers to your front door.</p>
-                      <Button variant="contained" color="primary" style={styles.button} onClick={() => { handleButtonClick('CommercialWindowArt'); }}>See more</Button>
-                    </div>
+                      <Link to="/commercial-window-art" onClick={() => window.scrollTo(0, 0)} style={{textDecoration: 'none'}}>
+                      <Button variant="contained" color="primary" style={{...styles.button, textDecoration: 'none'}}>
+         See More
+        </Button>
+      </Link>                    </div>
                   </Item>
                 </Slide>
               </Grid>
@@ -96,8 +98,11 @@ const ArtisticInnovations = ({ handleClick }) => {
 
                         <h4 style={styles.h4}>Custom</h4>
                         <p style={styles.p}>Custom Painting is a powerful medium that can be used to express your individualism and unique sense of self through the use of design and color. Whether it's a small piece of artwork in a room or a large-scale mural, custom painting can truly personalize a space and make it your own. This is especially true for children's rooms, where a personalized touch can help foster creativity and imagination.</p>
-                        <Button variant="contained" color="primary" style={styles.button} onClick={() => { handleButtonClick('Custom'); }}>See more</Button>
-                      </Slide>
+                        <Link to="/custom-and-commercial" onClick={() => window.scrollTo(0, 0)} style={{textDecoration: 'none'}}>
+                        <Button variant="contained" color="primary" style={{...styles.button, textDecoration: 'none'}}>
+          See More
+        </Button>
+      </Link>                      </Slide>
                     </div>
                   </Item>
                 </Slide>

@@ -7,6 +7,8 @@ import 'react-image-lightbox/style.css';
 import Lightbox from 'react-image-lightbox';
 import Fade from 'react-reveal/Fade';
 import styles from "./styles";
+import { Link } from 'react-router-dom';
+
 
 const FauxFinish = ({handleClick}) => {
   const [photoIndex, setPhotoIndex] = useState(0);
@@ -39,9 +41,11 @@ const FauxFinish = ({handleClick}) => {
               techniques can not only add warmth and character to a room, but
               also improve the appearance of aging walls and hide imperfections,
               goodbye fingerprints."</h3>
-              <Button variant="contained" color="primary" style={styles.button} onClick={() => { handleClick('Contact'); }}>
-              Contact us
-            </Button>
+              <Link to="/contact" style={{textDecoration: 'none'}}>
+        <Button variant="contained" color="primary" style={styles.button} >
+          Contact us
+        </Button>
+      </Link>
           </Fade>
         </div>
         {imagesLoaded ? (

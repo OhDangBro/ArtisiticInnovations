@@ -1,88 +1,70 @@
 import React, { useState, useEffect } from 'react';
-import { Button } from '@material-ui/core';
+import { Button, CircularProgress } from '@material-ui/core';
 import Container from '@mui/material/Container';
 import Masonry from '@mui/lab/Masonry';
 import itemData from "./itemdata.js";
 import 'react-image-lightbox/style.css';
 import Lightbox from 'react-image-lightbox';
 import Fade from 'react-reveal/Fade';
-import CircularProgress from '@mui/material/CircularProgress';
-import styles from "./styles"
+import styles from './styles'; // Import styles
+import { Link } from 'react-router-dom';
 
-const Murals = ({ handleClick }) => {
+
+const Murals = ({handleClick}) => {
   const [photoIndex, setPhotoIndex] = useState(0);
   const [isOpen, setIsOpen] = useState(false);
-  const [firstImageLoaded, setFirstImageLoaded] = useState(false);
-  const [loadedImages, setLoadedImages] = useState(0);
+  const [imagesLoaded, setImagesLoaded] = useState(false);
 
+  // eslint-disable-next-line no-unused-vars
+  const handleImageLoad = () => {
+    setImagesLoaded(true);
+  };
 
   useEffect(() => {
-    const img = new Image();
-    img.src = itemData[0].img;
-    img.onload = () => {
-      setFirstImageLoaded(true);
-    };
+    const loadedImages = itemData.map((item) => {
+      return new Promise((resolve, reject) => {
+        const img = new Image();
+        img.src = `${item.thumbnail}?w=200&auto=format`;
+        img.onload = resolve;
+        img.onerror = reject;
+      });
+    });
+
+    Promise.all(loadedImages)
+      .then(() => {
+        setImagesLoaded(true);
+      })
+      .catch((error) => {
+        console.error(error);
+      });
   }, []);
 
-  const handleImageLoad = () => {
-    setLoadedImages((prevLoadedImages) => prevLoadedImages + 1);
-  };
-  const totalImages = itemData.length;
 
 
-  return (
-    <React.Fragment>
-      <Container maxWidth="xl">
-        <div id="Commercial" style={styles.container}>
-          <Fade timeout={3000}>
-            <h2 style={styles.h2}>
-              Murals
-            </h2>
-            <h3 className="h3Description" style={styles.h3}>
-              Mural painting is a distinctive art form that blends the line between fine art and house painting.
-              As a medium that's applied directly to a wall surface, each mural is uniquely crafted and custom designed to capture the essence of a particular space. The result is a stunning visual representation of architecture, atmosphere, color, and design that expresses a range of ideas, thoughts, imagination, and emotions. With murals, you have the opportunity to bring your space to life in a way that's both creative and transformative. </h3>
-            <Button variant="contained" color="primary" style={styles.button} onClick={() => { handleClick('Contact'); }}>Contact us</Button>
-          </Fade>
+return (
+  <React.Fragment>
+    <Container maxWidth="xl">
+      <div id="Commercial" style={styles.container}>
+        <Fade timeout={3000}>
+          <h2 style={styles.h2}>
+           Murals
+          </h2>
+          <h3 className="h3Description" style={styles.h3}>
+          Mural painting is a distinctive art form that blends the line between fine art and house painting.
+            As a medium that's applied directly to a wall surface, each mural is uniquely crafted and custom designed to capture the essence of a particular space. The result is a stunning visual representation of architecture, atmosphere, color, and design that expresses a range of ideas, thoughts, imagination, and emotions. With murals, you have the opportunity to bring your space to life in a way that's both creative and transformative.           </h3>
+            <Link to="/contact" style={{textDecoration: 'none'}}>
+        <Button variant="contained" color="primary" style={styles.button}>
+          Contact us
+        </Button>
+      </Link>
+        </Fade>
+        {imagesLoaded ? (
           <div style={styles.imageContainer}>
-            {loadedImages < totalImages && (
-              <div
-                style={{
-                  position: 'relative',
-                  width: '100%',
-                  minHeight: '100%',
-                  backgroundColor: 'transparent',
-                  zIndex: 1000,
-                }}
-              >
-               <div
-  style={{
-    display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'center',
-    position: 'absolute',
-    top: 0,
-    left: 0,
-    right: 0,
-    bottom: 0,
-    zIndex: 1000,
-    backgroundColor: 'transparent',
-  }}
->
-                  <CircularProgress
-                    sx={{
-                      color: 'hsl(274deg 53% 63%)'
-                    }}
-                  />
-                </div>
-              </div>
-            )}
             <Masonry columns={3} spacing={2}>
               {itemData.map((item, index) => (
                 <div key={index} onClick={() => { setPhotoIndex(index); setIsOpen(true); }}>
                   <img
-                    onLoad={handleImageLoad}
-                    src={`${item.img}?w=200&auto=format`}
-                    srcSet={`${item.img}?w=200&auto=format&dpr=2 2x`}
+                    src={item.thumbnail}
                     alt={item.title}
                     loading="lazy"
                     style={{
@@ -97,20 +79,25 @@ const Murals = ({ handleClick }) => {
               ))}
             </Masonry>
           </div>
-          {isOpen && firstImageLoaded && (
-            <Lightbox
-              mainSrc={itemData[photoIndex].img}
-              nextSrc={itemData[(photoIndex + 1) % itemData.length].img}
-              prevSrc={itemData[(photoIndex + itemData.length - 1) % itemData.length].img}
-              onCloseRequest={() => setIsOpen(false)}
-              onMovePrevRequest={() => setPhotoIndex((photoIndex + itemData.length - 1) % itemData.length)}
-              onMoveNextRequest={() => setPhotoIndex((photoIndex + 1) % itemData.length)}
-            />
-          )}
-        </div>
-      </Container>
-    </React.Fragment>
-  );
+        ) : (
+          <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh' }}>
+            <CircularProgress style={{ color: 'purple' }} />
+          </div>
+        )}
+        {isOpen && (
+          <Lightbox
+            mainSrc={itemData[photoIndex].img}
+            nextSrc={itemData[(photoIndex + 1) % itemData.length].img}
+            prevSrc={itemData[(photoIndex + itemData.length - 1) % itemData.length].img}
+            onCloseRequest={() => setIsOpen(false)}
+            onMovePrevRequest={() => setPhotoIndex((photoIndex + itemData.length - 1) % itemData.length)}
+            onMoveNextRequest={() => setPhotoIndex((photoIndex + 1) % itemData.length)}
+          />
+        )}
+      </div>
+    </Container>
+  </React.Fragment>
+);
 };
 
 export default Murals;
