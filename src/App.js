@@ -64,25 +64,26 @@ const styles = {
 
 function App() {
   const [currentPage, setCurrentPage] = useState('Home');
+  const [displayLoadingScreen, setDisplayLoadingScreen] = useState(true);
   const handlePageChange = (page) => {
     setCurrentPage(page);
     window.scrollTo(0, 0);
   };
-  const [isLoading, setIsLoading] = useState(true);
+
 
   useEffect(() => {
     // simulate loading delay
     setTimeout(() => {
-      setIsLoading(false);
-    }, );
+      setDisplayLoadingScreen(false);
+    }, 2000);
   }, []);
 
   const handleClick = (page) => {
-    setIsLoading(true);
+    setDisplayLoadingScreen(true);
     handlePageChange(page);
     setTimeout(() => {
-      setIsLoading(false);
-    }, );
+      setDisplayLoadingScreen(false);
+    }, 2000);
   };
 
 
@@ -91,12 +92,10 @@ function App() {
   return (
     <BrowserRouter>
     <div style={styles.container}>
-        <div style={styles.loadingContainer}>
-      {isLoading ? (
-          <LoadingScreen style={{ zIndex: 9999, position: "absolute" }} />
-      ) : (
-        <>
-          <div id="Main" style={styles.container}>
+      {displayLoadingScreen && (
+        <LoadingScreen style={{ zIndex: 9999, position: 'absolute' }} />
+      )}
+      <div id="Main" style={styles.container}>
             <div style={styles.navBarContainer}>
               <Hero style={styles.hero} />
               <div style={styles.navBar}>
@@ -145,9 +144,6 @@ function App() {
               <Footer />
             </div>
           </div>
-        </>
-      )}
-      </div>
       </div>
     </BrowserRouter>
   );
