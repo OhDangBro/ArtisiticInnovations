@@ -74,7 +74,7 @@ function App() {
     // simulate loading delay
     setTimeout(() => {
       setIsLoading(false);
-    }, 3000);
+    }, );
   }, []);
 
   const handleClick = (page) => {
@@ -82,15 +82,10 @@ function App() {
     handlePageChange(page);
     setTimeout(() => {
       setIsLoading(false);
-    }, 3000);
+    }, );
   };
 
-  const containerStyle = {
-    minHeight: isLoading ? '100vh' : 'auto',
-    minWidth: 'auto',
-    position: 'relative',
-    overflow: 'hidden',
-  };
+
 
 
   return (
