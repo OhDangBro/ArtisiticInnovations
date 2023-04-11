@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/static/css/main.309eca0f.css",
+    "main.css": "/static/css/main.e2ebc7d6.css",
     "main.js": "/static/js/main.198937ae.js",
     "static/js/787.05c66b2b.chunk.js": "/static/js/787.05c66b2b.chunk.js",
     "static/media/muralThree.png": "/static/media/muralThree.5c1eb7872ee1f4d75db5.png",
@@ -9,7 +9,6 @@
     "static/media/windowArtThree.jpg": "/static/media/windowArtThree.615458b19f9540af7040.jpg",
     "static/media/customThree.jpg": "/static/media/customThree.90f1275666939bc7f3b8.jpg",
     "static/media/customSeven.jpg": "/static/media/customSeven.207c9c11c75a25cd44ee.jpg",
-    "static/media/fauxBack1.jpg": "/static/media/fauxBack1.2c1a57d636fb23a3b1ed.jpg",
     "static/media/muralSeven.jpg": "/static/media/muralSeven.e899a403358053d86e31.jpg",
     "static/media/customFour.jpg": "/static/media/customFour.98cf9eac0ebb54bb8f4a.jpg",
     "static/media/windowArtOne.jpg": "/static/media/windowArtOne.579fb3529a7d25840ac5.jpg",
@@ -39,7 +38,6 @@
     "static/media/customEighteen.jpg": "/static/media/customEighteen.27efd230ba1d56a8301e.jpg",
     "static/media/customThirteen.jpg": "/static/media/customThirteen.aec330047426fddffa88.jpg",
     "static/media/fauxFinishSeven.jpg": "/static/media/fauxFinishSeven.110422bf87b2956fa0e0.jpg",
-    "static/media/hero.png": "/static/media/hero.52b5f91a54646f30dc32.png",
     "static/media/windowArtThreeThumbnail.jpg": "/static/media/windowArtThreeThumbnail.01d6cccd457210d83b19.jpg",
     "static/media/windowArtFifteen.jpg": "/static/media/windowArtFifteen.9730986a67413fd9e66d.jpg",
     "static/media/muralTwoThumbnail.jpg": "/static/media/muralTwoThumbnail.2b8eecd3266c9fd7708a.jpg",
@@ -63,6 +61,7 @@
     "static/media/muralOneThumbnail.jpg": "/static/media/muralOneThumbnail.0405f47085bab13ea1ee.jpg",
     "static/media/windowArtTenThumbnail.jpg": "/static/media/windowArtTenThumbnail.093df69a527b966597ab.jpg",
     "static/media/customSevenThumbnail.jpg": "/static/media/customSevenThumbnail.5bf7cbe1a07ce1375653.jpg",
+    "static/media/fauxBack1.jpg": "/static/media/fauxBack1.a8ba562449e13eafec39.jpg",
     "static/media/windowArtThirteenThumbnail.jpg": "/static/media/windowArtThirteenThumbnail.9949c181016ce0752d00.jpg",
     "static/media/customNineThumbnail.jpg": "/static/media/customNineThumbnail.b744ac93b1d9a4eef043.jpg",
     "static/media/customNineteenThumbnail.jpg": "/static/media/customNineteenThumbnail.11b3fc4213fb6458604f.jpg",
@@ -83,6 +82,7 @@
     "static/media/customFourteenThumbnail.jpg": "/static/media/customFourteenThumbnail.b20dd8bab16f3bbe6308.jpg",
     "static/media/customThirteenThumbnail.jpg": "/static/media/customThirteenThumbnail.a53aeb0602954211c7d4.jpg",
     "static/media/fauxFinishNine.jpg": "/static/media/fauxFinishNine.c0b6ab67966afdf820c6.jpg",
+    "static/media/hero.png": "/static/media/hero.89e00fafd6db4f659c81.png",
     "static/media/muralFourteenThumbnail.jpg": "/static/media/muralFourteenThumbnail.9b03054e723ee01694ea.jpg",
     "static/media/muralThreeThumbnail.png": "/static/media/muralThreeThumbnail.7392a36cfef1c484104d.png",
     "static/media/windowArtEighteenThumbnail.jpg": "/static/media/windowArtEighteenThumbnail.06945b839808ceec7c87.jpg",
@@ -116,12 +116,12 @@
     "static/media/fauxFinishFour.jpeg": "/static/media/fauxFinishFour.d0f820fa6fa3c27ed0b9.jpeg",
     "static/media/fauxFinishTwo.jpeg": "/static/media/fauxFinishTwo.46e73cc0606f5d8851c1.jpeg",
     "index.html": "/index.html",
-    "main.309eca0f.css.map": "/static/css/main.309eca0f.css.map",
+    "main.e2ebc7d6.css.map": "/static/css/main.e2ebc7d6.css.map",
     "main.198937ae.js.map": "/static/js/main.198937ae.js.map",
     "787.05c66b2b.chunk.js.map": "/static/js/787.05c66b2b.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.309eca0f.css",
+    "static/css/main.e2ebc7d6.css",
     "static/js/main.198937ae.js"
   ]
 }
