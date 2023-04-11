@@ -33,7 +33,7 @@ const ArtisticInnovations = ({ handleClick }) => {
   useEffect(() => {
     const timeoutId = setTimeout(() => {
       setIsLoading(false);
-    }, 3000);
+    }, 2000);
     return () => clearTimeout(timeoutId);
   }, []);
 
@@ -42,7 +42,9 @@ const ArtisticInnovations = ({ handleClick }) => {
 
   return (
     <React.Fragment>
-         
+    {isLoading && (
+      <LoadingScreen style={{ zIndex: 9999, position: 'absolute' }} />
+    )}
         <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
         </div>
     
@@ -120,7 +122,7 @@ const ArtisticInnovations = ({ handleClick }) => {
 
                         <h4 style={styles.h4}>Custom</h4>
                         <p style={styles.p}>Custom Painting is a powerful medium that can be used to express your individualism and unique sense of self through the use of design and color. Whether it's a small piece of artwork in a room or a large-scale mural, custom painting can truly personalize a space and make it your own. This is especially true for children's rooms, where a personalized touch can help foster creativity and imagination.</p>
-                        <Link to="/custom" onClick={() => window.scrollTo(0, 0)} style={{textDecoration: 'none'}}>
+       <Link to="/custom" onClick={() => window.scrollTo(0, 0)} style={{textDecoration: 'none'}}>
   <Button variant="contained" color="primary" style={{ ...styles.button, textDecoration: 'none' }} onClick={() => handleButtonClick('Custom')}>
     See More
   </Button>
