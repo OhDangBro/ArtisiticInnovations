@@ -88,8 +88,8 @@ return (
         )}
         {isOpen && (
           <Lightbox
-            mainSrc={itemData[photoIndex].img}
-            nextSrc={itemData[(photoIndex + 1) % itemData.length].img}
+          mainSrc={itemData[photoIndex].thumbnail}
+          nextSrc={itemData[(photoIndex + 1) % itemData.length].img}
             prevSrc={itemData[(photoIndex + itemData.length - 1) % itemData.length].img}
             onCloseRequest={() => setIsOpen(false)}
             onMovePrevRequest={() => setPhotoIndex((photoIndex + itemData.length - 1) % itemData.length)}

@@ -1,24 +1,4 @@
-import windowArtOne from "../../assets/images/windowArt/windowArtOne.jpg";
-import windowArtTwo from "../../assets/images/windowArt/windowArtTwo.jpg";
-import windowArtThree from "../../assets/images/windowArt/windowArtThree.jpg";
-import windowArtSix from "../../assets/images/windowArt/windowArtSix.jpg";
-import windowArtTen from "../../assets/images/windowArt/windowArtTen.jpg";
-import windowArtEleven from "../../assets/images/windowArt/windowArtEleven.jpg";
-import windowArtTwelve from "../../assets/images/windowArt/windowArtTwelve.jpg";
-import windowArtThirteen from "../../assets/images/windowArt/windowArtThirteen.jpg";
-import windowArtFourteen from "../../assets/images/windowArt/windowArtFourteen.jpg";
-import windowArtFifteen from "../../assets/images/windowArt/windowArtFifteen.jpg";
-import windowArtSixteen from "../../assets/images/windowArt/windowArtSixteen.jpg";
-import windowArtSeventeen from "../../assets/images/windowArt/windowArtSeventeen.jpg";
-import windowArtEighteen from "../../assets/images/windowArt/windowArtEighteen.jpg";
-import windowArtNineteen from "../../assets/images/windowArt/windowArtNineteen.jpg";
-import windowArtTwenty from "../../assets/images/windowArt/windowArtTwenty.jpg";
-import windowArtTwentyOne from "../../assets/images/windowArt/windowArtTwentyOne.jpg";
-import windowArtTwentyTwo from "../../assets/images/windowArt/windowArtTwentyTwo.jpg";
-import windowArtTwentyThree from "../../assets/images/windowArt/windowArtTwentyThree.jpg";
-import windowArtTwentyFour from "../../assets/images/windowArt/windowArtTwentyFour.jpg";
-import windowArtTwentyFive from "../../assets/images/windowArt/windowArtTwentyFive.jpg";
-import windowArtTwentySeven from "../../assets/images/windowArt/windowArtTwentySeven.jpg";
+
 import windowArtOneThumbnail from "../../assets/images/windowArtThumbnail/windowArtOneThumbnail.jpg";
 import windowArtTwoThumbnail from "../../assets/images/windowArtThumbnail/windowArtTwoThumbnail.jpg";
 import windowArtThreeThumbnail from "../../assets/images/windowArtThumbnail/windowArtThreeThumbnail.jpg";
@@ -44,124 +24,124 @@ import windowArtTwentySevenThumbnail from "../../assets/images/windowArtThumbnai
 
 const itemData = [
   {
-    img: windowArtOne,
+    img: windowArtOneThumbnail,
     thumbnail: windowArtOneThumbnail,
     title: 'windowArt One',
     rows: 2,
     cols: 2,
   },
   {
-    img: windowArtTwo,
+    img: windowArtTwoThumbnail,
     thumbnail: windowArtTwoThumbnail,
     title: 'windowArt Two',
   },
   {
-    img: windowArtThree,
+    img: windowArtThreeThumbnail,
     thumbnail: windowArtThreeThumbnail,
     title: 'windowArt Three',
   },
   {
-    img: windowArtSix,
+    img: windowArtSixThumbnail,
     thumbnail: windowArtSixThumbnail,
     title: 'windowArt Six',
     rows: 2,
     cols: 2,
   },
   {
-    img: windowArtTen,
+    img: windowArtTenThumbnail,
     thumbnail: windowArtTenThumbnail,
     title: 'windowArt Ten',
   },
   {
-    img: windowArtEleven,
+    img: windowArtElevenThumbnail,
     thumbnail: windowArtElevenThumbnail,
     title: 'windowArt Eleven',
   },
   {
-    img: windowArtTwelve,
+    img: windowArtTwelveThumbnail,
     thumbnail: windowArtTwelveThumbnail,
     title: 'windowArt Twelve',
     cols: 2,
   },
   {
-    img: windowArtThirteen,
+    img: windowArtThirteenThumbnail,
     thumbnail: windowArtThirteenThumbnail,
     title: 'windowArt Thirteen',
   },
   {
-    img: windowArtFourteen,
+    img: windowArtFourteenThumbnail,
     thumbnail: windowArtFourteenThumbnail,
     title: 'windowArt Fourteen',
     cols: 2,
   },
   {
-    img: windowArtFifteen,
+    img: windowArtFifteenThumbnail,
     thumbnail: windowArtFifteenThumbnail,
     title: 'windowArt Fifteen',
     cols: 2,
   },
   {
-    img: windowArtSixteen,
+    img: windowArtSixteenThumbnail,
     thumbnail: windowArtSixteenThumbnail,
     title: 'windowArt Sixteen',
     cols: 2,
   },
   {
-    img: windowArtSeventeen,
+    img: windowArtSeventeenThumbnail,
     thumbnail: windowArtSeventeenThumbnail,
     title: 'windowArt Seventeen',
     cols: 2,
   },
   {
-    img: windowArtEighteen,
+    img: windowArtEighteenThumbnail,
     thumbnail: windowArtEighteenThumbnail,
     title: 'windowArt Eighteen',
     cols: 2,
   },
   {
-    img: windowArtNineteen,
+    img: windowArtNineteenThumbnail,
     thumbnail: windowArtNineteenThumbnail,
     title: 'windowArt Nineteen',
     cols: 2,
   },
   {
-    img: windowArtTwenty,
+    img: windowArtTwentyThumbnail,
     thumbnail: windowArtTwentyThumbnail,
     title: 'windowArt Twenty',
     cols: 2,
   },
   {
-    img: windowArtTwentyOne,
+    img: windowArtTwentyOneThumbnail,
     thumbnail: windowArtTwentyOneThumbnail,
     title: 'windowArt Twenty-One',
     cols: 1,
   },
   {
-    img: windowArtTwentyTwo,
+    img: windowArtTwentyTwoThumbnail,
     thumbnail: windowArtTwentyTwoThumbnail,
     title: 'windowArt Twenty-Two',
     cols: 1,
   },
   {
-    img: windowArtTwentyThree,
+    img: windowArtTwentyThreeThumbnail,
     thumbnail: windowArtTwentyThreeThumbnail,
     title: 'windowArt Twenty-Three',
     cols: 1,
   },
   {
-    img: windowArtTwentyFour,
+    img: windowArtTwentyFourThumbnail,
     thumbnail: windowArtTwentyFourThumbnail,
     title: 'windowArt Twenty-Four',
     cols: 2,
   },
   {
-    img: windowArtTwentyFive,
+    img: windowArtTwentyFiveThumbnail,
     thumbnail: windowArtTwentyFiveThumbnail,
     title: 'windowArt Twenty-Five',
     cols: 1,
   },
   {
-    img: windowArtTwentySeven,
+    img: windowArtTwentySevenThumbnail,
     thumbnail: windowArtTwentySevenThumbnail,
     title: 'windowArt Twenty-Seven',
     cols: 1,
