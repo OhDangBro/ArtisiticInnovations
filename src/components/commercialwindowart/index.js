@@ -6,7 +6,6 @@ import itemData from "./itemdata.js";
 import 'react-image-lightbox/style.css';
 import Lightbox from 'react-image-lightbox';
 import Fade from 'react-reveal/Fade';
-import CircularProgress from '@mui/material/CircularProgress';
 import { Link } from 'react-router-dom';
 import styles from './styles'; // Import styles
 
@@ -52,12 +51,7 @@ return (
               ))}
             </Masonry>
           </div>
-    
-          <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh' }}>
-            <CircularProgress style={{ color: 'purple' }} />
-          </div>
-      
-        {isOpen && (
+       {isOpen && (
           <Lightbox
           mainSrc={itemData[photoIndex].thumbnail}
           nextSrc={itemData[(photoIndex + 1) % itemData.length].img}

@@ -33,7 +33,7 @@ const ArtisticInnovations = ({ handleClick }) => {
   useEffect(() => {
     const timeoutId = setTimeout(() => {
       setIsLoading(false);
-    }, 2000);
+    }, 2750);
     return () => clearTimeout(timeoutId);
   }, []);
 
