@@ -10,8 +10,10 @@ import CommercialWindowArt from './components/commercialwindowart';
 import Custom from './components/customandcommercial';
 import ContactInfo from './components/contact';
 import Divider from '@mui/material/Divider';
-import CircularProgress from '@mui/material/CircularProgress';
 import NotFound from './components/NotFound';
+import LoadingScreen from './components/LoadingScreen';
+
+
 
 
 const styles = {
@@ -72,51 +74,69 @@ function App() {
   useEffect(() => {
     setIsLoading(false);
   }, []);
-  
-  const LoadingScreen = () => (
-    <div
-      style={{
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        minHeight: '100vh',
-        minWidth: '100vw',
-        backgroundColor: 'rgba(255, 255, 255, 0.7)',
-        position: 'absolute',
-        zIndex: 1000,
-      }}
-    >
-      <CircularProgress />
-    </div>
-  );
+
+  const handleClick = (page) => {
+    setIsLoading(true);
+    handlePageChange(page);
+    setTimeout(() => {
+      setIsLoading(false);
+    }, 2000);
+  };
+
 
 
   return (
-    <BrowserRouter>
-      <div id='Main' style={styles.container}>
+  <BrowserRouter>
+  {isLoading && <LoadingScreen />}
+      <div id="Main" style={styles.container}>
         <div style={styles.navBarContainer}>
           <Hero style={styles.hero} />
           <div style={styles.navBar}>
-            <NavBar handleClick={handlePageChange}/>
-            <Divider className="navDivider" variant="middle" sx={{ position: 'relative', top: '-3vh', width: '95%', borderTop: '1px solid rgba(0,0,0,1)' }} />
+            <NavBar handleClick={handleClick} />
+            <Divider
+              className="navDivider"
+              variant="middle"
+              sx={{
+                position: 'relative',
+                top: '-3vh',
+                width: '95%',
+                borderTop: '1px solid rgba(0,0,0,1)',
+              }}
+            />
           </div>
         </div>
         <div style={styles.artisticInnovations}>
-        <Routes>
-    <Route path="/" element={<ArtisticInnovations currentPage={currentPage} handleClick={handlePageChange} style={styles.contentStyle} />} />
-    <Route path="/murals" element={<Murals handleClick={handlePageChange} style={styles.contentStyle} />} />
-    <Route path="/commercial-window-art" element={<CommercialWindowArt handleClick={handlePageChange} style={styles.contentStyle} />} />
-    <Route path="/custom" element={<Custom handleClick={handlePageChange} style={styles.contentStyle} />} />
-    <Route path="/contact" element={<ContactInfo handleClick={handlePageChange} style={styles.contentStyle} />} />
-    <Route path="*" element={<NotFound />} />
-  </Routes>
+          <Routes>
+            <Route
+              path="/"
+              element={<ArtisticInnovations currentPage={currentPage} handleClick={handleClick} style={styles.contentStyle} />}
+            />
+            <Route
+              path="/murals"
+              element={<Murals handleClick={handleClick} style={styles.contentStyle} />}
+            />
+            <Route
+              path="/commercial-window-art"
+              element={<CommercialWindowArt handleClick={handleClick} style={styles.contentStyle} />}
+            />
+            <Route
+              path="/custom"
+              element={<Custom handleClick={handleClick} style={styles.contentStyle} />}
+            />
+            <Route
+              path="/contact"
+              element={<ContactInfo handleClick={handleClick} style={styles.contentStyle} />}
+            />
+            <Route path="*" element={<NotFound />} />
+          </Routes>
         </div>
         <div style={styles.footer}>
-          <Footer/>
+          <Footer />
         </div>
       </div>
     </BrowserRouter>
   );
+  
   };
 
   export default App;

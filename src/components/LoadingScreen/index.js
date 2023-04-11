@@ -1,9 +1,9 @@
 import React from 'react';
-import CircularProgress from '@mui/material/CircularProgress';
+import LoadingBrush from '../../assets/images/Brush';
 
 const styles = {
   container: {
-    minHeight: '100vh',
+    minHeight: '100%',
     minWidth: '100vw',
     display: 'flex',
     justifyContent: 'center',
@@ -12,7 +12,7 @@ const styles = {
     top: 0,
     left: 0,
     zIndex: 999,
-    backgroundColor: 'rgba(0, 0, 0, 0.6)',
+    backgroundColor: 'hsl(274deg 53% 63%)',
   },
   spinner: {
     color: '#ffffff',
@@ -22,7 +22,7 @@ const styles = {
 const LoadingScreen = () => {
   return (
     <div style={styles.container}>
-      <CircularProgress style={styles.spinner} />
+      <LoadingBrush style={styles.spinner} />
     </div>
   );
 };

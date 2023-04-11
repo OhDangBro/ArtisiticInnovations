@@ -10,6 +10,7 @@ import styles from './styles'; // Import styles
 import { Link } from 'react-router-dom';
 
 
+
 const Murals = ({handleClick}) => {
   const [photoIndex, setPhotoIndex] = useState(0);
   const [isOpen, setIsOpen] = useState(false);

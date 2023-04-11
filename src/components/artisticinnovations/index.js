@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Container, Grid, Paper, Button, Divider } from '@mui/material';
 import { styled } from '@mui/material/styles';
 import { useMediaQuery } from '@mui/material';
@@ -21,9 +21,23 @@ const Item = styled(Paper)(({ theme }) => ({
 
 const ArtisticInnovations = ({ handleClick }) => {
   const isMobile = useMediaQuery('(max-width:800px)');
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 3000); // Set the duration of the loading symbol, e.g., 3000ms
+    return () => clearTimeout(timer);
+  }, []);
+
 
   return (
     <React.Fragment>
+         {loading ? (
+        <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh' }}>
+          <withLoading />
+        </div>
+      ) : (
       <Container maxWidth="xl" id="Landing">
         <div style={styles.container}>
           <Fade>
@@ -121,6 +135,7 @@ const ArtisticInnovations = ({ handleClick }) => {
           </div>
         </div>
       </Container>
+       )}
     </React.Fragment>
   );
 };
