@@ -13,16 +13,13 @@ import Divider from '@mui/material/Divider';
 import NotFound from './components/NotFound';
 import LoadingScreen from './components/LoadingScreen';
 
-
-
-
 const styles = {
   container: {
-    minHeight: '100vh',
-    minWidth: '100vw',
-    position: 'relative',
-    overflow: 'hidden',
-    backgroundSize: '100% 100%'
+    minHeight: "auto",
+    minWidth: "auto",
+    position: "relative",
+    overflow: "hidden",
+
   },
   hero: {
     position: 'absolute',
@@ -61,6 +58,8 @@ const styles = {
     overflow: 'hidden',
     backgroundColor: '#f2f2f2',
   },
+  
+
 };
 
 function App() {
@@ -69,10 +68,13 @@ function App() {
     setCurrentPage(page);
     window.scrollTo(0, 0);
   };
-  const [isLoading, setIsLoading] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    setIsLoading(false);
+    // simulate loading delay
+    setTimeout(() => {
+      setIsLoading(false);
+    }, 3000);
   }, []);
 
   const handleClick = (page) => {
@@ -80,62 +82,82 @@ function App() {
     handlePageChange(page);
     setTimeout(() => {
       setIsLoading(false);
-    }, 2000);
+    }, 3000);
+  };
+
+  const containerStyle = {
+    minHeight: isLoading ? '100vh' : 'auto',
+    minWidth: 'auto',
+    position: 'relative',
+    overflow: 'hidden',
   };
 
 
-
   return (
-  <BrowserRouter>
-  {isLoading && <LoadingScreen />}
-      <div id="Main" style={styles.container}>
-        <div style={styles.navBarContainer}>
-          <Hero style={styles.hero} />
-          <div style={styles.navBar}>
-            <NavBar handleClick={handleClick} />
-            <Divider
-              className="navDivider"
-              variant="middle"
-              sx={{
-                position: 'relative',
-                top: '-3vh',
-                width: '95%',
-                borderTop: '1px solid rgba(0,0,0,1)',
-              }}
-            />
+    <BrowserRouter>
+    <div style={styles.container}>
+        <div style={styles.loadingContainer}>
+      {isLoading ? (
+          <LoadingScreen style={{ zIndex: 9999, position: "absolute" }} />
+      ) : (
+        <>
+          <div id="Main" style={styles.container}>
+            <div style={styles.navBarContainer}>
+              <Hero style={styles.hero} />
+              <div style={styles.navBar}>
+                <NavBar handleClick={handleClick} />
+                <Divider
+                  className="navDivider"
+                  variant="middle"
+                  sx={{
+                    position: 'relative',
+                    top: '-3vh',
+                    width: '95%',
+                    borderTop: '1px solid rgba(0,0,0,1)',
+                  }}
+                />
+              </div>
+            </div>
+            <div style={styles.artisticInnovations}>
+              <Routes>
+                <Route
+                  path="/"
+                  element={
+                    <ArtisticInnovations
+                      currentPage={currentPage}
+                      handleClick={handleClick}
+                      style={styles.contentStyle}
+                    />
+                  }
+                />
+                <Route
+                  path="/murals"
+                  element={<Murals handleClick={handleClick} style={styles.contentStyle} />}
+                />
+                <Route
+                  path="/commercial-window-art"
+                  element={<CommercialWindowArt handleClick={handleClick} style={styles.contentStyle} />}
+                />
+                <Route path="/custom" element={<Custom handleClick={handleClick} style={styles.contentStyle} />} />
+                <Route
+                  path="/contact"
+                  element={<ContactInfo handleClick={handleClick} style={styles.contentStyle} />}
+                />
+                <Route path="*" element={<NotFound />} />
+              </Routes>
+            </div>
+            <div style={styles.footer}>
+              <Footer />
+            </div>
           </div>
-        </div>
-        <div style={styles.artisticInnovations}>
-          <Routes>
-            <Route
-              path="/"
-              element={<ArtisticInnovations currentPage={currentPage} handleClick={handleClick} style={styles.contentStyle} />}
-            />
-            <Route
-              path="/murals"
-              element={<Murals handleClick={handleClick} style={styles.contentStyle} />}
-            />
-            <Route
-              path="/commercial-window-art"
-              element={<CommercialWindowArt handleClick={handleClick} style={styles.contentStyle} />}
-            />
-            <Route
-              path="/custom"
-              element={<Custom handleClick={handleClick} style={styles.contentStyle} />}
-            />
-            <Route
-              path="/contact"
-              element={<ContactInfo handleClick={handleClick} style={styles.contentStyle} />}
-            />
-            <Route path="*" element={<NotFound />} />
-          </Routes>
-        </div>
-        <div style={styles.footer}>
-          <Footer />
-        </div>
+        </>
+      )}
+      </div>
       </div>
     </BrowserRouter>
   );
+  
+  
   
   };
 
