@@ -75,7 +75,7 @@ function App() {
     // simulate loading delay
     setTimeout(() => {
       setDisplayLoadingScreen(false);
-    }, 2750);
+    }, 3500);
   }, []);
 
   const handleClick = (page) => {
@@ -83,7 +83,7 @@ function App() {
     handlePageChange(page);
     setTimeout(() => {
       setDisplayLoadingScreen(false);
-    }, 2750);
+    }, 3500);
   };
 
 
