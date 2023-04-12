@@ -11,12 +11,16 @@ const styles = {
       marginTop: '2em',
       color: 'hsl(274deg 53% 63%)',
       fontFamily: 'segoeFont',
+      textShadow: '1px 1px 0px #dddddd', 
+
     },
     h2: {
       fontSize: '3.2em',
       fontWeight: 'bold',
       textAlign: 'center',
       fontFamily: 'segoeFont',
+      textShadow: '1px 1px 0px #dddddd', 
+
     },
     h3: {
       fontSize: '1.4em',
@@ -24,20 +28,22 @@ const styles = {
       margin: '1em 0',
       fontFamily: 'segoeFont',
       paddingBottom: "5%",
-      width: "90%"
+      width: "90%",
+      textShadow: '1px 1px 0px #dddddd', 
     },
     h4: {
       fontSize: '3em',
       margin: '1em 0',
       fontFamily: 'segoeFont',
       color: 'hsl(274deg 53% 63%)',
-      
+      textShadow: '1px 1px 0px #dddddd',       
     },
     p: {
       fontSize: '1.6em',
       margin: '1em 0',
       fontFamily: 'segoeFont',
       width: '100%',
+      textShadow: '1px 1px 0px #dddddd', 
     },
     text: {
       marginRight: '1em',

@@ -9,12 +9,15 @@ const styles = {
       fontWeight: 'bold',
       textAlign: 'center',
       fontFamily: 'segoeFont',
+      textShadow: '1px 1px 0px #dddddd', 
+
     },
     h3: {
       fontSize: '1.4em',
       textAlign: 'center',
       margin: '1em 0',
-      width: "90%"
+      width: "90%",
+      textShadow: '1px 1px 0px #dddddd', 
     },
     imageContainer: {
       display: 'flex',

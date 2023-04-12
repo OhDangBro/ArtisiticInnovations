@@ -19,7 +19,7 @@ const styles = {
     fontSize: '3.5em',
     fontWeight: 'bold',
     textAlign: 'center',
-  
+    textShadow: '1px 1px 0px #dddddd',
     color: 'hsl(274deg 53% 63%)',
     fontFamily: 'segoeFont',
   },
@@ -29,13 +29,14 @@ const styles = {
     textAlign: 'center',
     fontFamily: 'segoeFont',
     margin: '.5em 0',
+    textShadow: '1px 1px 0px #dddddd', 
   },
   h3: {
     fontSize: '1.2em',
     textAlign: 'center',
     margin: '1em 0',
     fontFamily: 'segoeFont',
-
+    textShadow: '1px 1px 0px #dddddd', 
   },
   phoneIcon: {
     marginRight: '0.5em',
@@ -46,6 +47,7 @@ const styles = {
   },
   h5: {
     fontFamily: "segoeFont",
+    textShadow: '1px 1px 0px #dddddd'
   },
 };
 
