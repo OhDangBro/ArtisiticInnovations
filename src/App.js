@@ -12,6 +12,8 @@ import ContactInfo from './components/contact';
 import Divider from '@mui/material/Divider';
 import NotFound from './components/NotFound';
 import LoadingScreen from './components/LoadingScreen';
+import { useLocation } from 'react-router-dom';
+
 
 const styles = {
   container: {
@@ -65,6 +67,7 @@ const styles = {
 function App() {
   const [currentPage, setCurrentPage] = useState('Home');
   const [displayLoadingScreen, setDisplayLoadingScreen] = useState(true);
+  
   const handlePageChange = (page) => {
     setCurrentPage(page);
     window.scrollTo(0, 0);
@@ -93,7 +96,7 @@ function App() {
     <BrowserRouter>
     <div style={styles.container}>
       {displayLoadingScreen && (
-        <LoadingScreen style={{ zIndex: 9999, position: 'absolute' }} />
+        <LoadingScreen style={{ zIndex: 9999, position: 'fixed' }} />
       )}
       <div id="Main" style={styles.container}>
             <div style={styles.navBarContainer}>

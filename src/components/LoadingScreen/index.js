@@ -1,12 +1,16 @@
 import { Typography } from '@material-ui/core';
 import React from 'react';
 import LoadingBrush from '../../assets/images/Brush';
-import Pulse from 'react-reveal/Pulse';
+import Bounce from 'react-reveal/Bounce';
+
 
 
 const styles = {
   container: {
+    position: 'fixed', // Add this line to make the position fixed
+    zIndex: 9999, // Add this line to ensure it's on top of other elements
     minHeight: '100vh',
+    minWidth: '100vw',
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'center',
@@ -27,17 +31,49 @@ const styles = {
   },
 };
 
+
 const LoadingScreen = () => {
   return (
     <div style={styles.container}>
       <LoadingBrush style={styles.spinner} />
-      <Pulse>
-      <Typography variant="h6" style={styles.text}>
-        Brushing Up
-      </Typography>
-      </Pulse>
+      <div style={{ display: 'flex' }}>
+        <Bounce delay={100}>
+          <Typography variant="h6" style={styles.text}>i</Typography>
+        </Bounce>
+        <Bounce delay={400}>
+          <Typography variant="h6" style={styles.text}>n</Typography>
+        </Bounce>
+        <Bounce delay={700}>
+          <Typography variant="h6" style={styles.text}>n</Typography>
+        </Bounce>
+        <Bounce delay={1000}>
+          <Typography variant="h6" style={styles.text}>o</Typography>
+        </Bounce>
+        <Bounce delay={1300}>
+          <Typography variant="h6" style={styles.text}>v</Typography>
+        </Bounce>
+        <Bounce delay={1600}>
+          <Typography variant="h6" style={styles.text}>a</Typography>
+        </Bounce>
+        <Bounce delay={1900}>
+          <Typography variant="h6" style={styles.text}>t</Typography>
+        </Bounce>
+        <Bounce delay={2200}>
+          <Typography variant="h6" style={styles.text}>i</Typography>
+        </Bounce>
+        <Bounce delay={2500}>
+          <Typography variant="h6" style={styles.text}>o</Typography>
+        </Bounce>
+        <Bounce delay={2800}>
+          <Typography variant="h6" style={styles.text}>n</Typography>
+        </Bounce>
+        <Bounce delay={3100}>
+          <Typography variant="h6" style={styles.text}>s</Typography>
+        </Bounce>
+      </div>
     </div>
   );
 };
 
 export default LoadingScreen;
+
