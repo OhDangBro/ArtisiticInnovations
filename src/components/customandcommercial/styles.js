@@ -23,7 +23,7 @@ const styles = {
       display: 'flex',
       justifyContent: 'center',
       margin: '2em 0',
-      width: '90vw',
+      width: '80vw',
       flexDirection: 'row',
     },
     button: {

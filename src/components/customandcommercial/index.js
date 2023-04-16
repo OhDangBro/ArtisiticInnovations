@@ -21,7 +21,7 @@ return (
   <React.Fragment>
     <Container maxWidth="xl">
       <div id="Commercial" style={styles.container}>
-        <Fade timeout={2000}>
+        <Fade timeout={1000}>
           <h2 style={styles.h2}>
             Custom Art
           </h2>

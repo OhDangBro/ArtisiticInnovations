@@ -25,7 +25,7 @@ const styles = {
     alignItems: 'center',
     margin: '2em 0',
     flexDirection: 'column',
-    maxWidth: '1200px',
+    wWidth: '80vw',
   },
   button: {
     backgroundColor: 'hsl(274deg 53% 63%)',
