@@ -249,7 +249,8 @@
     }
 
     .navLink {
-        font-size: .6rem !important;
+        font-size: .9rem !important;
+        padding: 2px !important;
     }
 
     .heroContainer {
@@ -273,7 +274,7 @@
 /* Media Query for Laptops and Desktops */
 @media (min-width: 1025px) and (max-width: 1280px) {
     .navLink {
-        font-size: 12px !important;
+        font-size: .9rem !important;
     }
 
     .heroContainer {
@@ -329,7 +330,8 @@
 @media (min-width: 1281px) {
 
     .navLink {
-        font-size: .6rem !important;
+        font-size: .9rem !important;
+        padding: 0px !important;
     }
 
     .heroContainer {
@@ -387,7 +389,8 @@
 @media (min-width: 1481px) {
 
     .navLink {
-        font-size: .8rem !important;
+        font-size: 1rem !important;
+        padding: 0px !important;
     }
 
     .heroContainer {
@@ -436,7 +439,8 @@
 
 @media (min-width: 1681px) {
     .navLink {
-        font-size: .9rem !important;
+        font-size: 1rem !important;
+        padding: 0px !important;
     }
 
     .heroContainer {

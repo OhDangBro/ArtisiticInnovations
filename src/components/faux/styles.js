@@ -16,8 +16,6 @@ const styles = {
     textAlign: 'center',
     margin: '1em 0',
     width: "90%",
-    textShadow: '1px 1px 0px #dddddd', 
-
   },
   imageContainer: {
     display: 'flex',

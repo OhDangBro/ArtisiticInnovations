@@ -29,7 +29,7 @@ const styles = {
       fontFamily: 'segoeFont',
       paddingBottom: "5%",
       width: "90%",
-      textShadow: '1px 1px 0px #dddddd', 
+      
     },
     h4: {
       fontSize: '3em',
@@ -43,7 +43,7 @@ const styles = {
       margin: '1em 0',
       fontFamily: 'segoeFont',
       width: '100%',
-      textShadow: '1px 1px 0px #dddddd', 
+      fontWeight: 'bold', // Add this line
     },
     text: {
       marginRight: '1em',

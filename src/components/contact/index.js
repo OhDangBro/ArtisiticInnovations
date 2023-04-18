@@ -4,7 +4,7 @@ import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import EmailIcon from '@mui/icons-material/Email';
 import LocalPhoneIcon from '@mui/icons-material/LocalPhone';
-
+import ContactForm from '../contactform';
 
 
 const styles = {
@@ -47,7 +47,7 @@ const styles = {
   },
   h5: {
     fontFamily: "segoeFont",
-    textShadow: '1px 1px 0px #dddddd'
+    
   },
 };
 
@@ -60,7 +60,10 @@ const ContactInfo = () => {
         <h2 style={styles.h3} className="contacth2">
           We're always happy to hear from you. Please feel free to get in touch with us using the contact information below.
         </h2>
+        <ContactForm/>
         <Box className="contactIconText" sx={{ display: 'flex', alignItems: 'center', flexDirection: 'row', justifyContent: 'space-between', flex: 2 }}>
+
+
   <Box sx={{ display: 'flex', alignItems: 'center', flexDirection: 'column', flex: 1, margin: "40px" }}>
     <LocalPhoneIcon style={styles.phoneIcon} />
     <Typography style={styles.h5} variant="h5">Call/Text:</Typography>
@@ -71,8 +74,8 @@ const ContactInfo = () => {
   <Box sx={{ display: 'flex', alignItems: 'center', flexDirection: 'column', flex: 1, margin: "40px" }}>
     <EmailIcon style={styles.phoneIcon} />
     <Typography style={styles.h5} variant="h5">Email:</Typography>
-    <a href="mailto:artinnovations.deborah@email.com">
-      <Typography variant="subtitle1">artinnovations.deborah@gmail.com</Typography>
+    <a href="mailto:artisticinnovations.deborah@gmail.com">
+      <Typography variant="subtitle1">artisticinnovations.deborah@gmail.com</Typography>
     </a>
   </Box>
 </Box>

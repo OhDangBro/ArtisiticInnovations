@@ -5,6 +5,12 @@
   cursor: pointer;
   font-size: 2em;
   }
+
+  .navLink {
+    color: rgb(0, 0, 0) !important;
+    font-weight: bold;
+
+  }
   
   @media (max-width: 768px) {
     .hamburger {
@@ -41,6 +47,8 @@
       margin: 0.3em 0;
       text-align: center;
       padding: 10px 5px !important;
+      font-weight: bold;
+
     }
   
     .show {
