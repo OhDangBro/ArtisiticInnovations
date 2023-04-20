@@ -58,7 +58,7 @@ const ContactInfo = () => {
       <div style={styles.container}>
         <header style={styles.header}>Contact Us:</header>
         <h2 style={styles.h3} className="contacth2">
-          We're always happy to hear from you. Please feel free to get in touch with us using the contact information below.
+          We're always happy to hear from you. Please feel free to get in touch with us using the contact form or contact information below.
         </h2>
         <ContactForm/>
         <Box className="contactIconText" sx={{ display: 'flex', alignItems: 'center', flexDirection: 'row', justifyContent: 'space-between', flex: 2 }}>
