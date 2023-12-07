@@ -55,7 +55,7 @@ const Footer = () => {
   };
 
   const handlePhoneClick = () => {
-    window.location.href = "tel:+17328937440";
+    window.location.href = "tel:+17322617944";
   };
 
   return (

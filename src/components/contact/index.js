@@ -67,8 +67,8 @@ const ContactInfo = () => {
   <Box sx={{ display: 'flex', alignItems: 'center', flexDirection: 'column', flex: 1, margin: "40px" }}>
     <LocalPhoneIcon style={styles.phoneIcon} />
     <Typography style={styles.h5} variant="h5">Call/Text:</Typography>
-    <a href="tel:732-893-7440">
-      <Typography variant="subtitle1">732-893-7440</Typography>
+    <a href="tel:732-261-7944">
+      <Typography variant="subtitle1">732-261-7944</Typography>
     </a>
   </Box>
   <Box sx={{ display: 'flex', alignItems: 'center', flexDirection: 'column', flex: 1, margin: "40px" }}>
